@@ -1,0 +1,21 @@
+.connection{
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: .8;
+  transition: all .3s;
+  max-width: 170px;
+
+  &:hover{
+    opacity: 1;
+  }
+
+  .connection__img{
+    margin-right: 10px;
+  }
+}

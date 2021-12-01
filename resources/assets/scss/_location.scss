@@ -1,0 +1,29 @@
+
+.location{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: .8;
+  transition: all .3s;
+
+  &:hover{
+    opacity: 1;
+  }
+
+  &__text{
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color: #7B94B0;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 7px;
+    border-bottom: 1px dashed #7B94B0;
+  }
+
+  &__img{
+    fill: #7B94B0;
+    width: 12px;
+    height: 14px;
+    margin-bottom: 3px;
+  }
+}

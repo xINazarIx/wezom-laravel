@@ -1,0 +1,32 @@
+
+.navBtn{
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E77E42;
+  border-radius: 3px;
+  transition: opacity .3s;
+  fill: none;
+
+  &:hover{
+    opacity: .85;
+  }
+
+
+  &--disable{
+    cursor: default;
+    background-color: #E0E0E0;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__img{
+    margin: 0 auto;
+  }
+
+}

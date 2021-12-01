@@ -1,0 +1,18 @@
+
+.goTo{
+  cursor: pointer;
+  padding: 9px 21px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #E77E42;
+  border: 1px solid #E77E42;
+  border-radius: 3px;
+  transition: all .4s;
+
+  &:hover{
+    background-color: #E77E42;
+    color: white;
+  }
+}

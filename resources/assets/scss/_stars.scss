@@ -1,0 +1,26 @@
+.rating{
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__stars{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+
+  &__stars-img{
+    width: 12px;
+    height: 12px;
+    fill:  #E0E0E0;
+    margin-right: 1.5px;
+  }
+
+  &__stars[data-total="1"] &__stars-img:nth-child(n + 5),
+  &__stars[data-total="2"] &__stars-img:nth-child(n + 4),
+  &__stars[data-total="3"] &__stars-img:nth-child(n + 3),
+  &__stars[data-total="4"] &__stars-img:nth-child(n + 2),
+  &__stars[data-total="5"] &__stars-img:nth-child(n + 1){
+    fill: #E77E42;
+  }
+}

@@ -1,0 +1,22 @@
+.search__btn{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s;
+  opacity: .7;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #202454;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.search__img{
+  margin-right: 12px;
+  width: 32px;
+  height: 32px;
+  fill: none;
+}

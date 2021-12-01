@@ -1,0 +1,43 @@
+.userIcons{
+  display: flex;
+
+  &__btn{
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+    opacity: .8;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__img{
+    fill: none;
+    stroke: #202454;
+  }
+
+
+  &__btn + &__btn{
+    margin-left: 10px;
+  }
+
+  &__btn:nth-child(3)::after{
+    content: '0';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -13px;
+    top: -4px;
+    background-color: #E77E42;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

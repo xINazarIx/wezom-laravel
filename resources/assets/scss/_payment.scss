@@ -1,0 +1,17 @@
+.payment{
+  display: flex;
+  align-items: center;
+
+  &__item + &__item{
+    margin-left: 25px;
+  }
+
+  &__link{
+    transition: all .5s;
+    opacity: .85;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

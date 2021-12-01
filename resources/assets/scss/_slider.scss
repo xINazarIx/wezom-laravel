@@ -1,0 +1,300 @@
+.slider{
+  padding: 50px 0;
+
+  &__inner{
+    margin: 0 -15px;
+    position: relative;
+  }
+
+  &__items{
+    display: flex;
+  }
+
+  &__top{
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__petsNav{
+    margin-top: 8px;
+  }
+
+  &__title{
+    margin-right: 24px;
+    font-size: 32px;
+    line-height: 37px;
+    color: #202454;
+    font-weight: 400;
+  }
+
+  &__wrapper{
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__wrapper .slider__navBtn{
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__wrapper--active{
+    height: auto;
+    padding-bottom: 36px;
+  }
+
+  &__wrapper--active .slider__navBtn{
+    height: 32px;
+  }
+
+
+  &__item{
+    padding-top: 32px;
+    margin: 0 15px;
+    max-width: 260px;
+  }
+
+  &__card{
+    position: relative;
+    padding: 30px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    width: 100%;
+    height: 260px;
+    transition: all .5s;
+    margin-bottom: 16px;
+  }
+
+  &__card:hover{
+    box-shadow: 2px 2px 16px 2px rgba(18, 33, 63, .2);
+  }
+
+  &__widget{
+    position: absolute;
+    margin-right: 16px;
+    top: 16px;
+    left:  16px;
+  }
+
+  &__widget:nth-child(2){
+    top: 43px;
+  }
+
+  &__description{
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description-text{
+    font-size: 14px;
+    line-height: 16px;
+    color: #202454;
+    margin-bottom: auto;
+    transition: all .5s;
+  }
+
+  &__description-text:hover{
+    opacity: .7;
+  }
+
+  &__stars{
+    margin-top: 5px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  &__stars-text{
+    padding-top: 2px;
+    margin-left: 3px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #202454
+  }
+
+  &__stars-text--disabled{
+    color: #B6B7C4;
+  }
+
+  &__updatePrice{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__updateBtn{
+    transition: all .8s;
+  }
+
+  &__updateBtn:hover{
+    transform: rotate(-60deg);
+  }
+
+  &__updatePrice-text{
+    margin-left: 5px;
+    padding-bottom: 1px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #7B94B0;
+  }
+
+  &__prices-lastPrice{
+    font-size: 13px;
+    line-height: 140%;
+    text-decoration-line: line-through;
+    color: #7B94B0;
+    margin-right: 4px;
+  }
+
+  &__prices-currentlyPrice{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #202454;
+  }
+
+  &__buyBtn{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    margin-bottom: 3px;
+    transition: all .5s;
+  }
+
+  &__buyBtn:hover{
+    box-shadow: 0px 2px 4px rgba(84, 143, 199, 0.7);
+  }
+
+  &__navBtns{
+
+    width: 100%;
+    max-width: 72px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 5px;
+    right: 15px;
+  }
+}
+
+.slick-disabled{
+  cursor:default;
+  background-color: #E0E0E0;;
+}
+
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: -36px;
+}
+
+.slick-dots button{
+  font-size: 0;
+  border: none;
+  background-color: #E0E0E0;;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 36px 4px 0;
+}
+
+.slick-dots .slick-active button{
+  background-color: #026C00;
+}
+
+@media(max-width: 1340px){
+
+  .slider__card-img{
+    margin: 0 auto;
+  }
+}
+
+
+@media(max-width: 1115px){
+
+  .slider{
+
+    margin-top: 0;
+  
+    &__card-img{
+      margin: 0 auto;
+    }
+
+    &__title{
+      margin-right: 15px;
+      font-size: 26px;
+      line-height: 28px;
+      color: #202454;
+    }
+
+    &__navBtns{
+      display: none;
+    }
+
+  }
+}
+
+@media(max-width: 870px){
+
+  .slider__top{
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .slider__title{
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .slider__wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 650px){
+  .slider__title{
+    text-align: start;
+  }
+
+  .slider__top{
+    justify-content: start;
+  }
+}
+
+@media(max-width: 580px){
+  .slider__wrapper{
+    max-width: 300px;
+  }
+
+  .slider__top{
+    justify-content: center;
+  }
+
+  .slider__title{
+    text-align: center;
+    font-size: 26px;
+    line-height: 28px;
+    
+  }
+
+  @media(max-width: 445px){
+
+    .slider__title{
+      font-size: 18px;
+      line-height: 23px;
+      
+    }
+  }
+}

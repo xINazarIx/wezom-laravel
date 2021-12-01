@@ -1,0 +1,31 @@
+.info{
+  display: flex;
+  align-items: center;
+
+  &__item{
+    display: flex;
+  }
+
+  &__item + &__item{
+    margin-left: 16px;
+  }
+
+  &__link{
+    font-size: 14px;
+    line-height: 16px;
+    color: #7B94B0;
+    transition: all .3s;
+    opacity: .8;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__img{
+    margin-right: 4px;
+    width: 10px;
+    height: 6px;
+    stroke: #7B94B0;
+  }
+}

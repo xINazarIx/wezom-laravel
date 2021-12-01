@@ -1,0 +1,15 @@
+.showMore{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #E77E42;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #E77E42;
+  transition: all .3s;
+  opacity: .85;
+
+  &:hover{
+    opacity: 1;
+  }
+}

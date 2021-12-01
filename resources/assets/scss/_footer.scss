@@ -1,0 +1,278 @@
+.footer{
+  padding-top: 56px;
+  background-color: #245420;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+
+  &__top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+
+  &__logo-text{
+    margin-top: 3px;
+    opacity: .4;
+  }
+
+  &__connections{
+    display: flex;
+  }
+
+  &__connection:first-child{
+    margin-right: 47px;
+  }
+
+  &__btnUp{
+  margin-left: 60px;
+  }
+
+  &__main{
+    padding-top: 20px;
+    display: flex;
+    color: rgba(255, 255, 255, .6);
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__left-list{
+    white-space: nowrap;
+    margin-top: 47px;
+    margin-right: 157px;
+    width: 210px;
+  }
+
+  &__left-item{
+    margin-bottom: 12px;
+  }
+
+  &__left-link{
+    transition: all .4s;
+  }
+
+  &__left-link:hover{
+    color: white;
+  }
+
+  &__infoBoxes{
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 1062px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+  }
+
+  &__infoBoxes-box{
+    width: 220px;
+  }
+
+  &__infoBoxes-box:nth-child(3){
+    margin-right: 120px;
+  }
+
+  &__infoBoxes-tel{
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #10E17D;
+  }
+
+  &__infoBoxes-info{
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  &__infoBoxes-email{
+    margin-top: 15px;
+    color: white;
+    transition: all .3s;
+  }
+
+  &__infoBoxes-email:hover{
+    opacity: .7;
+  }
+
+  &__bottom{
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom-text{
+    color: rgba(255, 255, 255, .4);
+    transition: all .5s;
+  }
+
+  &__bottom-text:hover{
+    color: rgba(255, 255, 255, 1)
+  }
+
+  &__bottom-text span{
+    color: white;
+    font-size: 14px;
+    font-family: 'IBM-Plex-Sans', sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+}
+
+
+@media(max-width: 1475px){
+  .footer__logo{
+    text-align: center;
+  }
+  .footer__left-list{
+    margin-right: 50px;
+  }
+
+  .footer__infoBoxes{
+    max-width: 900px;
+  }
+
+  .footer__infoBoxes-box:nth-child(3){
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 1190px){
+  .footer__infoBoxes{
+    max-width: 750px;
+  }
+}
+
+@media(max-width: 1050px){
+
+  .footer{
+    position: relative;
+  }
+ 
+  .footer__btnUp{
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+  }
+
+  .footer__left-list{
+    margin-top: 0;
+    margin-right: 0;
+  }
+  
+  .footer__main{
+    padding-top: 50px;
+    flex-wrap: wrap;
+  }
+
+
+  .footer__left-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+
+
+  .footer__left-item:nth-child(3){
+    margin-right: 140px;
+  }
+
+  .footer__right{
+    width: 100%;
+  }
+
+  .footer__infoBoxes{
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .footer__bottom-text{
+    order: 1;
+  }
+
+  .footer__payment{
+    order: 2;
+  }
+
+  .footer__btnUp-second{
+    order: 3;
+  }
+
+}
+
+@media(max-width: 800px){
+  .footer__top{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__logo{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer__social{
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer__left-list{
+    text-align: center;
+    display: block;
+  }
+
+  .footer__left-item:nth-child(3){
+    margin-right: 0;
+  }
+
+  .footer__infoBoxes{
+    display: none;
+  }
+}
+
+@media(max-width: 660px){
+  .footer__bottom{
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer__payment{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .footer__bottom-text{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer__btnUp{
+    right: 40%;
+  }
+}
+
+@media(max-width: 660px){
+  .footer__connections{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__connection{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .footer__connection:first-child{
+    margin-right: 0;
+  }
+}

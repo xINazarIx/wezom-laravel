@@ -1,0 +1,238 @@
+.burgerMask{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  top: 0;
+  left: -100%;
+  background-color: rgba(0, 0, 0, .4);
+  transition: all .1s;
+}
+
+.burgerMask--active{
+  left: 0;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+
+.burgerMenu{
+  overflow: auto;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  transition: all .4s;
+  background-color: rgba(0, 0, 0, .6);
+  box-shadow: 10px 0px 15px 0px rgba(174, 174, 174, 0.7);
+  border-right: 3px solid white;
+  backdrop-filter: blur(5px);
+
+  &--active{
+    left: 0;
+  }
+
+  &__menu{
+    padding: 15px 5px;
+    text-align: center;
+    display: block;
+    background-color: #245420;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+  }
+
+  &__menu-item + &__menu-item{
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  &__menu-link{
+    font-size: 24px;
+    color: white;
+  }
+
+  &__menu-img{
+    stroke: white;
+    width: 14px;
+    height: 10px;
+  }
+
+  &__header{
+    display: none;
+    padding: 5px 5px 10px;
+    border-bottom: 2px solid white;
+  }
+
+  &__location-text{
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px dashed white;
+  }
+
+  &__location-img{
+    fill: white;
+  }
+
+  &__languages-link{
+    color: white;
+    font-size: 14px;
+  }
+
+  &__languages-link--active{
+    background: #F4F5F8;
+    border-radius: 3px;
+    color: rgba(32, 36, 84, 1);
+    font-weight: 700;
+  }
+
+  &__info,
+  &__consultation{
+    display: none;
+  }
+
+  &__info{
+    padding: 20px 5px 20px 10px;
+    border-bottom: 2px solid #fff;
+  }
+
+  &__info-item + &__info-item{
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  &__info-link{
+    color: white;
+    font-size: 24px;
+  }
+
+  &__info-img{
+    stroke: white;
+    width: 14px;
+    height: 10px;
+  }
+
+  &__consultation{
+    padding: 15px 5px 15px 10px;
+    border-bottom: 2px solid white;
+  }
+
+  &__consultation-text{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__consultation-img{
+    stroke: white;
+    width: 14px;
+    height: 10px;
+  }
+
+  &__consultation-phone{
+    color: white;
+    font-size: 20px;
+  }
+
+  &__userIcons{
+    display: none;
+    padding: 15px 5px 15px 10px;
+    border-bottom: 2px solid #fff;
+  }
+
+  &__userIcons-img{
+    stroke: white;
+  }
+
+  &__infoBoxes{
+    display: none;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #245420;
+  }
+
+  &__infoBoxes-box{
+    padding: 10px;
+  }
+
+  &__infoBoxes-box + &__infoBoxes-box{
+    border-top: 2px solid white;
+  }
+
+  &__infoBoxes-info{
+    color: white;
+  }
+
+  &__infoBoxes-email{
+    color: white;
+  }
+
+  &__infoBoxes-text{
+    color: rgba(255, 255, 255, .6)
+  }
+
+  &__infoBoxes-tel{
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #10E17D;
+  }
+}
+
+
+@media(max-width:800px){
+  .burgerMenu__infoBoxes{
+    display: block;
+  }
+}
+
+@media(max-width:850px){
+  .burgerMenu{
+    width: 50%;
+
+    &__header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #245420;
+    }
+
+    &__info,
+    &__consultation{
+      display: block;
+    }
+
+    &__menu{
+      padding-left: 10px;
+      background-color: transparent;
+      text-align: left;
+      border-top: none;
+    }
+  }
+}
+
+@media(max-width:710px){
+  .burgerMenu__userIcons{
+    display: block;
+  }
+}
+
+@media(max-width:600px){
+  .burgerMenu{
+    width: 72%;
+  }
+
+}
+
+@media(max-width:435px){
+  .burgerMenu__menu-link{
+    font-size: 18px;
+  }
+
+  .burgerMenu__info-link{
+    font-size: 20px;
+  }
+}

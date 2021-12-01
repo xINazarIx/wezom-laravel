@@ -1,0 +1,25 @@
+.infoBoxes{
+  display: none;
+
+  &__title{
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 23px;
+    margin-bottom: 30px;
+  }
+
+  &__item{
+    margin-bottom: 15px;
+  }
+
+  &__link{
+    transition: all .5s;
+    color: white;
+
+    &:hover{
+      color: white;
+    }
+  }
+}
+

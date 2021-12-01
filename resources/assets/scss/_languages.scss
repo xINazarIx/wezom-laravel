@@ -1,0 +1,35 @@
+.languages{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+
+  &__link{
+    width: 31px;
+    height: 20px;
+    padding: 3px;
+    transition: all .3s;
+    color: #7B94B0;
+
+    &:hover{
+      background: #F4F5F8;
+      border-radius: 3px;
+      color: rgba(32, 36, 84, 1);
+      font-weight: 700;
+
+    }
+  }
+
+  &__link--active{
+    background-color: rgba(244, 245, 248, 1);
+    font-weight: 700; 
+    border-radius: 3px;
+    color: #202454;
+
+    &:hover{
+      background-color: rgba(244, 245, 248, 1); 
+      border-radius: 3px;
+      color: #202454;
+    }
+  }
+}
