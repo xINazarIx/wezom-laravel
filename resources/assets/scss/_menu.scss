@@ -195,3 +195,15 @@
     }
   }
 }
+
+@media(max-width: 1840px){
+  .menu{
+    &__sub-menu-boxes-dog{
+      display: none;
+    }
+
+    &__sub-menu-boxes-bunner{
+      left: 230px;
+    }
+  }
+}

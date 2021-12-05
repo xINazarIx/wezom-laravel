@@ -2,8 +2,20 @@
   overflow: hidden;
 }
 
+.wrapper{
+  display: flex;
+	flex-direction: column;
+  min-height: 100%;
+
+}
+
+.main{
+  min-height: calc(100vh - 70px);
+}
+
 .container{
   max-width: 1450px;
   padding: 0 20px;
   margin: 0 auto;
 }
+
