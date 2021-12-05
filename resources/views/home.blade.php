@@ -1687,7 +1687,7 @@
     </div>
   </div>
 
-  <div class="useful">
+  <!-- <div class="useful">
     <div class="container">
       <div class="useful__inner">
         <div class="useful__find">
@@ -1792,9 +1792,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <div class="benefits">
+  <div class="benefits">
     <div class="container">
       <div class="benefits__inner">
         <div class="benefits__items">
@@ -1833,7 +1833,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="description">
     <div class="container">
