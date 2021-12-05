@@ -1687,10 +1687,10 @@
     </div>
   </div>
 
-  <!-- <div class="useful">
+  <div class="useful">
     <div class="container">
       <div class="useful__inner">
-        <div class="useful__find">
+        <!-- <div class="useful__find">
           <div class="useful__find-subtitle">Объявления о продаже</div>
             <img  class="js-lazy-load fade-in" data-zzload-source-img="assets/images/paw.png" data-zzload-source-srcset="assets/images/paw.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
           <div class="useful__find-title">Найди друга</div>
@@ -1720,7 +1720,7 @@
               <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
             </svg>
           </div>
-        </div>
+        </div> -->
         <div class="useful__materials">
           <div class="useful__materials-inner">
             <div class="useful__materials-title">Полезные материалы</div>
@@ -1792,7 +1792,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="benefits">
     <div class="container">
