@@ -1721,7 +1721,7 @@
             </svg>
           </div>
         </div>
-        <div class="useful__materials">
+        <!-- <div class="useful__materials">
           <div class="useful__materials-inner">
             <div class="useful__materials-title">Полезные материалы</div>
             <div class="useful__materials-header">
@@ -1789,7 +1789,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
