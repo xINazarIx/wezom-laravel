@@ -1692,7 +1692,7 @@
       <div class="useful__inner">
         <div class="useful__find">
           <div class="useful__find-subtitle">Объявления о продаже</div>
-            <!-- <img  class="useful__find-paw js-lazy-load fade-in" data-zzload-source-img="assets/images/paw.png" data-zzload-source-srcset="assets/images/paw.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#"> -->
+            <img class="useful__find-paw js-lazy-load fade-in" data-zzload-source-img="assets/images/paw.png" data-zzload-source-srcset="assets/images/paw.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
           <div class="useful__find-title">Найди друга</div>
           <div class="useful__find-text">Ищете питомца? Посмотрите сотни объявлений от проверенных разводителей.</div>
           <div class="useful__find-images">
