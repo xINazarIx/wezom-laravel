@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
 
+  &__item{
+    max-width: 84px;
+    max-height: 32px;
+  }
+
   &__item + &__item{
     margin-left: 25px;
   }

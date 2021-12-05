@@ -1280,6 +1280,10 @@ img.mfp-img {
   display: flex;
   align-items: center;
 }
+.payment__item {
+  max-width: 84px;
+  max-height: 32px;
+}
 .payment__item + .payment__item {
   margin-left: 25px;
 }
@@ -1697,7 +1701,7 @@ img.mfp-img {
   padding: 30px;
   border: 1px solid #E0E0E0;
   border-radius: 12px;
-  width: 100%;
+  width: 260px;
   height: 260px;
   transition: all 0.5s;
   margin-bottom: 16px;

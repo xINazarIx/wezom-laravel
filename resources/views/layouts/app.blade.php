@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="{{mix('assets/css/style.css')}}">
 </head>
 <body>
-  @include('inc.header')
 
+    @include('inc.header')
   <div class="wrapper">
     <div class="main">
       @yield('content')
