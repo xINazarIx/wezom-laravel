@@ -1690,12 +1690,12 @@
   <div class="useful">
     <div class="container">
       <div class="useful__inner">
-        <!-- <div class="useful__find">
+        <div class="useful__find">
           <div class="useful__find-subtitle">Объявления о продаже</div>
             <img  class="useful__find-paw js-lazy-load fade-in" data-zzload-source-img="assets/images/paw.png" data-zzload-source-srcset="assets/images/paw.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
           <div class="useful__find-title">Найди друга</div>
           <div class="useful__find-text">Ищете питомца? Посмотрите сотни объявлений от проверенных разводителей.</div>
-          <div class="useful__find-images">
+          <!-- <div class="useful__find-images">
             <a class="useful__find-link" href='#' target="_blank">
               <img  class="useful__find-img js-lazy-load fade-in" data-zzload-source-img="assets/images/pets-1.jpg" data-zzload-source-srcset="assets/images/pets-1.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
             </a>
@@ -1714,13 +1714,13 @@
             <a class="useful__find-link" href='#' target="_blank">
               <img  class="useful__find-img js-lazy-load fade-in" data-zzload-source-img="assets/images/pets-6.jpg" data-zzload-source-srcset="assets/images/pets-6.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
             </a>
-          </div>
+          </div> -->
           <div class="btn useful__find-btn">Все объявления
             <svg class='useful__find-btn-svg' fill='none' height='13px' width='9px' stroke='white' stroke-width='2'>
               <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
             </svg>
           </div>
-        </div> -->
+        </div>
         <div class="useful__materials">
           <div class="useful__materials-inner">
             <div class="useful__materials-title">Полезные материалы</div>
