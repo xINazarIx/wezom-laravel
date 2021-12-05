@@ -1687,7 +1687,7 @@
     </div>
   </div>
 
-  <div class="useful">
+  <!-- <div class="useful">
     <div class="container">
       <div class="useful__inner">
         <div class="useful__find">
@@ -1876,6 +1876,6 @@
         <button class="showMore showMore--js description__showMore" data-options="hidden">Показать все</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
 @endsection
