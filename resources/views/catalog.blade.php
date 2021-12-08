@@ -1,3 +1,20 @@
+<?php 
+
+  $cards = [
+    ['Корм', 'assets/images/catalog-1.jpeg', ['Сухой корм','Консервы', 'Ветеринарные диеты', 'Заменители молока']],
+    ['Лакомства', 'assets/images/catalog-2.jpeg', ['Кости','Печенье', 'Для дрессировки', 'Сушеные лакомства']],
+    ['Игрушки', 'assets/images/catalog-3.jpeg', ['Интерактивные','Удочки и дразнилки', 'Мышки', 'Мячики']],
+    ['Уход', 'assets/images/catalog-4.jpeg', ['Средства по уходу','Интсрументы для груминга', 'Туалеты и пелёнки']],
+    ['Здоровье', 'assets/images/catalog-5.jpeg', ['Средства от блох и клещей','Витамины и добавки','Средства от глиство','Ветеринарные препараты']],
+    ['Косметика', 'assets/images/catalog-6.jpeg', ['Шампуни','Духи','Кондиционеры и спреи','Профессиональная и выставочная косметика']],
+    ['Одежда и обувь', 'assets/images/catalog-7.jpeg', ['Комбенизоны','Костюмы','Дождевики','Свитера']],
+    ['Амуниция', 'assets/images/catalog-8.jpeg', ['Поводки', 'Ошейники', 'Шлейки','Рулетки','Намордники']],
+    ['Товары для дома', 'assets/images/catalog-9.jpeg', ['Домики','Когтеточки','Спальные места','Мистки и поилки']],
+    ['Путешествия', 'assets/images/catalog-10.jpeg', ['Сумки и переноски','Автоаксессуары']]
+  ]
+
+?>
+
 @extends('layouts.app')
 
 @section('content')
@@ -45,295 +62,49 @@
   <div class="sections">
     <div class="container">
       <div class="sections__inner">
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-1.jpg" data-zzload-source-srcset="assets/images/catalog-1.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Корм</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Сухой корм</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Консервы</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Ветеринарные диеты</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Заменители молока</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-2.jpg" data-zzload-source-srcset="assets/images/catalog-2.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Лакомства</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Кости</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Печенье</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Для дрессировки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Сушеные лакомства</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-3.jpg" data-zzload-source-srcset="assets/images/catalog-3.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Игрушки</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Интерактивные</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Удочки и дразнилки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Мышки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Мячики</a>
-            </div>
-            <div class="sections__showMore">
-              <a class="sections__showMore-link" href="">Больше категорий</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-4.jpg" data-zzload-source-srcset="assets/images/catalog-4.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Уход</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Сухой корм</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Консервы</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Ветеринарные диеты</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Заменители молока</a>
-            </div>
-          </div>
-        </div>
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-5.jpg" data-zzload-source-srcset="assets/images/catalog-5.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Здоровье</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Средства от блох и клещей</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Витамины и добавки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Средства от глистов</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Ветеринарные препараты</a>
-            </div>
-          </div>
-        </div>
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-6.jpg" data-zzload-source-srcset="assets/images/catalog-6.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Косметика</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Шампуни</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Духи</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Кондиционеры и спреи</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Профессиональная и выставочная косметика</a>
-            </div>
-          </div>
-        </div>
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-7.jpg" data-zzload-source-srcset="assets/images/catalog-7.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Одежда и обувь</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Комбинезоны</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Костюмы</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Дождевики</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Свитера</a>
-            </div>
-            <div class="sections__showMore">
-              <a class="sections__showMore-link" href="">Больше категорий</a>
-            </div>
-          </div>
-        </div>
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-8.jpg" data-zzload-source-srcset="assets/images/catalog-8.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Амуниция</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Поводки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Ошейники</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Шлейки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Рулетки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Намордники</a>
-            </div>
-            <div class="sections__showMore">
-              <a class="sections__showMore-link" href="">Больше категорий</a>
-            </div>
-          </div>
-        </div>
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-9.jpg" data-zzload-source-srcset="assets/images/catalog-9.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Товары для дома</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Домики</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Когтеточки</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Спальные места</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Миски и поилки</a>
-            </div>
-          </div>
-        </div>
-        <div class="sections__item">
-          <div class="sections__card" href='#'>
-            <a class="sections__img-link" href="#">
-              <img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-10.jpg" data-zzload-source-srcset="assets/images/catalog-10.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-            </a>
-          
-            <div class="sections__card-description">Путешествия</div>
-            <a class="sections__card-watchAll" href='#'>Смотреть все
-              <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
-              </svg>
-            </a>
-          </div>
-          <div class="sections__links">
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Сумки и переноски</a>
-            </div>
-            <div class="sections__links-item">
-              <a class="sections__link" href="#">Автоаксессуары</a>
-            </div>
-          </div>
-        </div>
+        <?php 
+          foreach($cards as $card){
+                ?>
+                  <div class="sections__item">
+                    <div class="sections__card" href='#'>
+                      <a class="sections__img-link" href="#">
+                        <?php echo
+                          '<img class="sections__card-img js-lazy-load fade-in" data-zzload-source-img="'.$card[1].'" data-zzload-source-srcset="'.$card[1].'" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;" alt="#">'
+                        ?>
+                      </a>
+                  
+                      <div class="sections__card-description"><?php echo $card[0]?></div>
+                      <a class="sections__card-watchAll" href='#'>Смотреть все
+                        <svg class="sections__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
+                          <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="sections__links">
+                      <?php
+                        foreach($card[2] as $link){
+                      ?>
+                            <div class="sections__links-item">
+                              <a class="sections__link" href="#"><?php echo $link?></a>
+                            </div>
+                      <?php
+                        }
+                      ?>
+                      <?php
+                        $length = count(($card[2]));
+                        if($length > 4){
+                          echo 
+                          '<div class="sections__showMore">
+                            <a class="sections__showMore-link" href="">Больше категорий</a>
+                          </div>';
+                        };
+                      ?>
+                    </div>
+                  </div>
+                <?php  
+          }
+        ?>
       </div>
     </div>
   </div>

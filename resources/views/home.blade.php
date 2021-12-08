@@ -1,7 +1,8 @@
+
 @extends('layouts.app')
 
 @section('content')
-  
+
   <div class="slider">
     <div class="container">
       <div class="slider__inner">
