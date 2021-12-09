@@ -1,0 +1,35 @@
+.breadcrumbs{
+  display: flex;
+  align-items: center;
+  padding: 19px 0 43px;
+
+  &__link{
+    margin-right: 8px;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    color: #7B94B0;
+    transition: opacity .4s;
+
+    &:hover{
+      opacity: .7;
+    }
+
+    &:last-child{
+      color: #B6B7C4;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__arrow{
+    width: 6px;
+    height: 10px;
+    stroke: #E0E0E0;
+    stroke-width: 2px;
+    fill: none;
+    margin-right: 8px;
+  }
+}

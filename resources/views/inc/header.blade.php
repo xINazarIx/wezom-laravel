@@ -55,7 +55,7 @@
             <div class="menu__sub-menu">
               <div class="menu__sub-menu-links">
                 <div class="menu__sub-menu-item">
-                  <a class="menu__sub-menu-link" href="#">
+                  <a class="menu__sub-menu-link" href="/goods">
                     <svg class="menu__sub-menu-icon" fill='none'>
                       <use xlink:href="assets/images/spritemap.svg#sprite-submenu-icon-1"></use>
                     </svg>

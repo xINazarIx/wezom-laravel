@@ -1,0 +1,138 @@
+.curtain{
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #E0E0E0;
+  position: relative;
+  
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title{
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #202454;
+
+  }
+
+  &__arrow-up{
+    transform: rotate(180deg);
+    cursor: pointer;
+    height: 8px;
+    width: 16px;
+    transition: all .2s;
+  }
+
+  &__arrow-down{
+    transform: rotate(0);
+    cursor: pointer;
+    height: 8px;
+    width: 16px;
+    transition: all .4s;
+  }
+
+  &__checkboxes{
+    margin-top: 24px;
+    transition: all .1s;
+  }
+
+  &__checkbox{
+    margin-bottom: 12px;
+
+    &--hidden{
+      display: none;
+    }
+  }
+
+  &__price-inputs{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    span{
+      width: 8px;
+      height: 1px;
+      background-color: #202454;
+      margin: 0 8px;
+    }
+  }
+
+  &__price-input{
+    width: 84px;
+    height: 48px;
+    padding: 16px 12px;
+    background-color: #F4F5F8;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    outline: none;
+
+    &::placeholder{
+      color: #202454;
+      font-family: "Roboto";
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__price-btn{
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: #E77E42;
+    border-radius: 3px;
+    color: white;
+    margin-left: 8px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    transition: opacity .3s;
+
+    &:hover{
+      opacity: .8;
+    }
+  }
+
+  .noUi-target{
+    background-color: #E0E0E0;
+    border: none;
+    box-shadow: none;
+    height: 3px;
+  }
+
+  .noUi-connect{
+    background-color: #E77E42;
+  }
+
+  .noUi-handle::after,
+  .noUi-handle::before{
+    display: none;
+  }
+
+  .noUi-handle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: none;
+    background-color: white;
+    border: 6px solid #E77E42;
+    top: -8px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+

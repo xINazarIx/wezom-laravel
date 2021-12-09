@@ -12,4 +12,10 @@
   &:hover{
     opacity: 1;
   }
+
+  &-link{
+    cursor: pointer;
+    color: #E77E42;
+    font-weight: 700;
+  }
 }

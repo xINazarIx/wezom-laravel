@@ -38,7 +38,7 @@
     height: 80px;
     margin-bottom: 56px;
 
-    background-image: url('../images/catalog-avatar-header-bg.jpg');
+    background-image: url('../../images/catalog-avatar-header-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,6 +84,39 @@
       color: white;
       background-color: #E77E42;
     }
+  }
+
+  &__name{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #202454;
+    line-height: 21px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 4px;
+
+    &:hover{
+      .avatar__arrow-down{
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  &__arrow-down{
+    transition: all .4s;
+    margin-left: 8px;
+  }
+
+  &__dog-description{
+    max-width: 186px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #7B94B0;
   }
 }
 

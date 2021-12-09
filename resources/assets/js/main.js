@@ -6,5 +6,7 @@ import './zz-load';
 import './buttonShowMore';
 import './searchPopup';
 import './buttonToUp';
+import './goodsCurtain';
+import './rangeSlider';
 
 

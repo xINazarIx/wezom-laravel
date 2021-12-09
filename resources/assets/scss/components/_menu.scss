@@ -198,12 +198,38 @@
 
 @media(max-width: 1840px){
   .menu{
+
+    &__sub-menu-links{
+      min-height: 0;
+    }
+
+    &__sub-menu-boxes{
+      padding: 32px 40px;
+      padding-bottom: 200px;
+    }
+
+    &__sub-menu-box{
+      margin-right: 20px;
+    }
+
     &__sub-menu-boxes-dog{
       display: none;
     }
 
     &__sub-menu-boxes-bunner{
       left: 230px;
+    }
+  }
+}
+
+@media(max-width: 1560px){
+  .menu{
+    &__sub-menu-boxes{
+      padding-bottom: 32px;
+    }
+
+    &__sub-menu-boxes-bunner{
+      display: none;
     }
   }
 }
