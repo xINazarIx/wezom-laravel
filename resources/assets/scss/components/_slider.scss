@@ -81,6 +81,10 @@
     top: 43px;
   }
 
+  &__widget:nth-child(3){
+    top: 70px;
+  }
+
   &__description{
     position: relative;
     min-height: 150px;

@@ -4,7 +4,8 @@
   position: fixed;
   top: 100px;
   left: 0;
-  right: 0; 
+  right: 0;
+  z-index: 100;
   max-width: 1420px;
   margin: 0 auto;
   background-color: #fff;
@@ -55,7 +56,169 @@
     line-height: 16px;
     text-align: center;
     color: #7B94B0;
+
+    &--disabled{
+      display: none;
+    }
   }
+
+  &__content{
+    display: none;
+  }
+
+  &__content-inner{
+    display: flex;
+  }
+
+  &__menu{
+    width: 285px;
+    margin-right: 80px;
+  }
+
+  &__menu-item{
+    cursor: pointer;
+    border-top: 1px solid #E0E0E0;
+    transition: all .4s;
+
+    &:hover{
+      background-color: rgba(#3A9EFD, .05);
+    }
+  }
+
+  &__menu-item:last-child{
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  &__menu-item-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    color: #202454;
+    padding: 12px 10px;
+  }
+
+  &__menu-links{
+    display: none;
+    background-color: white;
+  }
+
+  &__menu-link{
+    width: 100%;
+    padding: 12px 5px 12px 20px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #202454;
+    border-top: 1px solid #E0E0E0;
+    transition: all .4s;
+
+    &:hover{
+      background-color: rgba(#E0E0E0, .3);
+    }
+  }
+
+  &__menu-item--active{
+    background-color: rgba(#3A9EFD, .05);
+  }
+
+  &__menu-item--active &__menu-links{
+    display: block;
+  }
+
+  &__goods{
+    display: flex;
+  }
+
+  &__goods-box{
+    width: 325px;
+    margin-right: 36px;
+  }
+
+  &__goods-title{
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #202454;
+    margin-bottom: 8px;
+  }
+
+  &__goods-more{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #2C9323;
+    margin-top: 16px;
+    transition: all .4s;
+
+
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+  &__good{
+    display: flex;
+    margin-top: 16px;
+  }
+
+
+  &__good-img{
+    margin-right: 8px;
+    width: 56px;
+    height: 56px;
+    transition: all .4s;
+
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+  &__good-description-text{
+
+    max-width: 260px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #202454;
+    margin-bottom: 8px;
+    transition: all .4s;
+
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+  &__good-last-price{
+    font-size: 13px;
+    line-height: 140%;
+    text-decoration-line: line-through;
+    color: #7B94B0;
+    opacity: 0.5;
+  }
+
+  &__good-price{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 140%;
+    color: #202454;
+    margin-left: 4px;
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: center;
+    max-width: 234px;
+    padding: 14px 5px;
+    margin: 42px auto 54px;
+
+    &:hover{
+      border: 1px solid #E77E42;
+    }
+  }
+
 }
 
 @media(max-width: 900px){

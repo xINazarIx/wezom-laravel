@@ -33,10 +33,15 @@
     font-size: 14px;
     line-height: 16px;
     color: #202454;
+    transition: all .4s;
 
     span{
       margin-left: 4px;
       color: #7B94B0;
+    }
+
+    &:hover{
+      opacity: .7;
     }
   }
 

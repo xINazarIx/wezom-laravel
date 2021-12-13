@@ -314,6 +314,11 @@
         </div>
 
       </div>
+
+      <div class="goods__content">
+        @include('inc.benefits')
+        @include('inc.description')
+      </div>
     </div>
   </div>
 @endsection

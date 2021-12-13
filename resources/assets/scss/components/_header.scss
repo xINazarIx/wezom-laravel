@@ -55,32 +55,43 @@
 
   .header{
 
-    &__burger{
-      display: block;
-    }
-
     &__menu{
-      display: none;
-    }
-
-    &__userIcons{
-      margin-right: 70px;
-    }
-
-    &__logo{
       margin-right: auto;
     }
+    &__menu-item + &__menu-item{
+      margin-left: 20px;      
+    }
 
     &__logo{
-      margin-right: 25px;
+      margin-right: 20px;
+    }
+
+    &__search{
+      margin-right: 0;
+    }
+
+  }
+
+}
+
+@media(max-width: 1130px){
+  .header{
+    &__menu{
+      display: none;
     }
 
     &__search{
       margin-right: auto;
     }
 
-  }
+    &__userIcons{
+      margin-right: 80px;
+    }
 
+    &__burger{
+      display: block;
+    }
+  }
 }
 
 @media(max-width: 850px){

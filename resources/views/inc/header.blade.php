@@ -229,9 +229,7 @@
                   </a>
                 </div>
               </div>
-              <div class="menu__sub-menu-content">
-                <div class="menu__sub-menu-title">Нужно выбрать питомца</div>
-              </div>
+              <div class="menu__sub-menu-content"></div>
             </div>
           </li>
           <li class="menu__item header__menu-item header__menu-item--menu">

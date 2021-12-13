@@ -233,3 +233,12 @@
     }
   }
 }
+
+@media(max-width: 1260px){
+  .menu{
+    &__link{
+      font-size: 16px;
+    }
+  }
+}
+
