@@ -101,7 +101,13 @@
   <div class="sections">
     <div class="container">
       <div class="sections__inner">
-        @include('inc.catalog-card')   
+        <?php 
+          foreach($catalogCards as $card){
+        ?>
+          @include('inc.catalog-card')
+        <?php  
+        };
+        ?>
       </div>
     </div>
   </div>
