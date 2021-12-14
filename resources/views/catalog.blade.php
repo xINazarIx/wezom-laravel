@@ -97,7 +97,7 @@
         <div class="catalog__links">
 
         @foreach($catalogLinks as $link)
-          <a class="catalog__link" href="<?php echo $link['url']?>">{{$link['title']}}</a>   
+          <a class="catalog__link" href="{{$link['url']}}">{{$link['title']}}</a>   
         @endforeach
 
         </div>
