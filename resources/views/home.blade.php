@@ -112,7 +112,11 @@
         </div>
         <div class="slider__wrapper slider__wrapper--active" id='slider__items--dog' data-check='true'>
           <div class="slider__items">
-            @include('inc.slider-card')
+
+           <?php foreach($sliderCards as $card){ ?>
+              @include('inc.slider-card')
+            <?php }; ?>
+            
           </div>
           <div class="slider__navBtns">
             <button class="navBtn slider__navBtn slider__navBtn-prev">

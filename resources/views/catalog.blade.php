@@ -51,8 +51,20 @@
       'img' => 'assets/images/catalog-10.jpeg',
       'links' => ['Сумки и переноски' => '#', 'Автоакссуары' => '#']
     ],
-  ]
+  ];
 
+  $catalogLinks = [
+    ['title' => 'Корм', 'url' => '#'],
+    ['title' => 'Лакомства', 'url' => '#'],
+    ['title' => 'Игрушки', 'url' => '#'],
+    ['title' => 'Уход', 'url' => '#'],
+    ['title' => 'Здоровье', 'url' => '#'],
+    ['title' => 'Косметика', 'url' => '#'],
+    ['title' => 'Одежда и обувь', 'url' => '#'],
+    ['title' => 'Амуниция', 'url' => '#'],
+    ['title' => 'Товары для дома', 'url' => '#'],
+    ['title' => 'Путешествия', 'url' => '#'],
+  ];
 ?>
 
 @extends('layouts.app')
@@ -84,13 +96,9 @@
         <div class="catalog__subtitle">Товары и аксессуары для собак и щенков </div>
         <div class="catalog__links">
 
-        <?php 
-          foreach($catalogCards as $card){
-            ?>
-              <a class="catalog__link" href="<?php echo $card['section']['link']?>"><?php echo $card['section']['title']?></a>   
-            <?php  
-          };
-        ?>
+        @foreach($catalogLinks as $link)
+          <a class="catalog__link" href="<?php echo $link['url']?>">{{$link['title']}}</a>   
+        @endforeach
 
         </div>
       </div>
@@ -101,13 +109,9 @@
   <div class="sections">
     <div class="container">
       <div class="sections__inner">
-        <?php 
-          foreach($catalogCards as $card){
-        ?>
+        @foreach($catalogCards as $card)
           @include('inc.catalog-card')
-        <?php  
-        };
-        ?>
+        @endforeach
       </div>
     </div>
   </div>
