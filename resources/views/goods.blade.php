@@ -317,7 +317,7 @@
 
       <div class="goods__content">
         @include('inc.benefits')
-        @include('inc.description')
+        @include('inc.blog')
       </div>
     </div>
   </div>

@@ -12,10 +12,18 @@
     </a>
   </div>
   <div class="catalog-item__links">
+
     @foreach($card['links'] as $title => $link)
       <div class="catalog-item__links-item">
         <a class="catalog-item__link" href="{{$link}}">{{$title}}</a>
       </div>
     @endforeach
+
+    @if (count($card['links']) > 4)
+      <a class="showMore showMore--solid" href="#">
+        Показать больше
+      </a>
+    @endif
+  
   </div>
 </div>

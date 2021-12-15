@@ -1,4 +1,5 @@
 .showMore{
+  display: inline-block;
   cursor: pointer;
   font-weight: bold;
   font-size: 12px;
@@ -17,5 +18,9 @@
     cursor: pointer;
     color: #E77E42;
     font-weight: 700;
+  }
+
+  &--solid{
+    border-bottom: 1px solid #E77E42;
   }
 }

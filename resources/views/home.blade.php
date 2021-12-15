@@ -113,9 +113,9 @@
         <div class="slider__wrapper slider__wrapper--active" id='slider__items--dog' data-check='true'>
           <div class="slider__items">
 
-           <?php foreach($sliderCards as $card){ ?>
-              @include('inc.slider-card')
-            <?php }; ?>
+          @foreach($sliderCards as $card)
+            @include('inc.slider-card', $card)
+          @endforeach
             
           </div>
           <div class="slider__navBtns">
@@ -236,7 +236,7 @@
                 <a class="useful__materials-link" href="#" target="_blank">Обзор товаров</a>
                 <a class="useful__materials-link" href="#" target="_blank">Лайфхаки</a>
               </div>
-              <a class="goTo useful__materials-goTo" href='#' target="_blank">Перейти в блог</a>
+              <a class="btn--secondary" href='#' target="_blank">Перейти в блог</a>
             </div>
             <div class="useful__materials-items">
               <div class="useful__materials-item">
@@ -299,6 +299,6 @@
   </div>
 
   @include('inc.benefits')
-  @include('inc.description')
+  @include('inc.blog')
 
 @endsection

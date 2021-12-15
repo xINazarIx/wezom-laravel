@@ -1,7 +1,13 @@
 import $ from 'jquery';
+import { after } from 'lodash';
 
-$('.showMore--js').on('click', function(){
-  $('.description__box--hidden').css('height', '100%')
-  $('.description__box--hidden').css('opacity', '1')
-  $(this).css('display', 'none')
+$('.blog__inner').children().each(function(i){
+  i >= 4 ? $(this).css('display', 'none') : $(this).css('display', 'block') 
+})
+
+$('.blog__showMore--js').on('click', function(){
+  $('.blog__inner').children().each(function(i){
+    $(this).css('display', 'block')
+  })
+  $('.blog__showMore').css('display', 'none')
 })

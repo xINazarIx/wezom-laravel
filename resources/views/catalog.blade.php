@@ -74,22 +74,7 @@
   <div class="catalog">
     <div class="container">
     <div class="catalog__inner">
-      <div class="avatar">
-        <div class="avatar__header">
-          <div class="avatar__text">Товары для</div>
-          <img class="avatar__bg js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-avatar-bg.png" data-zzload-source-srcset="assets/images/catalog-avatar-bg.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-          <a class="link__question" href="#">
-            <svg class="avatar__header-img" height='15px' width='15px' fill='white'>
-              <use xlink:href='assets/images/spritemap.svg#sprite-question'></use>
-            </svg>
-          </a>
-          <div class="avatar__img">
-          <img class="avatar__dog js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-dog-avatar.png" data-zzload-source-srcset="assets/images/catalog-dog-avatar.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-        </div>
-        </div>
-        <div class="avatar__title">У вас есть собака?</div>
-        <button class="btn avatar__btn">+ Добавить питомца</button>
-      </div>
+      @include('inc.avatar')
 
       <div class="catalog__content">
         <div class="catalog__title">Каталог товаров<br> <span>для собак</span></div>
@@ -110,13 +95,13 @@
     <div class="container">
       <div class="sections__inner">
         @foreach($catalogCards as $card)
-          @include('inc.catalog-card')
+          @include('inc.catalog-card', $card)
         @endforeach
       </div>
     </div>
   </div>
   
-  @include('inc.description')
+  @include('inc.blog')
 @endsection
 
 
