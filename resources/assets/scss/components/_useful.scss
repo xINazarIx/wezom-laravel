@@ -254,6 +254,7 @@
   .useful__materials-header{
     flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
   }
 
   .useful__materials-links{
@@ -263,7 +264,7 @@
   .useful__materials-link{
     font-size: 18px;
     padding: 2px 0 4px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .useful__materials-link:hover{

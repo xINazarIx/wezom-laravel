@@ -810,6 +810,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.blog__showMore--js').on('click',
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.blog__inner').children().each(function (i) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('display', 'block');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.blog__inner').css('padding-bottom', '36px');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.blog').css('margin-bottom', '128px');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.blog__showMore').css('display', 'none');
 });
 
