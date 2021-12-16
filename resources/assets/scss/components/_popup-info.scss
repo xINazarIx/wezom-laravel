@@ -1,0 +1,21 @@
+.popup-info{
+  position: relative;
+
+  padding: 32px 25px 32px 38px;
+  border-radius: 12px;
+  background-color: rgba($color: #3A9EFD, $alpha: .1);
+
+  &__text{
+    padding-left: 56px;
+    color: $darkBlue;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__svg{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+  }
+}

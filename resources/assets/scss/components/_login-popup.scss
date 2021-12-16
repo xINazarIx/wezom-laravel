@@ -1,187 +1,50 @@
 .login-popup{
   position: relative;
-  background-color: white;
-  padding: 32px 0;
-  
-  margin: 0 auto;
   width: 460px;
-
-
-
-  &__title{
-    padding-left: 30px;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
-    border-bottom: 1px solid #E0E0E0;
-    font-family: 'Roboto';
-    font-size: 32px;
-    line-height: 37px;
-    color: #202454;
-  }
+  margin: 0 auto;
+  background-color: white;
 
   &__inner{
-    padding: 0 30px;
+    padding: 15px 30px;
   }
 
-  &__input{
-    width: 100%;
-    padding: 16px 10px 16px 16px;
-    border: 1px solid #E0E0E0;
-    border-radius: 12px;
-    outline: none;
-    font-family: 'Roboto';
-    color: #202454;
-    margin-bottom: 32px;
-
-    &::placeholder{
-      font-family: 'Roboto';
-      font-size: 14px;
-      line-height: 16px;
-      color: #7B94B0;
-    }
+  &__label-svg-check{
+    width: 12px;
+    height: 10px;
+    stroke: $darkBlue;
+    stroke-width: 2px;
+    fill: none;
   }
 
-  &__btn{
-    margin-bottom: 24px;
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-  }
-
-  &__text{
-    font-size: 12px;
-    color: #7B94B0;
-    text-align: center;
-    position: relative;
-    margin-bottom: 25px;
-
-    &::after,
-    &::before{
-      position: absolute;
-      content: '';
-      width: 120px;
-      height: 1px;
-      top: 6px;
-      background-color: #E0E0E0;
-    }
-
-    &::after{
-      right: 0;
-    }
-
-    &::before{
-      left: 0;
-    }
-  }
-
-  &__socials{
-    margin-bottom: 26px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__social{
-    padding: 12px 0;
-    display: flex;
-    justify-content: center;
-    width: 196px;
-    border: 1px solid #2C9323;
-    border-radius: 3px;
+  &__label-svg-showPassword{
+    cursor: pointer;
+    width: 18px;
+    height: 15px;
+    fill: $darkBlue;
     transition: all .5s;
+    opacity: .2;
 
     &:hover{
-      background-color: #2C9323;
-
-      .login-popup__social-svg{
-        fill: #fff;
-      }
+      opacity: 1;
     }
   }
 
-  &__social-svg{
-    fill: #2C9323;
+  &__remaind{
+    width: 100%;
+    text-align: right;
+    margin-top: 12px;
   }
 
-  &__checkbox{
-    margin-bottom: 56px;
-    align-items: flex-start;
-  }
-
-  &__checkbox--fake{
-    width: 38px;
-  }
-
-  &__checkbox-text{
-    font-size: 12px;
-    color: #7B94B0;
-
-    span{
-      color: #202454;
-    }
-  }
-
-  &__action{
-    padding: 32px 20px 32px 38px;
-    display: flex;
-    background-color: rgba(#3A9EFD, .1);
-    border-radius: 12px
-  }
-
-  &__action-text{
+  &__remaind-link{
     font-weight: 700;
-    font-size: 16px;
-    color: #202454;
-  }
-
-  &__action-svg{
-    max-height: 32px;
-    margin-right: 30px;
-  }
-}
+    font-size: 12px;
+    line-height: 14px;
+    color: $green;
+    transition: all .4s;
 
 
-@media(max-width: 500px){
-  .login-popup{
-    max-width: 310px;
-
-    &__title{
-      padding-left: 15px;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      font-size: 22px;
-      line-height: 27px;
+    &:hover{
+      color: $darkBlue
     }
-
-    &__inner{
-      padding: 0 15px;
-    }
-
-    &__text{
-      &::after,
-      &::before{
-        width: 80px;
-      }
-    }
-
-    &__socials{
-      margin-bottom: 26px;
-      display: flex;
-      justify-content: space-around;
-    }
-  
-    &__social{
-      padding: 12px 0;
-      justify-content: center;
-      width: 126px;
-    }
-
-    &__checkbox{
-      margin-bottom: 26px;
-    }
-
-    &__action-svg{
-      display: none;
-    }
-
   }
 }

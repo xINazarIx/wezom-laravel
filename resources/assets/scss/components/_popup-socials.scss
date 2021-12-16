@@ -1,0 +1,27 @@
+.popup-socials{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &__link{
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    width: 196px;
+    border: 1px solid #2C9323;
+    border-radius: 3px;
+    transition: all .5s;
+
+    &:hover{
+      background-color: #2C9323;
+
+      .popup-socials__link-svg{
+        fill: #fff;
+      }
+    }
+  }
+
+  &__link-svg{
+    fill: #2C9323;
+  }
+}

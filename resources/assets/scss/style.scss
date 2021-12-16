@@ -1,4 +1,5 @@
 @import 'fonts.scss';
+@import 'vars.scss';
 @import 'plugins/normalize.scss';
 @import 'plugins/global.scss';
 @import 'plugins/slick.scss';
@@ -51,5 +52,13 @@
 @import 'components/_curtain.scss';
 @import 'components/_catalog-item.scss';
 @import 'components/_slider-item.scss';
+@import 'components/_popup-title.scss';
+@import 'components/_popup-input.scss';
+@import 'components/_popup-with-help.scss';
+@import 'components/_popup-socials.scss';
+@import 'components/_popup-info.scss';
+@import 'components/_popup-label.scss';
+@import 'components/_check-popup.scss';
+@import 'components/_reg-popup.scss';
 @import 'components/_login-popup.scss';
 

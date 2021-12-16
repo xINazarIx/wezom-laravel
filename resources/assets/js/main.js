@@ -1,12 +1,14 @@
 
 import './burgerMenu';
 import './homeSlider';
-import './loginPopup';
+import './magnific-popup';
 import './zz-load';
 import './buttonShowMore';
 import './searchPopup';
+import './goodsCurtain';  
 import './buttonToUp';
-import './goodsCurtain';
 import './rangeSlider';
+
+
 
 

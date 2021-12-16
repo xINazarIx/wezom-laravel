@@ -269,20 +269,20 @@
         </div>
 
         <div class="userIcons header__userIcons">
-          <a class="userIcons__btn open-popup-link" href='#login-popup'>
-              <svg class="userIcons__img header__userIcons-img" stroke='#202454' stroke-width='2' height='32px' width='30px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-user' height='27px' width='25px'></use>
-              </svg>
+          <a class="userIcons__btn open-popup-link" href='#check-popup'>
+             <svg class="userIcons__img header__userIcons-img" stroke='#202454' stroke-width='2' height='32px' width='30px'>
+               <use xlink:href='assets/images/spritemap.svg#sprite-user' height='27px' width='25px'></use>
+             </svg>
           </a>
-          <a class="userIcons__btn">
-              <svg class="userIcons__img header__userIcons-img" stroke='#202454' stroke-width='2' height='32px' width='30px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-fav'></use>
-              </svg>
+          <a class="userIcons__btn" href="#">
+            <svg class="userIcons__img header__userIcons-img" stroke='#202454' stroke-width='2' height='32px' width='30px'>
+              <use xlink:href='assets/images/spritemap.svg#sprite-fav'></use>
+            </svg>
           </a>
-          <a class="userIcons__btn">
-              <svg class="userIcons__img header__userIcons-img" stroke='#202454' stroke-width='2' height='32px' width='30px'>
-                <use xlink:href='assets/images/spritemap.svg#sprite-userBuying'></use>
-              </svg>
+          <a class="userIcons__btn" href="#">
+            <svg class="userIcons__img header__userIcons-img" stroke='#202454' stroke-width='2' height='32px' width='30px'>
+              <use xlink:href='assets/images/spritemap.svg#sprite-userBuying'></use>
+            </svg>
           </a>
         </div>
         <div class="burger burger--js header__burger">

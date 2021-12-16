@@ -1,0 +1,57 @@
+.reg-popup{
+  position: relative;
+  width: 460px;
+  margin: 0 auto;
+  background-color: white;
+
+  &__inner{
+    padding: 32px 30px;
+  }
+
+  &__back{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    &:hover{
+      .reg-popup__back-text{
+        color: $darkBlue;
+      }
+
+      .reg-popup__back-svg{
+        stroke: $darkBlue;
+      }
+    }
+  }
+
+  &__back-svg{
+    width: 5px;
+    height: 10px;
+    stroke: $grey;
+    stroke-width: 3px;
+    margin-right: 8px;
+    transition: all .4s;
+  }
+
+  &__back-text{
+    color: $grey;
+    font-size: 12px;
+    line-height: 14px;
+    transition: all .4s;
+  }
+
+  &__text{
+    margin: 24px 0;
+    color: $darkBlue;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__reg-input-text{
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey;
+    margin-bottom: 8px;
+  }
+}

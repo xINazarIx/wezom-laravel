@@ -1,0 +1,98 @@
+.popup-label{
+  display: inline-block;
+  padding: 6px 16px 8px 16px;
+  border: 1px solid $orange;
+  box-shadow: 0px 0px 10px rgba($color: $orange, $alpha: .5);
+  border-radius: 12px;
+
+  &__inner{
+    max-width: 320px;
+  }
+
+  &__phone-text{
+    margin-bottom: 5px;
+    font-size: 11px;
+    line-height: 13px;
+    color: $grey;
+  }
+
+  &__input{
+    outline: none;
+    width: 368px;
+    color: $darkBlue;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'Roboto';
+
+    &::placeholder{
+      color: $darkBlue;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: 'Roboto';
+    }
+  }
+
+  &__input--password{
+    padding: 10px 0 8px 0;
+    outline: none;
+    font-size: 18px;
+    line-height: 20px;
+    color: $grey;
+    width: 100%;
+    max-width: 300px;
+
+    &::placeholder{
+      font-size: 14px;
+      line-height: 16px;
+      color: $grey;
+    }
+  }
+
+  &__text{
+    font-size: 14px;
+    line-height: 16px;
+    color: #202454;
+  }
+
+  &__arrow-btn{
+    display: flex;
+    align-items: center;
+  }
+
+  &__svg-arrow-down{
+    width: 12px;
+    height: 6px;
+    stroke: $darkBlue;
+    stroke-width: 2px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  &--choice{
+    padding: 16px 10px 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid $lightGrey;
+    box-shadow: none;
+    transition: all .4s;
+  }
+
+  &--login{
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3A9EFD;
+    box-shadow: 0px 0px 10px rgba($color: #3A9EFD, $alpha: .5);
+  }
+
+  &--password{
+    box-shadow: none;
+    border: 1px solid $lightGrey;
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

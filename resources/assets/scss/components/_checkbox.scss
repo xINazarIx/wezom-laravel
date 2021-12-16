@@ -60,4 +60,23 @@
     display: inline-block;
     border-bottom: none;
   }
+
+  &--popup{
+    align-items: flex-start;
+    margin-bottom: 56px;
+  }
+  
+  &__fake--popup{
+    width: 38px;
+  }
+
+  &__text--popup{
+    font-size: 12px;
+    line-height: 14px;
+    color: $grey;
+
+    span{
+      color: $darkBlue;
+    }
+  }
 }

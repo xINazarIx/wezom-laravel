@@ -27,6 +27,8 @@
 
   @include('inc.burgerMenu')
   @include('inc.search-popup')
+  @include('inc.check-popup') 
+  @include('inc.reg-popup') 
   @include('inc.login-popup') 
 </body>
 <script src="{{mix('/assets/js/main.js')}}"></script>

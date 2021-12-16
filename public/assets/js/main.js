@@ -961,10 +961,10 @@ function inicializedSlider(nameSlider, prevBtn, nextBtn) {
 
 /***/ }),
 
-/***/ "./resources/assets/js/loginPopup.js":
-/*!*******************************************!*\
-  !*** ./resources/assets/js/loginPopup.js ***!
-  \*******************************************/
+/***/ "./resources/assets/js/magnific-popup.js":
+/*!***********************************************!*\
+  !*** ./resources/assets/js/magnific-popup.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -976,8 +976,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.open-popup-link').magnificPopup({
-  type: 'inline',
-  midClick: true
+  type: 'inline'
 });
 
 /***/ }),
@@ -992,12 +991,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.open-popup-link').magnificPopup(
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _burgerMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./burgerMenu */ "./resources/assets/js/burgerMenu.js");
 /* harmony import */ var _homeSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homeSlider */ "./resources/assets/js/homeSlider.js");
-/* harmony import */ var _loginPopup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loginPopup */ "./resources/assets/js/loginPopup.js");
+/* harmony import */ var _magnific_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./magnific-popup */ "./resources/assets/js/magnific-popup.js");
 /* harmony import */ var _zz_load__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zz-load */ "./resources/assets/js/zz-load.js");
 /* harmony import */ var _buttonShowMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./buttonShowMore */ "./resources/assets/js/buttonShowMore.js");
 /* harmony import */ var _searchPopup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./searchPopup */ "./resources/assets/js/searchPopup.js");
-/* harmony import */ var _buttonToUp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./buttonToUp */ "./resources/assets/js/buttonToUp.js");
-/* harmony import */ var _goodsCurtain__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./goodsCurtain */ "./resources/assets/js/goodsCurtain.js");
+/* harmony import */ var _goodsCurtain__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./goodsCurtain */ "./resources/assets/js/goodsCurtain.js");
+/* harmony import */ var _buttonToUp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./buttonToUp */ "./resources/assets/js/buttonToUp.js");
 /* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
 
 

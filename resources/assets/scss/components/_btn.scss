@@ -1,6 +1,7 @@
 .btn{
   font-family: 'Roboto Condensed';
   display: flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
   padding: 15px 32px;
@@ -12,6 +13,7 @@
   border-radius: 3px;
   color: #FFFFFF;
   transition: all .5s;
+  text-align: center;
 
   &:hover{
     color: #E77E42;
@@ -21,5 +23,10 @@
   &__img{
     margin-left: 10px;
     transition: all .5s;
+  }
+
+  &--popup{
+    margin-top: 32px;
+    margin-bottom: 24px;
   }
 }

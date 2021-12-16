@@ -1,0 +1,24 @@
+.popup-input{
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  outline: none;
+  color: $darkBlue;
+  
+  &::placeholder{
+    line-height: 16px;
+    color: #7B94B0;
+    font-family: 'Roboto';
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}

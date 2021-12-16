@@ -1,0 +1,26 @@
+.popup-with-help{
+  text-align: center;
+  color: $grey;
+  font-size: 12px;
+  line-height: 14px;
+  position: relative;
+  margin-bottom: 25px;
+
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background-color: $lightGrey;
+    top: 7.5px;
+  }
+
+  &::after{
+    right: 3px;
+  }
+
+  &::before{
+    left: 3px;
+  }
+}

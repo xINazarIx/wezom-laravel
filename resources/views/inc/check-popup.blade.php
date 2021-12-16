@@ -1,26 +1,9 @@
-@section('login-popup')
-<div class="login-popup mfp-hide" id="login-popup">
+@section('check-popup')
+<div class="check-popup mfp-hide" id="check-popup">
   <div class="popup-title">Вход/Регистрация</div>
-  <div class="login-popup__inner">
-    <label class="popup-label popup-label--login">
-      <div class="popup-label__inner">
-        <span class="popup-label__phone-text">Ваш номер телефона</span>
-        <input class="popup-label__input" type="number" placeholder="+380 (97) 015-61-72">
-      </div>
-      <svg class="login-popup__label-svg-check">
-        <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
-      </svg>
-    </label>
-    <label class="popup-label popup-label--password">
-      <input type="password" class="popup-label__input--password" placeholder="Пароль">
-      <svg class="login-popup__label-svg-showPassword">
-        <use xlink:href="assets/images/spritemap.svg#sprite-show-password"></use>
-      </svg>
-    </label>
-    <div class="login-popup__remaind">
-      <a class="login-popup__remaind-link" href="#">Напомнить пароль</a>
-    </div>
-    <a class="btn btn--popup" href="#">Войти</a>
+  <div class="check-popup__inner">
+    <input type="number" class="popup-input" placeholder="Ваш номер телефона">
+    <a class="btn btn--popup open-popup-link" href="#reg-popup">Далее</a>
     <div class="popup-with-help">или с помощью</div>
     <div class="popup-socials">
       <a href="" class="popup-socials__link" href="#">
@@ -36,7 +19,7 @@
     </div>
     <label class="checkbox checkbox--popup">
       <input type="checkbox" class="checkbox__real">
-      <span class="checkbox__fake checkbox__fake--popup">
+      <span class="checkbox__fake checkbox__fake--popup" >
         <svg class="checkbox__fake-mark" height="18px" width="15px" stroke="black" stroke-width="2px" fill="none">
           <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
         </svg>

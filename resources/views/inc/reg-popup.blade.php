@@ -1,26 +1,30 @@
-@section('login-popup')
-<div class="login-popup mfp-hide" id="login-popup">
+@section('reg-popup')
+<div class="reg-popup mfp-hide" id="reg-popup">
   <div class="popup-title">Вход/Регистрация</div>
-  <div class="login-popup__inner">
-    <label class="popup-label popup-label--login">
-      <div class="popup-label__inner">
-        <span class="popup-label__phone-text">Ваш номер телефона</span>
-        <input class="popup-label__input" type="number" placeholder="+380 (97) 015-61-72">
-      </div>
-      <svg class="login-popup__label-svg-check">
-        <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
-      </svg>
+  <div class="reg-popup__inner">
+    <label class="popup-label">
+      <span class="popup-label__phone-text">Ваш номер телефона</span>
+      <input class="popup-label__input" type="number" placeholder="+380 (97) 015-61-72">
     </label>
-    <label class="popup-label popup-label--password">
-      <input type="password" class="popup-label__input--password" placeholder="Пароль">
-      <svg class="login-popup__label-svg-showPassword">
-        <use xlink:href="assets/images/spritemap.svg#sprite-show-password"></use>
+    <a class="reg-popup__back open-popup-link" href="#check-popup">
+      <svg class="reg-popup__back-svg">
+        <use xlink:href="assets/images/spritemap.svg#sprite-arrow-prev"></use>
       </svg>
-    </label>
-    <div class="login-popup__remaind">
-      <a class="login-popup__remaind-link" href="#">Напомнить пароль</a>
+      <div class="reg-popup__back-text">Ввести другой номер телефона</div>
+    </a>
+    <div class="reg-popup__text">С таким номером телефона еще нет пользователей, хотите зарегистрироваться?</div>
+    <div class="reg-popup__reg-input">
+      <div class="reg-popup__reg-input-text">Я регистрируюсь как</div>
+      <label class="popup-label popup-label--choice">
+        <div class="popup-label__text">Частное лицо</div>
+        <button class="popup-label__arrow-btn">
+          <svg class="popup-label__svg-arrow-down">
+            <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
+          </svg>
+        </button>
+      </label>
     </div>
-    <a class="btn btn--popup" href="#">Войти</a>
+    <a class="btn btn--popup open-popup-link" href="#login-popup">Регистрация</a>
     <div class="popup-with-help">или с помощью</div>
     <div class="popup-socials">
       <a href="" class="popup-socials__link" href="#">
