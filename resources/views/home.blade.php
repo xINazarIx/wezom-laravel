@@ -1,7 +1,7 @@
 <?php
   $sliderCards = [
     [
-       'link' => '#',
+      'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж', 'Скидка' => 'Скидка -5%'],  
       'img' => 'assets/images/slider-1.webp',
       'description' => 'Brit Premium (Брит Премиум) by Nature ADULT L - Сухой корм с курицей, 4 кг',
@@ -11,7 +11,7 @@
       'price' => '1 600,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Скидка' => 'Скидка -5%'],
       'img' => 'assets/images/slider-2.webp',
       'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
@@ -21,7 +21,7 @@
       'price' => 'от 206,71'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Новинка' => 'Новинка'],
       'img' => 'assets/images/slider-3.webp',
       'description' => 'PetKind Beef Tripe Formula Беззерновые консервы для собак с говядиной, 500 мл',
@@ -31,7 +31,7 @@
       'price' => '1 600,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж', 'Скидка' => 'Скидка -5%'],
       'img' => 'assets/images/slider-4.webp',
       'description' => 'Scalibor (Скалибор) ошейник 48 см',
@@ -41,7 +41,7 @@
       'price' => '560,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж'],
       'img' => 'assets/images/slider-5.webp',
       'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
@@ -51,7 +51,7 @@
       'price' => '1600,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж'],
       'img' => 'assets/images/slider-2.webp',
       'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
@@ -61,7 +61,7 @@
       'price' => '1600,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж'],
       'img' => 'assets/images/slider-1.webp',
       'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
@@ -71,7 +71,7 @@
       'price' => '1600,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж'],
       'img' => 'assets/images/slider-4.webp',
       'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
@@ -81,7 +81,7 @@
       'price' => '1600,22'
     ],
     [
-       'link' => '#',
+       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж'],
       'img' => 'assets/images/slider-4.webp',
       'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',

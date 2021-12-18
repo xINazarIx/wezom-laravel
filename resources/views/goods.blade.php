@@ -9,9 +9,7 @@
       </svg>
       <div class="breadcrumbs__link">Корм для собак</div>
     </div>
-  </div>
-
-  <div class="container">
+      
     <div class="goods">
       <div class="goods__sidebar">
 
@@ -316,8 +314,49 @@
       </div>
 
       <div class="goods__content">
-        @include('inc.benefits')
-        @include('inc.blog')
+        <div class="sort goods__sort">
+          <div>
+            <div class="sort__subtext">Сортировать по</div>
+            <div class="sort__text">Подходящим для питомца</div>
+          </div>
+          <svg class="sort__svg">
+            <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
+          </svg>
+        </div>
+        <div class="title goods__title">Корм для собак <span>Найдено 1074 товара</span></div>
+        <div class="goods__filters">
+          <div class="filter goods__filter">
+            <div class="filter__text">Nature's Protection</div>
+            <svg class="filter__svg">
+              <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
+            </svg>
+          </div>
+          <div class="filter goods__filter">
+            <div class="filter__text">С Автозаказом</div>
+            <svg class="filter__svg">
+              <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
+            </svg>
+          </div>
+          <div class="filter goods__filter">
+            <div class="filter__text">Суперпремиум</div>
+            <svg class="filter__svg">
+              <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
+            </svg>
+          </div>
+          <button class="showMore">Очистить фильтры</button>
+        </div>
+        <img  class="goods__bunner js-lazy-load fade-in" data-zzload-source-img="assets/images/goods/goods_bunner.jpg" data-zzload-source-srcset="assets/images/goods/goods_bunner.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+        <div class="goods__info">
+          <img  class="goods__info-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-dog-avatar.png" data-zzload-source-srcset="assets/images/catalog-dog-avatar.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+          <div class="goods__info-text">Товары с аватаром животного – наиболее подходящие для данного питомца</div>
+        </div>
+
+        <button class="btn-showMore">
+          <svg class="btn-showMore__svg">
+            <use xlink:href="assets/images/spritemap.svg#sprite-update-arrow"></use>
+          </svg>
+          <div class="btn-showMore__text">Показать<br> еще 24 товара</div>
+        </button>
       </div>
     </div>
   </div>

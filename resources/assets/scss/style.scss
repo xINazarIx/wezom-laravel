@@ -8,6 +8,8 @@
 @import 'plugins/nouislider.scss';
 
 
+@import 'components/_title.scss';
+@import 'components/_filter.scss';
 @import 'components/_burger.scss';
 @import 'components/_location.scss';
 @import 'components/_info.scss';
@@ -50,6 +52,8 @@
 @import 'components/_auto-order.scss';
 @import 'components/_checkbox.scss';
 @import 'components/_curtain.scss';
+@import 'components/_sort.scss';
+@import 'components/_btn-showMore.scss';
 @import 'components/_catalog-item.scss';
 @import 'components/_slider-item.scss';
 @import 'components/_popup-title.scss';
@@ -61,4 +65,7 @@
 @import 'components/_popup-auntification.scss';
 @import 'components/_reg-popup.scss';
 @import 'components/_login-popup.scss';
+@import 'components/_page-product.scss';
+
+
 

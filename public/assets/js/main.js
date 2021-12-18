@@ -898,7 +898,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_slider__WEBPACK_IMPORTED_MODULE_1__);
 
 
-inicializedSlider(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-prev', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-next', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')));
+
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')).children().length >= 6) {
+  inicializedSlider(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-prev', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-next', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')));
+} else {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtns', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')).css('display', 'none');
+} // если в слайдере меньше 6 єлементов не инициализируем его
+
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.petsNav__btn').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.petsNav__btn').removeClass('petsNav__btn--active'); // Удаляем у таба класс актив
 

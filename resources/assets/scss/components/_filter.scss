@@ -1,0 +1,27 @@
+.filter{
+  display: flex;
+  align-items: center;
+  padding: 7px 10px 7px 8px;
+  background: #F4F5F8;
+  border-radius: 3px;
+
+  &__text{
+    font-size: 12px;
+    line-height: 14px;
+    color: $darkBlue;
+    margin-right: 8px;
+  }
+
+  &__svg{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    stroke: #B6B7C4;
+    stroke-width: 2px;
+    transition: all .4s;
+
+    &:hover{
+      stroke: $darkBlue;
+    }
+  }
+}
