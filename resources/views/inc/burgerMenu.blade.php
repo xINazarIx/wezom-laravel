@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="userIcons burgerMenu__userIcons">
-        <button class="userIcons__btn open-popup-link" href='#login-popup'>
+        <button class="userIcons__btn open-popup-link" href='#check-popup'>
             <svg class="userIcons__img burgerMenu__userIcons-img" stroke='white' stroke-width='2' height='28px' width='28px'>
               <use xlink:href='assets/images/spritemap.svg#sprite-user'></use>
             </svg>

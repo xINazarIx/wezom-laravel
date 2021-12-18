@@ -1,4 +1,5 @@
 .popup-label{
+  width: 100%;
   display: inline-block;
   padding: 6px 16px 8px 16px;
   border: 1px solid $orange;
@@ -18,7 +19,8 @@
 
   &__input{
     outline: none;
-    width: 368px;
+    width: 100%;
+    max-width: 368px;
     color: $darkBlue;
     font-size: 14px;
     line-height: 16px;

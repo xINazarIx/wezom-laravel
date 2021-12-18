@@ -1,7 +1,7 @@
 @section('check-popup')
-<div class="check-popup mfp-hide" id="check-popup">
+<div class="popup-auntification mfp-hide" id="check-popup">
   <div class="popup-title">Вход/Регистрация</div>
-  <div class="check-popup__inner">
+  <div class="popup-auntification__inner">
     <input type="number" class="popup-input" placeholder="Ваш номер телефона">
     <a class="btn btn--popup open-popup-link" href="#reg-popup">Далее</a>
     <div class="popup-with-help">или с помощью</div>

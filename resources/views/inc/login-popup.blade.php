@@ -1,7 +1,7 @@
 @section('login-popup')
-<div class="login-popup mfp-hide" id="login-popup">
+<div class="popup-auntification mfp-hide" id="login-popup">
   <div class="popup-title">Вход/Регистрация</div>
-  <div class="login-popup__inner">
+  <div class="popup-auntification__inner">
     <label class="popup-label popup-label--login">
       <div class="popup-label__inner">
         <span class="popup-label__phone-text">Ваш номер телефона</span>

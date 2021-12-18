@@ -1,12 +1,4 @@
 .login-popup{
-  position: relative;
-  width: 460px;
-  margin: 0 auto;
-  background-color: white;
-
-  &__inner{
-    padding: 15px 30px;
-  }
 
   &__label-svg-check{
     width: 12px;
@@ -32,7 +24,7 @@
   &__remaind{
     width: 100%;
     text-align: right;
-    margin-top: 12px;
+    margin: 12px 0;
   }
 
   &__remaind-link{

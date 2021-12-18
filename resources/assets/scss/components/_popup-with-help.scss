@@ -24,3 +24,14 @@
     left: 3px;
   }
 }
+
+@media(max-width: 500px){
+  .popup-with-help{
+    margin-bottom: 15px;
+    
+    &::before,
+    &::after{
+      width: 80px;
+    }
+  }
+}

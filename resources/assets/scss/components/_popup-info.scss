@@ -19,3 +19,20 @@
     height: 32px;
   }
 }
+
+@media(max-width: 500px){
+  .popup-info{
+    padding: 16px 15px;
+
+    &__text{
+      padding-left: 35px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__svg{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

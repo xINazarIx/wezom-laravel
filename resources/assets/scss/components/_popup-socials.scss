@@ -25,3 +25,13 @@
     fill: #2C9323;
   }
 }
+
+@media(max-width: 500px){
+  .popup-socials{
+    margin-bottom: 15px;
+    
+    &__link{
+      width: 120px;
+    }
+  }
+}

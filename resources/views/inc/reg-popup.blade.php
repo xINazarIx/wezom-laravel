@@ -1,7 +1,7 @@
 @section('reg-popup')
-<div class="reg-popup mfp-hide" id="reg-popup">
+<div class=" popup-auntification mfp-hide" id="reg-popup">
   <div class="popup-title">Вход/Регистрация</div>
-  <div class="reg-popup__inner">
+  <div class="popup-auntification__inner">
     <label class="popup-label">
       <span class="popup-label__phone-text">Ваш номер телефона</span>
       <input class="popup-label__input" type="number" placeholder="+380 (97) 015-61-72">

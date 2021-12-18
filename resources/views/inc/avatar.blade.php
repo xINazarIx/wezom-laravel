@@ -12,5 +12,5 @@
     </div>
   </div>
   <div class="avatar__title">У вас есть собака?</div>
-  <button class="btn--secondary">+ Добавить питомца</button>
+  <button class="btn-secondary">+ Добавить питомца</button>
 </div>

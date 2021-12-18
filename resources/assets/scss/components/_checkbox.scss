@@ -80,3 +80,16 @@
     }
   }
 }
+
+@media(max-width: 500px){
+  .checkbox{
+
+    &__fake--popup{
+      width: 56px;
+    }
+
+    &--popup{
+      margin-bottom: 20px;
+    }
+  }
+}

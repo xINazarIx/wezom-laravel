@@ -236,7 +236,7 @@
                 <a class="useful__materials-link" href="#" target="_blank">Обзор товаров</a>
                 <a class="useful__materials-link" href="#" target="_blank">Лайфхаки</a>
               </div>
-              <a class="btn--secondary" href='#' target="_blank">Перейти в блог</a>
+              <a class="btn-secondary" href='#' target="_blank">Перейти в блог</a>
             </div>
             <div class="useful__materials-items">
               <div class="useful__materials-item">
