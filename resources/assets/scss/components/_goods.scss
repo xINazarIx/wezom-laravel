@@ -35,6 +35,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+
+    &--hidden{
+      display: none;
+    }
   }
 
   &__filter{
@@ -68,6 +72,10 @@
     font-size: 14px;
     line-height: 140%;
     color: #7B94B0;
+  }
+
+  &__btn-showMore{
+    margin-bottom: 48px;
   }
 
 }

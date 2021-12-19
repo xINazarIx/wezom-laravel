@@ -324,26 +324,26 @@
           </svg>
         </div>
         <div class="title goods__title">Корм для собак <span>Найдено 1074 товара</span></div>
-        <div class="goods__filters">
+        <div class="goods__filters filters--js">
           <div class="filter goods__filter">
             <div class="filter__text">Nature's Protection</div>
-            <svg class="filter__svg">
+            <svg class="filter__svg filter-close-btn--js">
               <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
             </svg>
           </div>
           <div class="filter goods__filter">
             <div class="filter__text">С Автозаказом</div>
-            <svg class="filter__svg">
+            <svg class="filter__svg filter-close-btn--js">
               <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
             </svg>
           </div>
           <div class="filter goods__filter">
             <div class="filter__text">Суперпремиум</div>
-            <svg class="filter__svg">
+            <svg class="filter__svg filter-close-btn--js">
               <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
             </svg>
           </div>
-          <button class="showMore">Очистить фильтры</button>
+          <button class="showMore btn-clean-filters--js">Очистить фильтры</button>
         </div>
         <img  class="goods__bunner js-lazy-load fade-in" data-zzload-source-img="assets/images/goods/goods_bunner.jpg" data-zzload-source-srcset="assets/images/goods/goods_bunner.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
         <div class="goods__info">
@@ -351,12 +351,27 @@
           <div class="goods__info-text">Товары с аватаром животного – наиболее подходящие для данного питомца</div>
         </div>
 
-        <button class="btn-showMore">
+        <button class="btn-showMore goods__btn-showMore">
           <svg class="btn-showMore__svg">
             <use xlink:href="assets/images/spritemap.svg#sprite-update-arrow"></use>
           </svg>
           <div class="btn-showMore__text">Показать<br> еще 24 товара</div>
         </button>
+
+        <div class="pagination pagination--js">
+          <a class="pagination__link pagination__link--active" href="/">1</a>
+          <a class="pagination__link" href="#">2</a>
+          <a class="pagination__link" href="#">3</a>
+          <a class="pagination__link" href="#">4</a>
+          <a class="pagination__link" href="#">5</a>
+          <span>...</span>
+          <a class="pagination__link" href="#">18</a>
+          <a class="pagination__svg-link" href="#">
+            <svg class="pagination__svg-arrow">
+              <use xlink:href="assets/images/spritemap.svg#sprite-arrow-next"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>

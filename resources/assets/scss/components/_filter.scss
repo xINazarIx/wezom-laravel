@@ -24,4 +24,8 @@
       stroke: $darkBlue;
     }
   }
+
+  &--hidden{
+    display: none;
+  }
 }

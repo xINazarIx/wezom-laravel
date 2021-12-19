@@ -1,0 +1,62 @@
+.pagination{
+  width: 100%;
+  max-width: 316px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  &__link,span{
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 4px;
+    padding: 8px 12px;
+    color: $darkBlue;
+    transition: all .4s;
+    border-radius: 3px;
+  }
+
+  &__link:hover{
+    box-shadow: 0px 2px 8px rgba(32, 36, 84, 0.15);
+    color: $orange;
+  }
+
+  &__svg-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 12px;
+    margin-left: 4px;
+    border-radius: 3px;
+    transition: all .4s;
+
+    &:hover{
+      box-shadow: 0px 2px 8px rgba(32, 36, 84, 0.15);
+
+      .pagination__svg-arrow{
+        stroke: $orange;
+      }
+    }
+  }
+  
+  &__svg-arrow{
+    fill: none;
+    stroke: $darkBlue;
+    stroke-width: 2px;
+    width: 8px;
+    height: 14px;
+    transition: all .4s;
+  }
+
+  &__link--active{
+    background-color: $orange;
+    color: white;
+
+    &:hover{
+      cursor: default;
+      color: white;
+      background-color: $orange;
+    }
+  }
+}

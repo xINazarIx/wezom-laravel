@@ -7,6 +7,8 @@ import './buttonShowMore';
 import './searchPopup';
 import './goodsCurtain';  
 import './buttonToUp';
+import './filters';
+import './pagination';
 import './rangeSlider';
 
 
