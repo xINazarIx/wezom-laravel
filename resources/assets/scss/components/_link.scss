@@ -1,0 +1,19 @@
+.link{
+  display: flex;
+  font-size: 14px;
+  line-height: 16px;
+  color: #202454;
+  transition: all .3s;
+
+  &--border{
+    padding-bottom: 4px;
+    border-bottom: 1px dashed $grey;
+  }
+
+  &:hover{
+    color: $grey;
+  }
+  span{
+    margin-left: 4px;
+  }
+}

@@ -1,0 +1,33 @@
+.video-review{
+
+  text-align: center;
+  cursor: pointer;
+
+  &__svg{
+    margin-bottom: 8px; 
+    width: 40px;
+    height: 40px;
+    stroke-width: 2px;
+    stroke: $orange;
+    fill: $orange;
+    transition: all .4s;
+  }
+
+  &__text{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: $orange;
+    transition: all .4s;
+  }
+
+  &:hover{
+    .video-review__text{
+      color: $grey;
+    }
+    .video-review__svg{
+      stroke: $grey;
+      fill: $grey;
+    }
+  }
+}

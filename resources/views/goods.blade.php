@@ -358,7 +358,7 @@
           <div class="btn-showMore__text">Показать<br> еще 24 товара</div>
         </button>
 
-        <div class="pagination pagination--js">
+        <div class="pagination goods__pagination pagination--js">
           <a class="pagination__link pagination__link--active" href="/">1</a>
           <a class="pagination__link" href="#">2</a>
           <a class="pagination__link" href="#">3</a>
@@ -374,5 +374,8 @@
         </div>
       </div>
     </div>
+
+    @include('inc.benefits')
+    @include('inc.blog')
   </div>
 @endsection
