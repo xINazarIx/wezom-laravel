@@ -5,6 +5,7 @@
   position: relative;
   
   &__header{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,6 +40,10 @@
   &__checkboxes{
     margin-top: 24px;
     transition: all .1s;
+
+    &--hidden{
+      display: none;
+    }
   }
 
   &__checkbox{

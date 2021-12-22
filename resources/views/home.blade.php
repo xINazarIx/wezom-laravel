@@ -1,5 +1,5 @@
 <?php
-  $sliderCards = [
+  $sliderCards = (object)[
     [
       'link' => 'page-product',
       'info' => ['Top' => 'Топ продаж', 'Скидка' => 'Скидка -5%'],  

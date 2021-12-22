@@ -1,27 +1,26 @@
-<div class="slider-item slider__item">
+<div class="slider-item">
   <a class="slider-item__card" href="{{$card['link']}}">
-    <?php
-    foreach ($card['info'] as $info) {
-      if ($info == 'Топ продаж') {
-        echo '<div class="widget widget--purpure slider-item__widget">
-                  <p class="widget__text">Топ продаж</p>
-                </div>';
-      } else if ($info == 'Скидка -5%') {
-        echo '<div class="widget widget--pink slider-item__widget">
-                  <p class="widget__text">Скидка -5%</p>
-                </div>';
-      } else if ($info == 'Новинка') {
-        echo '<div class="widget widget--green slider-item__widget">
-                  <p class="widget__text">Новинка</p>
-                </div>';
-      };
-    }
-    ?>
+  
+    @foreach($card['info'] as $info)
+      @if($info == 'Топ продаж')
+        <div class="widget widget--purpure slider-item__widget">
+          <p class="widget__text">Топ продаж</p>
+        </div>
+      @elseif($info == 'Скидка -5%')
+        <div class="widget widget--pink slider-item__widget">
+          <p class="widget__text">Скидка -5%</p>
+        </div>
+      @elseif($info == 'Новинка')
+        <div class="widget widget--green slider-item__widget">
+          <p class="widget__text">Новинка</p>
+        </div>
+      @endif
+    @endforeach
     <img class="slider-item__item-img js-lazy-load fade-in" data-zzload-source-img="{{$card['img']}}" data-zzload-source-srcset="{{$card['img']}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
   </a>
   <div class="slider-item__description">
     <a class="slider-item__description-text" href="{{$card['link']}}">{{$card['description']}}</a>
-    <div class="rating">
+    <div class="rating slider-item__rating">
       <div class="rating__stars slider-item__rating-stars" data-total="{{$card['rating']['star']}}">
         <svg class="rating__stars-img">
           <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>

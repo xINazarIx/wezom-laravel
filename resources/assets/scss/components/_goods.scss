@@ -59,7 +59,7 @@
   &__info{
     display: flex;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 3px;
   }
 
   &__info-img{
@@ -80,6 +80,17 @@
 
   &__pagination{
     margin-bottom: 120px;
+  }
+
+  &__cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  &__card--hidden{
+    display: none;
   }
 
 }

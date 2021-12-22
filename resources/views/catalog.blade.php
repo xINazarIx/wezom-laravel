@@ -1,6 +1,6 @@
 <?php 
 
-  $catalogCards = [
+  $catalogCards = (object)[
     [
       'section' => ['title' => 'Корм', 'link' => '/goods'],
       'img' => 'assets/images/catalog-1.jpeg',
@@ -53,18 +53,20 @@
     ],
   ];
 
-  $catalogLinks = [
-    ['title' => 'Корм', 'url' => '#'],
-    ['title' => 'Лакомства', 'url' => '#'],
-    ['title' => 'Игрушки', 'url' => '#'],
-    ['title' => 'Уход', 'url' => '#'],
-    ['title' => 'Здоровье', 'url' => '#'],
-    ['title' => 'Косметика', 'url' => '#'],
-    ['title' => 'Одежда и обувь', 'url' => '#'],
-    ['title' => 'Амуниция', 'url' => '#'],
-    ['title' => 'Товары для дома', 'url' => '#'],
-    ['title' => 'Путешествия', 'url' => '#'],
-  ];
+  $catalogLinks = (object)[
+    'Корм' => '#',
+    'Лакомства' => '#',
+    'Игрушки' => '#',
+    'Уход' => '#',
+    'Здоровье' => '#',
+    'Косметика' => '#',
+    'Одежда и обувь' => '#',
+    'Аммуниция' => '#',
+    'Товары для дома' => '#',
+    'Путешествия' => '#',
+  ]
+
+  
 ?>
 
 @extends('layouts.app')
@@ -81,8 +83,9 @@
         <div class="catalog__subtitle">Товары и аксессуары для собак и щенков </div>
         <div class="catalog__links">
 
-        @foreach($catalogLinks as $link)
-          <a class="catalog__link" href="{{$link['url']}}">{{$link['title']}}</a>   
+        
+        @foreach($catalogLinks as $title => $link)
+          <a class="catalog__link" href="{{$link}}">{{$title}}</a>   
         @endforeach
 
         </div>

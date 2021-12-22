@@ -1,25 +1,36 @@
 import $ from 'jquery';
 
-$('.curtain__arrow-up').on('click', function(){
-  $($(this).attr('data-id')).hasClass('curtain__checkboxes--active') ? closeCurtain($($(this).attr('data-id')), $(this)) : openCurtain($($(this).attr('data-id')), $(this))
+
+$('.curtain__checkboxes--js').each(function(){
+  if($(this).children().length == 0){
+    $(this).css('margin-top', '0')
+    $(this).addClass('curtain__checkboxes--hidden')
+    $('.curtain__arrow-up', $(this).parent()).css('transform', 'rotate(0deg)')
+  }else{
+  $(this).children().each(function(i,elem){
+    if(i >= 9 && $(this).children().hasClass('curtain__showMore--js') !== true){
+      $(this).addClass('curtain__checkbox--hidden')
+    }
+  })}
 })
-
-
-function closeCurtain(checkboxes, arrow){
-  checkboxes.css('display', 'none')
-  checkboxes.css('margin-top', '0')
-  arrow.css('transform', 'rotate(0)')
-  checkboxes.removeClass('curtain__checkboxes--active')
-}
-
-function openCurtain(checkboxes, arrow){
-  checkboxes.css('display', 'block')
-  checkboxes.css('margin-top', '24px')
-  arrow.hasClass('curtain__arrow-down') ? arrow.css('transform', 'rotate(0)') : arrow.css('transform', 'rotate(180deg)')
-  checkboxes.addClass('curtain__checkboxes--active')
-}
 
 $('.curtain__showMore--js').on('click', function(){
-  $('.checkbox__showMore').css('display', 'none')
-  $('.curtain__checkbox').removeClass('curtain__checkbox--hidden')
+  $('.curtain__checkboxes--js').children().each(function(){
+    $(this).removeClass('curtain__checkbox--hidden')
+  })
+  $(this).remove()
 })
+
+$('.curtain__header').on('click', function(){
+  $('.curtain__checkboxes--js', $(this).parent()).hasClass('curtain__checkboxes--hidden') ? openCurtain($('.curtain__checkboxes--js', $(this).parent()), $('.curtain__arrow-up', $(this))) : closeCurtain($('.curtain__checkboxes--js', $(this).parent()), $('.curtain__arrow-up', $(this)))
+})
+
+function closeCurtain(elem, arrow){
+  elem.addClass('curtain__checkboxes--hidden')
+  arrow.css('transform', 'rotate(0deg)')
+}
+
+function openCurtain(elem, arrow){
+  elem.removeClass('curtain__checkboxes--hidden')
+  arrow.css('transform', 'rotate(-180deg)')
+}

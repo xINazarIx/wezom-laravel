@@ -860,10 +860,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btn-clean-filters--js').on('click', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__filters').addClass('goods__filters--hidden');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__filters').remove();
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filter-close-btn--js').on('click', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().addClass('filter--hidden');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filters--js').children().length <= 2 ? jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filters--js').remove() : jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().remove();
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/goods-cards.js":
+/*!********************************************!*\
+  !*** ./resources/assets/js/goods-cards.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__cards--js').children().each(function (i, elem) {
+  if (i >= 24) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('goods__card--hidden');
+  }
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__btn-showMore--js').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__cards--js').children().each(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('goods__card--hidden');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).remove();
 });
 
 /***/ }),
@@ -879,28 +904,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__arrow-up').on('click', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id')).hasClass('curtain__checkboxes--active') ? closeCurtain(jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id')), jquery__WEBPACK_IMPORTED_MODULE_0___default()(this)) : openCurtain(jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id')), jquery__WEBPACK_IMPORTED_MODULE_0___default()(this));
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js').each(function () {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().length == 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('margin-top', '0');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('curtain__checkboxes--hidden');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__arrow-up', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).css('transform', 'rotate(0deg)');
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().each(function (i, elem) {
+      if (i >= 9 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().hasClass('curtain__showMore--js') !== true) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('curtain__checkbox--hidden');
+      }
+    });
+  }
 });
-
-function closeCurtain(checkboxes, arrow) {
-  checkboxes.css('display', 'none');
-  checkboxes.css('margin-top', '0');
-  arrow.css('transform', 'rotate(0)');
-  checkboxes.removeClass('curtain__checkboxes--active');
-}
-
-function openCurtain(checkboxes, arrow) {
-  checkboxes.css('display', 'block');
-  checkboxes.css('margin-top', '24px');
-  arrow.hasClass('curtain__arrow-down') ? arrow.css('transform', 'rotate(0)') : arrow.css('transform', 'rotate(180deg)');
-  checkboxes.addClass('curtain__checkboxes--active');
-}
-
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__showMore--js').on('click', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.checkbox__showMore').css('display', 'none');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkbox').removeClass('curtain__checkbox--hidden');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js').children().each(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('curtain__checkbox--hidden');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).remove();
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__header').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).hasClass('curtain__checkboxes--hidden') ? openCurtain(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__arrow-up', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this))) : closeCurtain(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__arrow-up', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this)));
+});
+
+function closeCurtain(elem, arrow) {
+  elem.addClass('curtain__checkboxes--hidden');
+  arrow.css('transform', 'rotate(0deg)');
+}
+
+function openCurtain(elem, arrow) {
+  elem.removeClass('curtain__checkboxes--hidden');
+  arrow.css('transform', 'rotate(-180deg)');
+}
 
 /***/ }),
 
@@ -1026,7 +1061,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _buttonToUp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./buttonToUp */ "./resources/assets/js/buttonToUp.js");
 /* harmony import */ var _filters__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./filters */ "./resources/assets/js/filters.js");
 /* harmony import */ var _pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pagination */ "./resources/assets/js/pagination.js");
-/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+/* harmony import */ var _goods_cards__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./goods-cards */ "./resources/assets/js/goods-cards.js");
+/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+
 
 
 

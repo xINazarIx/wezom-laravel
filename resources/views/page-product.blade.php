@@ -63,22 +63,24 @@
               </div>
               <span class="manufacturer__text">Чехия</span>
             </div>
-            <div class="rating__stars product__stars" data-total="4">
-              <svg class="rating__stars-img product__star">
-                <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
-              </svg>
-              <svg class="rating__stars-img product__star">
-                <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
-              </svg>
-              <svg class="rating__stars-img product__star">
-                <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
-              </svg>
-              <svg class="rating__stars-img product__star">
-                <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
-              </svg>
-              <svg class="rating__stars-img product__star">
-                <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
-              </svg>
+            <div class="rating">
+              <div class="rating__stars product__stars" data-total="4">
+                <svg class="rating__stars-img product__star">
+                  <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
+                </svg>
+                <svg class="rating__stars-img product__star">
+                  <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
+                </svg>
+                <svg class="rating__stars-img product__star">
+                  <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
+                </svg>
+                <svg class="rating__stars-img product__star">
+                  <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
+                </svg>
+                <svg class="rating__stars-img product__star">
+                  <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
+                </svg>
+              </div>
             </div>
             <a class="link link--border" href="#">Отзывы<span>(65)</span></a>
             <a class="link link--border product__link-question" href="#">Вопросы<span>(3)</span></a>
