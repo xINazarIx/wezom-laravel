@@ -755,6 +755,34 @@ function sanitizeAttrs(element) {
 
 /***/ }),
 
+/***/ "./resources/assets/js/about.js":
+/*!**************************************!*\
+  !*** ./resources/assets/js/about.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__tabs--js').children().on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__tabs--js').children().each(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('about__tab--active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__content--js').each(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('about__content--hidden');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab')).removeClass('about__content--hidden');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('about__tab--active');
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__btn-secondary--js').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__content-inner', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).addClass('about__content-inner--more');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).remove();
+});
+
+/***/ }),
+
 /***/ "./resources/assets/js/burgerMenu.js":
 /*!*******************************************!*\
   !*** ./resources/assets/js/burgerMenu.js ***!
@@ -844,6 +872,31 @@ function scrollToTop() {
     clearTimeout(timer);
     window.scrollTo(0, 0);
   }
+}
+
+/***/ }),
+
+/***/ "./resources/assets/js/drop-menu.js":
+/*!******************************************!*\
+  !*** ./resources/assets/js/drop-menu.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.drop-menu__header').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().hasClass('drop-menu--active') ? closeDropMenu(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()) : openDropMenu(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent());
+});
+
+function openDropMenu(elem) {
+  elem.addClass('drop-menu--active');
+}
+
+function closeDropMenu(elem) {
+  elem.removeClass('drop-menu--active');
 }
 
 /***/ }),
@@ -1062,7 +1115,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _filters__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./filters */ "./resources/assets/js/filters.js");
 /* harmony import */ var _pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pagination */ "./resources/assets/js/pagination.js");
 /* harmony import */ var _goods_cards__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./goods-cards */ "./resources/assets/js/goods-cards.js");
-/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+/* harmony import */ var _drop_menu__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./drop-menu */ "./resources/assets/js/drop-menu.js");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./about */ "./resources/assets/js/about.js");
+/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+
+
 
 
 

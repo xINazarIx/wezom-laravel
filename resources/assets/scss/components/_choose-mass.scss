@@ -4,6 +4,7 @@
   padding: 14px 12px;
   box-shadow: 0px 4px 12px rgba(84, 143, 199, 0.15);
   border-radius: 12px;
+  transition: all .5s;
 
   &__text{
     font-weight: 700;
@@ -19,12 +20,31 @@
     }
   }
 
+  
+  &:hover{
+    background-color: rgba($color: $orange, $alpha: .9);
+    
+    .choose-mass__text{
+      color: white;
+
+      span{
+        color: white;
+      }
+    }
+  }
+
   &--active{
+    cursor: default;
     background-color: $orange;
+
+    &:hover{
+      background-color: rgba($color: $orange, $alpha: 1);
+    }
   }
 
   &--active .choose-mass__text{
     color: white;
+    cursor: default;
 
     span{
       color: white;

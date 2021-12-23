@@ -1,0 +1,126 @@
+.drop-menu{
+  padding: 12px 10px;
+  width: 100%;
+  max-width: 820px;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+
+  &__header{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+
+    padding: 12px 10px;
+    transition: all .3s;
+
+    &:hover{
+      background-color: rgba($color: $lightGrey, $alpha: .5);
+    }
+  }
+
+  &__header-svg{
+    cursor: pointer;
+    width: 24px;
+    height: 13px;
+    fill: none;
+    stroke: #BDC9D7;
+    stroke-width: 1px;
+    transition: all .3s;
+  }
+
+  &__text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #202454;
+
+    span{
+      color: $orange;
+      padding-bottom: 1px;
+      border-bottom: 1px dashed #3A9EFD;
+    }
+
+    &--grey{
+      color: #7B94B0;
+      margin-left: auto;
+    }
+  }
+
+  &__options{
+    padding: 0 10px;
+    padding-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s;
+  }
+
+
+  &__option{ 
+    display: flex;
+    align-items: center;
+  }
+
+  &__option + &__option{
+    padding-top: 24px;
+  }
+
+  &__link{
+    width: 320px;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $darkBlue;
+    transition: all .3s;
+
+    &:hover{
+      color: grey;
+    }
+  }
+
+  &__showMore{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7B94B0;
+    transition: all .3s;
+
+    &:hover{
+      color: $darkBlue;
+
+      .drop-menu__showMore-svg{
+        stroke: $darkBlue;
+      }
+    }
+
+
+  }
+
+  &__showMore-svg{
+    width: 12px;
+    height: 6px;
+    fill: none;
+    stroke: #7B94B0;
+    stroke-width: 2px;
+    transition: all .3s;
+  }
+
+  &--active{
+    .drop-menu{
+
+      &__header-svg{
+        transform: rotate(-180deg);
+      }
+
+      &__options{
+        padding: 12px 10px;
+        max-height: 500px;
+      }
+    }
+  }
+}

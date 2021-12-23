@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 15px 32px;
+  padding: 14px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -12,12 +12,16 @@
   background-color: #E77E42;
   border-radius: 3px;
   color: #FFFFFF;
-  transition: all .5s;
+  transition: all .4s;
   text-align: center;
 
   &:hover{
     color: #E77E42;
     background-color: #fff;
+
+    .btn__svg{
+      stroke: $orange;
+    }
   }
 
   &__img{
@@ -28,6 +32,15 @@
   &--popup{
     margin-top: 32px;
     margin-bottom: 24px;
+  }
+
+  &__svg{
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    stroke-width: 3px;
+    margin-right: 17px;
+    transition: all .4s;
   }
 }
 

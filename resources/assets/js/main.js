@@ -10,6 +10,8 @@ import './buttonToUp';
 import './filters';
 import './pagination';
 import './goods-cards';
+import './drop-menu';
+import './about';
 import './rangeSlider';
 
 
