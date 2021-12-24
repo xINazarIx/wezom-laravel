@@ -1117,7 +1117,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _goods_cards__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./goods-cards */ "./resources/assets/js/goods-cards.js");
 /* harmony import */ var _drop_menu__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./drop-menu */ "./resources/assets/js/drop-menu.js");
 /* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./about */ "./resources/assets/js/about.js");
-/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./reviews */ "./resources/assets/js/reviews.js");
+/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+
 
 
 
@@ -1200,6 +1202,50 @@ priceInputs.forEach(function (el, index) {
   el.addEventListener('change', function (e) {
     setRangeSlider(index, e.currentTarget.value);
   });
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/reviews.js":
+/*!****************************************!*\
+  !*** ./resources/assets/js/reviews.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__title--js').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__title--js').removeClass('reviews__title--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('reviews__title--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__content--js').children().removeClass('reviews__content--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id')).addClass('reviews__content--active');
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__users--js').each(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().each(function (i, elem) {
+    if (i >= 4) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('reviews__user--hidden');
+    } else if (i == 3) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('reviews__user--disable');
+    }
+  });
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__users--js').each(function (i, elem) {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().length <= 3) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__showMore--js', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).remove();
+  }
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__showMore--js').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__users--js', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).children().each(function (i, elem) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('reviews__user--hidden');
+
+    if (i == 3) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('reviews__user--disable');
+    }
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).remove();
 });
 
 /***/ }),

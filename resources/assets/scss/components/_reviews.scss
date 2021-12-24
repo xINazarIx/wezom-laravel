@@ -1,0 +1,138 @@
+.reviews{
+  margin-bottom: 500px;
+
+  &__title{
+    cursor: pointer;
+    margin-right: 40px;
+    opacity: 0.5;
+
+    &:hover{
+      opacity: .7;
+    }
+
+    &--active{
+      cursor: default;
+      opacity: 1;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $darkBlue;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__inner{
+    padding-top: 36px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  &__comments,
+  &__questions{
+    display: none;
+  }
+
+  &__content{
+    margin-right: 140px;
+    width: 100%;
+    max-width: 820px;
+
+    &--active{
+      display: block;
+    }
+  }
+
+
+  &__user{
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #E0E0E0;
+
+    &:last-child{
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    &--disable{
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    &--hidden{
+      display: none;
+    }
+  }
+
+  &__user-like{
+    position: absolute;
+    right: 0;
+    bottom: 24px;
+  }
+
+  &__user-info{
+    width: 100%;
+    max-width: 120px;
+  }
+
+  &__rating{
+    margin-bottom: 10px;
+  }
+
+  &__user-name{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    color: $grey;
+    margin-bottom: 8px;
+
+    span{
+      font-weight: 400;
+    }
+  }
+
+  &__user-description{
+    width: 100%;
+    max-width: 648px;
+  }
+  
+  &__user-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $darkBlue;
+    margin-bottom: 10px;
+  }
+
+  &__user-text{
+    font-size: 14px;
+    line-height: 140%;
+    color: $darkBlue;
+    margin-bottom: 10px;
+  }
+
+  &__user-images{
+    min-height: 20px;
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+  }
+
+  &__user-img{
+    cursor: pointer;
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  &__btn-secondary{
+    margin-top: 6px;
+    font-family: 'Roboto';
+  }
+}

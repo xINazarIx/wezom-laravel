@@ -1,0 +1,38 @@
+.user-like{
+  display: flex;
+  align-items: center;
+  
+  &__icon{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 4px;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(84, 143, 199, 0.15);
+
+    &:hover{
+
+      .user-like__svg{
+        fill: #E95471;
+      }
+    }
+  }
+
+  &__svg{
+    width: 16px;
+    height: 16px;
+    fill: $grey;
+    transition: all .4s;
+  }
+  
+  &__col{
+    font-size: 12px;
+    line-height: 14px;
+    color: $grey;
+  }
+}

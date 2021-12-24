@@ -12,6 +12,7 @@ import './pagination';
 import './goods-cards';
 import './drop-menu';
 import './about';
+import './reviews';
 import './rangeSlider';
 
 

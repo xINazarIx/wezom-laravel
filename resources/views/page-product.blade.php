@@ -62,7 +62,7 @@
           <div class="share product__share">
             <div class="share__text">Поделиться</div>
             <a class="share__icon-link" href="#" target="_blank">
-              <svg class="share__icon-svg" height='40px' width='40px'> 
+              <svg class="share__icon-svg" height='40px' width='40px'>
                 <use xlink:href="assets/images/spritemap.svg#sprite-page-product-fc"></use>
               </svg>
             </a>
@@ -267,7 +267,7 @@
     <div class="about">
       <div class="about__inner">
         <div class="about__product">
-          <div class="about__title">О товаре</div>
+          <div class="title title--normal about__title">О товаре</div>
           <div class="about__tabs about__tabs--js">
             <div class="about__tab about__tab--active" data-tab="#about__description">Описание</div>
             <div class="about__tab" data-tab="#about__consist">Состав</div>
@@ -293,9 +293,9 @@
             </div>
           </div>
           <div class="about__content about__content--hidden about__content--js" id='about__video-review'>
-          <div class="about__content-inner">
-            <h6>Видеообзор</h6>
-          </div>
+            <div class="about__content-inner">
+              <h6>Видеообзор</h6>
+            </div>
           </div>
           <div class="about__content about__content--hidden about__content--js" id='about__guide'>
             <div class="about__content-inner">
@@ -305,7 +305,7 @@
         </div>
 
         <div class="about__characteristic">
-          <div class="about__title">Характеристика</div>
+          <div class="title title--normal about__title">Характеристика</div>
           <div class="about__info">
             <div class="about__info-item">
               <div class="about__info-text">Артикул</div>
@@ -343,6 +343,116 @@
         </div>
       </div>
     </div>
+
+    <div class="reviews">
+      <span class="title title--normal reviews__title reviews__title--js reviews__title--active" data-id='#reviews-content'>Отзывы (65)</span>
+      <span class="title title--normal reviews__title reviews__title--js" data-id='#reviews-questions'>Вопросы (3)</span>
+      <div class="reviews__inner">
+        <div class="reviews__content reviews__content--js">
+
+          <div class="reviews__comments reviews__content--active" id='reviews-content'>
+            <div class="reviews__users reviews__users--js">
+              @for($i = 1; $i <= 6; $i++)
+                @include('inc.user-review')
+              @endfor
+            </div>
+            <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">Показать все отзывы</button>
+          </div>
+
+          <div class="reviews__questions" id='reviews-questions'>
+            <div class="reviews__users reviews__users--js">
+              @for($i = 1; $i <= 3; $i++)
+                @include('inc.user-question')
+              @endfor
+            </div>
+            <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">Показать все вопросы</button>
+          </div>
+        </div>
+        
+        <div class="reviews-filter">
+          <div class="reviews-filter__inner">
+            <div class="reviews-filter__recomend">
+              <div class="reviews-filter__circle">
+                <svg viewBox="0 0 36 36" class="reviews-filter__circle-svg">
+                  <path class="circle-bg"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"/>
+    
+                  <path class="circle"
+                    stroke-dasharray="95, 100"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"/>
+      
+                  <text x="19.5" y="21" class="reviews-filter__circle-text">95%</text>
+                </svg>
+              </div>
+              <div class="reviews-filter__recomend-text">пользователей рекомендуют этот продукт</div>
+            </div>
+            <div class="reviews-filter__values">
+              <div class="reviews-filter__title">Фильтровать по оценке</div>
+              <div class="reviews-filter__items">
+                <div class="reviews-filter__item">
+                  <div class="reviews-filter__star">
+                    <svg class="reviews-filter__star-svg">
+                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
+                    </svg>
+                    <span>5</span>
+                    <span class="reviews-filter__line" style="width: 173px;"></span>
+                  </div>
+                  <div class="reviews-filter__procent">81%</div>
+                </div>
+                <div class="reviews-filter__item">
+                  <div class="reviews-filter__star">
+                    <svg class="reviews-filter__star-svg">
+                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
+                    </svg>
+                    <span>4</span>
+                    <span class="reviews-filter__line" style="width: 27px;"></span>
+                  </div>
+                  <div class="reviews-filter__procent">9%</div>
+                </div>
+                <div class="reviews-filter__item">
+                  <div class="reviews-filter__star">
+                    <svg class="reviews-filter__star-svg">
+                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
+                    </svg>
+                    <span>3</span>
+                    <span class="reviews-filter__line" style="width: 14px;"></span>
+                  </div>
+                  <div class="reviews-filter__procent">5%</div>
+                </div>
+                <div class="reviews-filter__item">
+                  <div class="reviews-filter__star">
+                    <svg class="reviews-filter__star-svg">
+                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
+                    </svg>
+                    <span>2</span>
+                    <span class="reviews-filter__line" style="width: 6px;"></span>
+                  </div>
+                  <div class="reviews-filter__procent">2%</div>
+                </div>
+                <div class="reviews-filter__item">
+                  <div class="reviews-filter__star">
+                    <svg class="reviews-filter__star-svg">
+                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
+                    </svg>
+                    <span>1</span>
+                    <span class="reviews-filter__line" style="width: 0px;"></span>
+                  </div>
+                  <div class="reviews-filter__procent">0%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn reviews-filter__btn">Написать отзыв</button>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+</div>
 </div>
 @endsection
