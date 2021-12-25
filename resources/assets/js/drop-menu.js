@@ -13,3 +13,9 @@ function openDropMenu(elem){
 function closeDropMenu(elem){
   elem.removeClass('drop-menu--active')
 }
+
+($('.drop-menu--js')).each(function(i,elem){
+  if(i == 0){
+    $(this).addClass('drop-menu--active')
+  }
+})

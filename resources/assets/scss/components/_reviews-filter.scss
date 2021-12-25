@@ -6,40 +6,10 @@
     display: flex;
   }
 
-  &__circle{
+  &__reviews-circle{
     margin-bottom: 15px;
   }
   
-  &__circle-svg{
-    display: block;
-    width: 154px;
-    height: 154px;
-  }
-
-  &__circle-svg .circle {
-    stroke: $orange;
-  }
-
-  &__circle .circle-bg {
-    fill: none;
-    stroke: #eee;
-    stroke-width: 2.8;
-  }
-
-  &__circle .circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
-  }
-
-  &__circle-text{
-    fill: $darkBlue;
-    font-family: 'Roboto';
-    font-size: 0.65em;
-    text-anchor: middle;
-  }
-
   &__recomend{
     margin-right: 40px;
     width: 100%;

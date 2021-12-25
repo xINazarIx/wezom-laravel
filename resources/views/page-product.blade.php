@@ -1,3 +1,44 @@
+<?php 
+
+$smallCards = (object)[
+  ['link' => '#', 'img' => 'assets/images/small-card-1.webp', 'stars' => '4', 'comments' => '65', 'text' => 'Brit Premium (Брит Премиум) by Nature ADULT L - Сухой корм с курицей, 4 кг'],
+
+  ['link' => '#', 'img' => 'assets/images/small-card-2.webp', 'stars' => '1', 'comments' => '15', 'text' => 'Scalibor (Скалибор) ошейник 48 см'],
+
+  ['link' => '#', 'img' => 'assets/images/small-card-3.webp', 'stars' => '2', 'comments' => '4', 'text' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг'],
+
+  ['link' => '#', 'img' => 'assets/images/small-card-4.webp', 'stars' => '5', 'comments' => '24', 'text' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород'],
+
+  ['link' => '#', 'img' => 'assets/images/small-card-5.webp', 'stars' => '2', 'comments' => '1', 'text' => 'Brit Premium (Брит Премиум) by Nature ADULT L - Сухой корм с курицей, 4 кг'],
+
+  ['link' => '#', 'img' => 'assets/images/small-card-6.webp', 'stars' => '4', 'comments' => '32', 'text' => 'PetKind Beef Tripe Formula Беззерновые консервы для собак с говядиной, 500 мл'],
+];
+
+$aboutProduct = (object)[
+  ['desc' => 'Артикул', 'result' => "ТМ 34673474578"],
+  ['desc' => 'Для кого корм?', 'result' => "Для собак"],
+  ['desc' => 'Класс корма', 'result' => "Супер премиум"],
+  ['desc' => 'Форма выпуска корма', 'result' => "Сухой корм"],
+  ['desc' => 'Форма выпуска корма', 'result' => "Сухой корм"],
+  ['desc' => 'Возраст собаки', 'result' => "Взрослые собаки"],
+  ['desc' => 'Размер породы', 'result' => 'Средние породы (10-25 кг)'],
+  ['desc' => 'Основной источник протеинов в корме', 'result' => "Ягненок"],
+  ['desc' => ' Особые потребности в питании', 'result' => "Аллергии, Чувствительный желудок"]
+];
+
+
+$productOptions = (object)[
+  ['city' => 'Запорожье', 'title' => 'Доставка в:', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴'],['option' => 'Самовывоз из JustIn','date' => 'Отправим сегодня', 'price' => '59 ₴']]],
+
+  ['city' => '', 'title' => 'Варианты оплаты', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴'],['option' => 'Самовывоз из JustIn','date' => 'Отправим сегодня', 'price' => '59 ₴']]],
+
+  ['city' => '', 'title' => 'Гарантия и возврат', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴']]]
+]
+
+?>
+
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -13,34 +54,35 @@
     </svg>
     <a class="breadcrumbs__link">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</a>
   </div>
-  <div class="title title--normal page-product__title">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</div>
+  <div class="title title--regular page-product__title">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</div>
   <div class="page-product__content">
 
     <div class="product">
       <div class="product__inner">
         <div class="product__right-section">
           <div class="product__right-section-inner">
-            <div class="product__images">
-              <div class="product__sub-img">
-                <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-1.png" data-zzload-source-srcset="assets/images/product-1.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-              </div>
-              <div class="product__sub-img">
-                <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-2.png" data-zzload-source-srcset="assets/images/product-2.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-              </div>
-              <div class="product__sub-img">
-                <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-3.png" data-zzload-source-srcset="assets/images/product-3.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-              </div>
-              <div class="product__sub-img">
-                <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-4.png" data-zzload-source-srcset="assets/images/product-4.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-              </div>
-              <a class="video-review product__video-review" href="#">
-                <svg class="video-review__svg">
-                  <use xlink:href="assets/images/spritemap.svg#sprite-video-review"></use>
-                </svg>
-                <div class="video-review__text">Видеообзор</div>
-              </a>
-            </div>
+      
             <div class="product-card">
+              <div class="product-card__images">
+                <div class="product-card__sub-img">
+                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-1.png" data-zzload-source-srcset="assets/images/product-1.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                </div>
+                <div class="product-card__sub-img">
+                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-2.png" data-zzload-source-srcset="assets/images/product-2.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                </div>
+                <div class="product-card__sub-img">
+                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-3.png" data-zzload-source-srcset="assets/images/product-3.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                </div>
+                <div class="product-card__sub-img">
+                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-4.png" data-zzload-source-srcset="assets/images/product-4.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                </div>
+                <a class="video-review product__video-review" href="#">
+                  <svg class="video-review__svg">
+                    <use xlink:href="assets/images/spritemap.svg#sprite-video-review"></use>
+                  </svg>
+                  <div class="video-review__text">Видеообзор</div>
+                </a>
+              </div>
               <div class="product-card__inner">
                 <img class="product-card__img js-lazy-load fade-in" data-zzload-source-img="assets/images/product-main.png" data-zzload-source-srcset="assets/images/product-main.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
 
@@ -155,11 +197,11 @@
 
             <div class="order product__order">
               <div class="order__check">
-                <div class="order__input">
-                  <button class="order__input-btn order__input-btn--minus">
+                <div class="order__input order__input--js">
+                  <button class="order__input-btn order__input-btn--minus order__input-btn--js">
                   </button>
-                  <span>1</span>
-                  <button class="order__input-btn order__input-btn--plus">
+                  <span class="order__input-span--js">1</span>
+                  <button class="order__input-btn order__input-btn--plus order__input-btn--js">
                   </button>
                 </div>
 
@@ -182,273 +224,23 @@
               </div>
             </div>
           </div>
-          <div class="drop-menu drop-menu--active product__drop-menu drop-menu--js">
-            <div class="drop-menu__header">
-              <div class="drop-menu__text">Доставка в: <span>Запорожье</span></div>
-              <svg class="drop-menu__header-svg">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
-            </div>
-            <div class="drop-menu__options">
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из наших магазинов</a>
-                <div class="drop-menu__text">Забрать сегодня с 16:00</div>
-                <div class="drop-menu__text drop-menu__text--grey">Бесплатно</div>
-              </div>
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из Новой Почты</a>
-                <div class="drop-menu__text">Отправим завтра</div>
-                <div class="drop-menu__text drop-menu__text--grey">50 ₴</div>
-              </div>
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из JustIn</a>
-                <div class="drop-menu__text">Отправим завтра</div>
-                <div class="drop-menu__text drop-menu__text--grey">59 ₴</div>
-              </div>
-              <a class="drop-menu__showMore" href="#">Все варианты и правила доставки
-                <svg class="drop-menu__showMore-svg">
-                  <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="drop-menu product__drop-menu drop-menu--js">
-            <div class="drop-menu__header">
-              <div class="drop-menu__text">Варианты оплаты</div>
-              <svg class="drop-menu__header-svg">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
-            </div>
-            <div class="drop-menu__options">
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из наших магазинов</a>
-                <div class="drop-menu__text">Забрать сегодня с 16:00</div>
-                <div class="drop-menu__text drop-menu__text--grey">Бесплатно</div>
-              </div>
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из Новой Почты</a>
-                <div class="drop-menu__text">Отправим завтра</div>
-                <div class="drop-menu__text drop-menu__text--grey">50 ₴</div>
-              </div>
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из JustIn</a>
-                <div class="drop-menu__text">Отправим завтра</div>
-                <div class="drop-menu__text drop-menu__text--grey">59 ₴</div>
-              </div>
-              <a class="drop-menu__showMore" href="#">Все варианты и правила доставки
-                <svg class="drop-menu__showMore-svg">
-                  <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="drop-menu product__drop-menu drop-menu--js">
-            <div class="drop-menu__header">
-              <div class="drop-menu__text">Гарантия и возврат</div>
-              <svg class="drop-menu__header-svg">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
-            </div>
-            <div class="drop-menu__options">
-              <div class="drop-menu__option">
-                <a class="drop-menu__link" href="#">Самовывоз из наших магазинов</a>
-                <div class="drop-menu__text">Забрать сегодня с 16:00</div>
-                <div class="drop-menu__text drop-menu__text--grey">Бесплатно</div>
-              </div>
-            </div>
-          </div>
+          @foreach($productOptions as $productOption)
+            @include('inc.drop-menu', $productOption)
+          @endforeach
         </div>
-
-      </div>
+      </div>  
     </div>
 
-    <div class="about">
-      <div class="about__inner">
-        <div class="about__product">
-          <div class="title title--normal about__title">О товаре</div>
-          <div class="about__tabs about__tabs--js">
-            <div class="about__tab about__tab--active" data-tab="#about__description">Описание</div>
-            <div class="about__tab" data-tab="#about__consist">Состав</div>
-            <div class="about__tab" data-tab="#about__video-review">Видеообзор</div>
-            <div class="about__tab" data-tab="#about__guide">Руководство по кормлению</div>
-          </div>
-          <div class="about__content about__content--js" id='about__description'>
-            <div class="about__content-inner">
-              <div>Корм для взрослых собак Hill's Science Plan с ягненком и рисом специально разработан для обеспечения энергетических потребностей собак в самом расцвете их жизни. Сделан из высококачественных, легко усваиваемых ингредиентов.</div>
-              <h6>Особенности HILLS Mature Adult 7+ ягненок и рис:</h6>
-              <ul>
-                <li>Омега-6 жирные кислоты и витамин Е для красивой кожи и шерсти</li>
-                <li>Высококачественные ингредиенты: ягненок и рис для собак с чувствительным пищеварением</li>
-                <li>Высококачественный белок для поддержания мышечной массы</li>
-              </ul>
-              <div>Hill's Science Plan Active Longevity помогает сохранить функцию почек и других жизненно важных органов собак мелких и средних пород старше 7 лет: - Разработан с антиоксидантами с клинически подтвержденным эффектом, Омега-3 жирными кислотами и сниженным содержанием фосфора. - Антиоксидантные витамины Е и С для сохранения функции почек. - Высоко перевариваемые ингредиенты для легкого пищеварения. - Поддерживает функцию жизненно важных органов с помощью сбалансированного уровня минералов. - 100% гарантия качества, консистенции и вкуса Повседневный рацион для собак старше 7 лет Пробуете этот рацион впервые? Постепенно в течение 7 дней переводите животное на новый рацион, увеличивая его содержание по отношению к прежнему. Обеспечьте питомцу свободный доступ к свежей воде. Суточная норма, обозначенная на упаковке, требует корректировки для поддержания оптимального веса питомца. Не рекомендуется Кошкам Щенкам Беременным и кормящим сукам. */</div>
-            </div>
-            <button class="btn-secondary about__btn-secondary about__btn-secondary--js">Читать полностью</button>
-          </div>
-          <div class="about__content about__content--hidden about__content--js" id='about__consist'>
-            <div class="about__content-inner">
-              <h6>Состав</h6>
-            </div>
-          </div>
-          <div class="about__content about__content--hidden about__content--js" id='about__video-review'>
-            <div class="about__content-inner">
-              <h6>Видеообзор</h6>
-            </div>
-          </div>
-          <div class="about__content about__content--hidden about__content--js" id='about__guide'>
-            <div class="about__content-inner">
-              <h6>Руководство</h6>
-            </div>
-          </div>
-        </div>
+    @include('inc.about-product')
+    @include('inc.reviews')
 
-        <div class="about__characteristic">
-          <div class="title title--normal about__title">Характеристика</div>
-          <div class="about__info">
-            <div class="about__info-item">
-              <div class="about__info-text">Артикул</div>
-              <div class="about__info-result">ТМ 34673474578</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Для кого корм?</div>
-              <div class="about__info-result">Для собак</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Класс корма</div>
-              <div class="about__info-result">Супер премиум</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Форма выпуска корма</div>
-              <div class="about__info-result">Сухой корм</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Возраст собаки</div>
-              <div class="about__info-result">Взрослые собаки</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Размер породы</div>
-              <div class="about__info-result">Средние породы (10-25 кг)</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Основной источник протеинов в корме</div>
-              <div class="about__info-result">Ягненок</div>
-            </div>
-            <div class="about__info-item">
-              <div class="about__info-text">Особые потребности в питании</div>
-              <div class="about__info-result">Аллергии <br>Чувствительный желудок</div>
-            </div>
-          </div>
-        </div>
+    <div class="small-cards">
+      <div class="small-cards__inner">
+        @foreach($smallCards as $smallCard)
+          @include('inc.small-card', $smallCard)
+        @endforeach
       </div>
-    </div>
-
-    <div class="reviews">
-      <span class="title title--normal reviews__title reviews__title--js reviews__title--active" data-id='#reviews-content'>Отзывы (65)</span>
-      <span class="title title--normal reviews__title reviews__title--js" data-id='#reviews-questions'>Вопросы (3)</span>
-      <div class="reviews__inner">
-        <div class="reviews__content reviews__content--js">
-
-          <div class="reviews__comments reviews__content--active" id='reviews-content'>
-            <div class="reviews__users reviews__users--js">
-              @for($i = 1; $i <= 6; $i++)
-                @include('inc.user-review')
-              @endfor
-            </div>
-            <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">Показать все отзывы</button>
-          </div>
-
-          <div class="reviews__questions" id='reviews-questions'>
-            <div class="reviews__users reviews__users--js">
-              @for($i = 1; $i <= 3; $i++)
-                @include('inc.user-question')
-              @endfor
-            </div>
-            <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">Показать все вопросы</button>
-          </div>
-        </div>
-        
-        <div class="reviews-filter">
-          <div class="reviews-filter__inner">
-            <div class="reviews-filter__recomend">
-              <div class="reviews-filter__circle">
-                <svg viewBox="0 0 36 36" class="reviews-filter__circle-svg">
-                  <path class="circle-bg"
-                    d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"/>
-    
-                  <path class="circle"
-                    stroke-dasharray="95, 100"
-                    d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"/>
-      
-                  <text x="19.5" y="21" class="reviews-filter__circle-text">95%</text>
-                </svg>
-              </div>
-              <div class="reviews-filter__recomend-text">пользователей рекомендуют этот продукт</div>
-            </div>
-            <div class="reviews-filter__values">
-              <div class="reviews-filter__title">Фильтровать по оценке</div>
-              <div class="reviews-filter__items">
-                <div class="reviews-filter__item">
-                  <div class="reviews-filter__star">
-                    <svg class="reviews-filter__star-svg">
-                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
-                    </svg>
-                    <span>5</span>
-                    <span class="reviews-filter__line" style="width: 173px;"></span>
-                  </div>
-                  <div class="reviews-filter__procent">81%</div>
-                </div>
-                <div class="reviews-filter__item">
-                  <div class="reviews-filter__star">
-                    <svg class="reviews-filter__star-svg">
-                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
-                    </svg>
-                    <span>4</span>
-                    <span class="reviews-filter__line" style="width: 27px;"></span>
-                  </div>
-                  <div class="reviews-filter__procent">9%</div>
-                </div>
-                <div class="reviews-filter__item">
-                  <div class="reviews-filter__star">
-                    <svg class="reviews-filter__star-svg">
-                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
-                    </svg>
-                    <span>3</span>
-                    <span class="reviews-filter__line" style="width: 14px;"></span>
-                  </div>
-                  <div class="reviews-filter__procent">5%</div>
-                </div>
-                <div class="reviews-filter__item">
-                  <div class="reviews-filter__star">
-                    <svg class="reviews-filter__star-svg">
-                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
-                    </svg>
-                    <span>2</span>
-                    <span class="reviews-filter__line" style="width: 6px;"></span>
-                  </div>
-                  <div class="reviews-filter__procent">2%</div>
-                </div>
-                <div class="reviews-filter__item">
-                  <div class="reviews-filter__star">
-                    <svg class="reviews-filter__star-svg">
-                      <use xlink:href="assets/images/spritemap.svg#sprite-star"></use>
-                    </svg>
-                    <span>1</span>
-                    <span class="reviews-filter__line" style="width: 0px;"></span>
-                  </div>
-                  <div class="reviews-filter__procent">0%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="btn reviews-filter__btn">Написать отзыв</button>
-        </div>
-      </div>
+      <a class="btn-secondary small-cards__btn-secondary" href="#" >Смотреть все</a>
     </div>
   </div>
 

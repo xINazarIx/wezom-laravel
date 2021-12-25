@@ -1,7 +1,7 @@
 <div class="reviews__user">
   <div class="reviews__user-info">
     <div class="rating reviews__rating">
-      <div class="rating__stars" data-total="5">
+      <div class="rating__stars" data-total="{{$review['stars']}}">
         <svg class="rating__stars-img product__star">
           <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
         </svg>
@@ -19,14 +19,17 @@
         </svg>
       </div>
     </div>
-    <div class="reviews__user-name">Татьяна Куприна,<br><span>12 апреля 2021</span></div>
+    <div class="reviews__user-name">{{$review['name']}}<br><span>{{$review['date']}}</span></div>
   </div>
   <div class="reviews__user-description">
-    <div class="reviews__user-title">Отличный корм! Хороший состав</div>
-    <div class="reviews__user-text">Отличный корм! Хороший состав. Собаки едят с удовольствием. Чувствуют себя прекрасно. Кормлю собак Фест Чойс уже не первый год. Всем довольны.</div>
+    <div class="reviews__user-title">{{$review['title']}}</div>
+    <div class="reviews__user-text">{{$review['text']}}</div>
     <div class="reviews__user-images">
-      <img class="reviews__user-img js-lazy-load fade-in" data-zzload-source-img="assets/images/user-1.jpg" data-zzload-source-srcset="assets/images/user-1.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-      <img class="reviews__user-img js-lazy-load fade-in" data-zzload-source-img="assets/images/user-2.jpg" data-zzload-source-srcset="assets/images/user-2.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+      @if(count($review['images']) > 0)
+        @foreach($review['images'] as $img)
+          <img class="reviews__user-img js-lazy-load fade-in" data-zzload-source-img="{{$img}}" data-zzload-source-srcset="{{$img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+        @endforeach
+      @endif
     </div>
   </div>
   <div class="user-like reviews__user-like">
@@ -35,6 +38,6 @@
         <use xlink:href="assets/images/spritemap.svg#sprite-like"></use>
       </svg>
     </div>
-    <span class="user-like__col">78</span>
+    <span class="user-like__col">{{$review['likes']}}</span>
   </div>
 </div>

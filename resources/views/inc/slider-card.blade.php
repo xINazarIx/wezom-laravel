@@ -38,7 +38,7 @@
           <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
         </svg>
       </div>
-      <span class='slider-item__stars-text'>({{$card['rating']['coments']}})</span>
+      <span class='rating__text'>({{$card['rating']['coments']}})</span>
     </div>
     <div class="slider-item__updatePrice">
       <button class="updateBtn slider-item__updateBtn">
