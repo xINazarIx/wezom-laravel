@@ -799,6 +799,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger--js').on('click', functio
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burgerMask').on('click', function () {
   closeBurgerMenu();
+  closeFiltersMenu();
 });
 
 function openBergerMenu() {
@@ -811,6 +812,12 @@ function openBergerMenu() {
 function closeBurgerMenu() {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger--js').removeClass('burger--active');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burgerMenu').removeClass('burgerMenu--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('body--disable');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burgerMask').removeClass('burgerMask--active');
+}
+
+function closeFiltersMenu() {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__sidebar--js').removeClass('goods__sidebar--active');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('body--disable');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burgerMask').removeClass('burgerMask--active');
 }
@@ -919,10 +926,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btn-clean-filters--js').on('click', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__filters').remove();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filters--js').remove();
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filter-close-btn--js').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filters--js').children().length <= 2 ? jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filters--js').remove() : jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().remove();
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.showFilters--js').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.goods__sidebar--js').addClass('goods__sidebar--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('body--disable');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burgerMask').addClass('burgerMask--active');
 });
 
 /***/ }),

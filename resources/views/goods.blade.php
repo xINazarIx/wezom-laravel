@@ -83,7 +83,7 @@ $filters = [
   </div>
 
   <div class="goods">
-    <div class="goods__sidebar">
+    <div class="goods__sidebar goods__sidebar--js">
 
       <div class="avatar goods__sidebar--avatar">
         <div class="avatar__header">
@@ -218,26 +218,29 @@ $filters = [
         </svg>
       </div>
       <div class="title goods__title">Корм для собак <span>Найдено 1074 товара</span></div>
-      <div class="goods__filters filters--js">
-        <div class="filter goods__filter">
-          <div class="filter__text">Nature's Protection</div>
-          <svg class="filter__svg filter-close-btn--js">
-            <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
-          </svg>
+      <div class="goods__filters">
+        <div class="goods__filters-inner filters--js">
+          <div class="filter goods__filter">
+            <div class="filter__text">Nature's Protection</div>
+            <svg class="filter__svg filter-close-btn--js">
+              <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
+            </svg>
+          </div>
+          <div class="filter goods__filter">
+            <div class="filter__text">С Автозаказом</div>
+            <svg class="filter__svg filter-close-btn--js">
+              <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
+            </svg>
+          </div>
+          <div class="filter goods__filter">
+            <div class="filter__text">Суперпремиум</div>
+            <svg class="filter__svg filter-close-btn--js">
+              <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
+            </svg>
+          </div>
+          <button class="showMore goods__filters-btnclean btn-clean-filters--js">Очистить фильтры</button>
         </div>
-        <div class="filter goods__filter">
-          <div class="filter__text">С Автозаказом</div>
-          <svg class="filter__svg filter-close-btn--js">
-            <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
-          </svg>
-        </div>
-        <div class="filter goods__filter">
-          <div class="filter__text">Суперпремиум</div>
-          <svg class="filter__svg filter-close-btn--js">
-            <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
-          </svg>
-        </div>
-        <button class="showMore btn-clean-filters--js">Очистить фильтры</button>
+        <button class="btn filter__btn showFilters--js">Фильтры</button>
       </div>
       <img class="goods__bunner js-lazy-load fade-in" data-zzload-source-img="assets/images/goods/goods_bunner.jpg" data-zzload-source-srcset="assets/images/goods/goods_bunner.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
       <div class="goods__info">
@@ -246,33 +249,38 @@ $filters = [
       </div>
 
       <div class="goods__cards goods__cards--js">
-        @for($i = 1; $i <= 10; $i++) @foreach($goodsCards as $card) @include('inc.slider-card', $card) @endforeach @endfor </div>
+        @for($i = 1; $i <= 10; $i++)
+          @foreach($goodsCards as $card)
+            @include('inc.slider-card', $card)
+          @endforeach
+        @endfor
+      </div>
 
-          <button class="btn-showMore goods__btn-showMore goods__btn-showMore--js">
-            <svg class="btn-showMore__svg">
-              <use xlink:href="assets/images/spritemap.svg#sprite-update-arrow"></use>
-            </svg>
-            <div class="btn-showMore__text">Показать<br> еще 24 товара</div>
-          </button>
+      <button class="btn-showMore goods__btn-showMore goods__btn-showMore--js">
+        <svg class="btn-showMore__svg">
+          <use xlink:href="assets/images/spritemap.svg#sprite-update-arrow"></use>
+        </svg>
+        <div class="btn-showMore__text">Показать<br> еще 24 товара</div>
+      </button>
 
-          <div class="pagination goods__pagination pagination--js">
-            <a class="pagination__link pagination__link--active" href="/">1</a>
-            <a class="pagination__link" href="#">2</a>
-            <a class="pagination__link" href="#">3</a>
-            <a class="pagination__link" href="#">4</a>
-            <a class="pagination__link" href="#">5</a>
-            <span>...</span>
-            <a class="pagination__link" href="#">18</a>
-            <a class="pagination__svg-link" href="#">
-              <svg class="pagination__svg-arrow">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-next"></use>
-              </svg>
-            </a>
-          </div>
+      <div class="pagination goods__pagination pagination--js">
+        <a class="pagination__link pagination__link--active" href="/">1</a>
+        <a class="pagination__link" href="#">2</a>
+        <a class="pagination__link" href="#">3</a>
+        <a class="pagination__link" href="#">4</a>
+        <a class="pagination__link" href="#">5</a>
+        <span>...</span>
+        <a class="pagination__link" href="#">18</a>
+        <a class="pagination__svg-link" href="#">
+           <svg class="pagination__svg-arrow">
+             <use xlink:href="assets/images/spritemap.svg#sprite-arrow-next"></use>
+          </svg>
+        </a>
       </div>
     </div>
-
-    @include('inc.benefits')
-    @include('inc.blog')
   </div>
-  @endsection
+
+  @include('inc.benefits')
+  @include('inc.blog')
+</div>
+@endsection

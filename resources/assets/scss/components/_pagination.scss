@@ -60,3 +60,15 @@
     }
   }
 }
+
+@media(max-width: 450px){
+  .pagination{
+    &__link{
+      padding: 4px 8px;
+
+      &--active{
+        font-weight: 400;
+      }
+    }
+  }
+}

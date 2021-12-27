@@ -148,3 +148,13 @@
   }
 }
 
+
+@media(max-width: 450px){
+  .curtain{
+    &__price-input{
+      width: 66px;
+      padding: 8px 4px;
+    }
+  }
+}
+

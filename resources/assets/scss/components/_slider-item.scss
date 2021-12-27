@@ -1,4 +1,5 @@
 .slider-item{
+  width: 100%;
   max-width: 260px;
   padding: 32px 0;
   margin: 0 15px;
@@ -8,7 +9,7 @@
     padding: 30px;
     border: 1px solid #E0E0E0;
     border-radius: 12px;
-    width: 260px;
+    width: 100%;
     height: 260px;
     transition: all .5s;
     margin-bottom: 16px;
@@ -16,6 +17,11 @@
     &:hover{
       box-shadow: 2px 2px 16px 2px rgba(18, 33, 63, .2);
     }
+  }
+
+  &__img{
+    width: 200px;
+    height: 200px;
   }
 
   &__widget{
@@ -109,5 +115,21 @@
 
   &__rating{
     margin-bottom: 16px;
+  }
+}
+
+@media(max-width: 1200px){
+  .slider-item{
+    max-width: 200px;
+    padding: 24px 0;
+
+    &__card{
+      height: 200px;
+    }
+
+    &__img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }

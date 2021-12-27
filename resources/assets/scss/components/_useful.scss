@@ -197,6 +197,10 @@
 }
 
 @media(max-width: 1370px){
+  .useful{
+    margin-top: 0;
+  }
+
   .useful__inner{
     justify-content: center;
     flex-wrap: wrap;
@@ -222,7 +226,7 @@
 @media(max-width: 890px){
 
   .useful{
-    margin-top: 20px;
+    
 
     &__find-images{
       max-width: 380px;

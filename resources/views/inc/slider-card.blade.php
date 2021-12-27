@@ -16,7 +16,7 @@
         </div>
       @endif
     @endforeach
-    <img class="slider-item__item-img js-lazy-load fade-in" data-zzload-source-img="{{$card['img']}}" data-zzload-source-srcset="{{$card['img']}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
+    <img class="slider-item__img js-lazy-load fade-in" data-zzload-source-img="{{$card['img']}}" data-zzload-source-srcset="{{$card['img']}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
   </a>
   <div class="slider-item__description">
     <a class="slider-item__description-text" href="{{$card['link']}}">{{$card['description']}}</a>

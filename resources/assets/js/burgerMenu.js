@@ -6,6 +6,7 @@ $('.burger--js').on('click', function(){
 
 $('.burgerMask').on('click', function(){
   closeBurgerMenu();
+  closeFiltersMenu();
 })
 
 
@@ -19,6 +20,12 @@ function openBergerMenu(){
 function closeBurgerMenu(){
   $('.burger--js').removeClass('burger--active')
   $('.burgerMenu').removeClass('burgerMenu--active')
+  $('body').removeClass('body--disable')
+  $('.burgerMask').removeClass('burgerMask--active')
+}
+
+function closeFiltersMenu(){
+  $('.goods__sidebar--js').removeClass('goods__sidebar--active')
   $('body').removeClass('body--disable')
   $('.burgerMask').removeClass('burgerMask--active')
 }
