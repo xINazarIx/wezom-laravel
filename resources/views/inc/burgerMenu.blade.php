@@ -50,7 +50,7 @@
           </a>
         </li>
         <li class="menu__item burgerMenu__menu-item">
-          <a class="menu__link burgerMenu__menu-link" href="#">
+          <a class="menu__link burgerMenu__menu-link" href="/goods">
             Бренды
               <svg class="menu__img burgerMenu__menu-img">
                 <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
