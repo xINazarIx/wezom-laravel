@@ -233,7 +233,7 @@
             </div>
           </li>
           <li class="menu__item header__menu-item header__menu-item--menu">
-            <a class="menu__link header__menu-link" href="menu__link">
+            <a class="menu__link header__menu-link" href="/goods">
               Бренды
                 <svg class="menu__img header__menu-img">
                   <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
@@ -241,7 +241,7 @@
             </a>
           </li>
           <li class="menu__item header__menu-item header__menu-item--menu">
-            <a class="menu__link header__menu-link" href="menu__link">
+            <a class="menu__link header__menu-link" href="#">
               Ветаптека
                 <svg class="menu__img header__menu-img">
                   <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
@@ -249,12 +249,12 @@
             </a>
           </li>
           <li class="menu__item header__menu-item">
-            <a class="menu__link header__menu-link" href="menu__link">
+            <a class="menu__link header__menu-link" href="#">
               Найди друга
             </a>
           </li>
           <li class="menu__item header__menu-item">
-            <a class="menu__link header__menu-link" href="menu__link">
+            <a class="menu__link header__menu-link" href="#">
               Ветклиники
             </a>
           </li>
