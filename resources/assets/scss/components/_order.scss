@@ -109,3 +109,26 @@
     border-bottom: 1px dashed #7B94B0;
   }
 }
+
+@media(max-width: 1460px){
+  .order{
+
+    &__input{
+      order: 2;
+      margin-right: 0;
+      margin-top: 15px;
+    }
+
+    &__input-text{
+      order: 1;
+      margin-right: 10px;
+    }
+
+    &__check{
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+  }
+}

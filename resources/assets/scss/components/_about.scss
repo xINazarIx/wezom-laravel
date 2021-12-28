@@ -158,3 +158,11 @@
     color: #202454
   }
 }
+
+@media(max-width: 1710px){
+  .about{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto 85px;
+  }
+}

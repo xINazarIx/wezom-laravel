@@ -238,7 +238,7 @@ $filters = [
               <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
             </svg>
           </div>
-          <button class="showMore goods__filters-btnclean btn-clean-filters--js">Очистить фильтры</button>
+          <button class="showMore goods__filters-btn-clean btn-clean-filters--js">Очистить фильтры</button>
         </div>
         <button class="btn filter__btn showFilters--js">Фильтры</button>
       </div>

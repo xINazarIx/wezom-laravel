@@ -38,31 +38,19 @@ function inicializedSlider(nameSlider, prevBtn, nextBtn){
         }
       },
       {
-        breakpoint: 1115,
-        settings: {
-          arrows: false,
-          prevArrow: false,
-          nextArrow: false,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 870,
+        breakpoint: 881,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: false
+          slidesToScroll: 2,
         }
       },
       {
-        breakpoint: 580,
+        breakpoint: 581,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false
+          slidesToScroll: 2,
         }
-      },
+      }
     ]
   })
 }

@@ -54,9 +54,8 @@ $productOptions = (object)[
     </svg>
     <a class="breadcrumbs__link">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</a>
   </div>
-  <div class="title title--regular page-product__title">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</div>
+  <div class="title title--regular product__title">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</div>
   <div class="page-product__content">
-
     <div class="product">
       <div class="product__inner">
         <div class="product__right-section">
@@ -230,7 +229,7 @@ $productOptions = (object)[
         </div>
       </div>  
     </div>
-
+ 
     @include('inc.about-product')
     @include('inc.reviews')
 
