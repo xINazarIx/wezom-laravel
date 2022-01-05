@@ -1162,7 +1162,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.order__input-btn--js').on('click
 
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("order__input-btn--minus") && jquery__WEBPACK_IMPORTED_MODULE_0___default()('.order__input-span--js').text() > 1) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.order__input-span--js').text(--i);
-  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("order__input-btn--plus") && jquery__WEBPACK_IMPORTED_MODULE_0___default()('.order__input-span--js').text() < 10) {
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("order__input-btn--plus")) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.order__input-span--js').text(++i);
   }
 });

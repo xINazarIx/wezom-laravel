@@ -58,8 +58,8 @@ $productOptions = (object)[
   <div class="page-product__content">
     <div class="product">
       <div class="product__inner">
-        <div class="product__right-section">
-          <div class="product__right-section-inner">
+        <div class="product__left-section">
+          <div class="product__left-section-inner">
       
             <div class="product-card">
               <div class="product-card__images">
@@ -115,8 +115,8 @@ $productOptions = (object)[
           </div>
         </div>
 
-        <div class="product__left-section">
-          <div class="product__left-section-main">
+        <div class="product__right-section">
+          <div class="product__right-section-main">
             <div class="product__description">
               <div class="product__description-head">
                 <div class="manufacturer">
@@ -125,7 +125,7 @@ $productOptions = (object)[
                   </div>
                   <span class="manufacturer__text">Чехия</span>
                 </div>
-                <div class="rating">
+                <div class="rating  product__rating">
                   <div class="rating__stars product__stars" data-total="4">
                     <svg class="rating__stars-img product__star">
                       <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
@@ -223,14 +223,14 @@ $productOptions = (object)[
               </div>
             </div>
           </div>
-          @foreach($productOptions as $productOption)
+          <!-- @foreach($productOptions as $productOption)
             @include('inc.drop-menu', $productOption)
-          @endforeach
+          @endforeach -->
         </div>
       </div>  
     </div>
  
-    @include('inc.about-product')
+    <!-- @include('inc.about-product')
     @include('inc.reviews')
 
     <div class="small-cards">
@@ -240,7 +240,7 @@ $productOptions = (object)[
         @endforeach
       </div>
       <a class="btn-secondary small-cards__btn-secondary" href="#" >Смотреть все</a>
-    </div>
+    </div> -->
   </div>
 
 

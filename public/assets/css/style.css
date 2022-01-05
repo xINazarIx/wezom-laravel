@@ -1688,6 +1688,9 @@ img.mfp-img {
 .rating__stars[data-total="1"] .rating__stars-img:nth-child(n+5), .rating__stars[data-total="2"] .rating__stars-img:nth-child(n+4), .rating__stars[data-total="3"] .rating__stars-img:nth-child(n+3), .rating__stars[data-total="4"] .rating__stars-img:nth-child(n+2), .rating__stars[data-total="5"] .rating__stars-img:nth-child(n+1) {
   fill: #E77E42;
 }
+.rating span {
+  margin-top: 3px;
+}
 
 .infoBoxes {
   display: none;
@@ -5139,6 +5142,18 @@ img.mfp-img {
     margin-bottom: 10px;
   }
 }
+@media (max-width: 360px) {
+  .order__check {
+    justify-content: center;
+  }
+  .order__input-text {
+    order: 2;
+  }
+  .order__input {
+    order: 1;
+    margin-bottom: 10px;
+  }
+}
 .share {
   width: 180px;
   display: flex;
@@ -5940,7 +5955,7 @@ img.mfp-img {
   display: flex;
   align-items: flex-start;
 }
-.product__right-section-inner {
+.product__left-section-inner {
   display: flex;
 }
 .product__share {
@@ -5949,7 +5964,7 @@ img.mfp-img {
 .product__video-review {
   margin-top: 34px;
 }
-.product__left-section-main {
+.product__right-section-main {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
@@ -6107,7 +6122,7 @@ img.mfp-img {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1295px) {
   .product__title {
     text-align: center;
   }
@@ -6124,6 +6139,15 @@ img.mfp-img {
     justify-content: center;
   }
 }
+@media (max-width: 740px) {
+  .product__right-section-main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product__description {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 540px) {
   .product__price-inner {
     flex-wrap: wrap;
@@ -6135,5 +6159,26 @@ img.mfp-img {
   }
   .product__about {
     width: 100%;
+  }
+}
+@media (max-width: 470px) {
+  .product__description-head {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .product__rating {
+    justify-content: flex-end;
+    width: 70%;
+  }
+  .product__link-question {
+    margin-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .product__order {
+    margin: 10px 0;
+  }
+  .product__rating {
+    width: 50%;
   }
 }

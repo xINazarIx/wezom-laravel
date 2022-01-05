@@ -132,3 +132,21 @@
     }
   }
 }
+
+@media(max-width: 360px){
+  .order{
+    
+    &__check{
+      justify-content: center;
+    }
+
+    &__input-text{
+      order: 2;
+    }
+
+    &__input{
+      order: 1;
+      margin-bottom: 10px;
+    }
+  }
+}
