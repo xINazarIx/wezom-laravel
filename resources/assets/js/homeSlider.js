@@ -40,17 +40,39 @@ function inicializedSlider(nameSlider, prevBtn, nextBtn){
       {
         breakpoint: 881,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
         }
       },
       {
-        breakpoint: 581,
+        breakpoint: 769,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 5,
+          slidesToScroll: 5,
         }
-      }
+      },
+      {
+        breakpoint: 610,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        }
+      },
+      {
+        breakpoint: 460,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      
     ]
   })
 }

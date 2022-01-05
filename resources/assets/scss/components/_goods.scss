@@ -159,11 +159,11 @@
     }
 
     &__title{
-      margin-top: 25px;
+      margin-top: 10px;
     }
 
     &__sort{
-      top: 25px;
+      top: 10px;
     }
   }
 }
@@ -196,6 +196,43 @@
   }
 }
 
+@media(max-width: 770px){
+  .goods{
+
+    &__filters{
+      margin: 0;
+    }
+
+    &__filters-inner{
+      display: none;
+    }
+
+    &__filter-btn{
+      position: fixed;
+      right: 20px;
+      top: 90px;
+      z-index: 1;
+    }
+
+    &__sort{
+      display: none;
+    }
+
+    &__bunner{
+      display: none;
+    }
+
+    &__info{
+      display: none;
+    }
+
+    &__title{
+      margin: 0;
+    }
+    
+  }
+}
+
 @media(max-width: 710px){
   .goods{
     &__sidebar{
@@ -209,6 +246,10 @@
     &__sort{
       top: 0;
     }
+
+    &__filter-btn{
+      top: 70px;
+    }
   }
 }
 
@@ -216,13 +257,10 @@
   .goods{
 
     &__title{
-      margin-top: 65px;
       font-size: 24px;
       align-items: center;
-      justify-content: space-between;
 
       span{
-        width: max-content;
         font-size: 16px;
       }
     }

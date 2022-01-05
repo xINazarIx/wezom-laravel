@@ -240,7 +240,7 @@ $filters = [
           </div>
           <button class="showMore goods__filters-btn-clean btn-clean-filters--js">Очистить фильтры</button>
         </div>
-        <button class="btn filter__btn showFilters--js">Фильтры</button>
+        <button class="btn filter__btn goods__filter-btn showFilters--js">Фильтры</button>
       </div>
       <img class="goods__bunner js-lazy-load fade-in" data-zzload-source-img="assets/images/goods/goods_bunner.jpg" data-zzload-source-srcset="assets/images/goods/goods_bunner.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
       <div class="goods__info">

@@ -137,3 +137,58 @@
     }
   }
 }
+
+@media(max-width: 770px){
+  .slider-item{
+    max-width: 100px;
+    padding: 12px 0;
+
+    &__card{
+      height: 120px;
+      padding: 10px;
+      margin-bottom: 6px;
+    }
+
+    &__description-text{
+      font-size: 12px;
+      line-height: 14px;
+      max-height: 54px;
+      overflow-y: scroll;
+      margin-bottom: 8px;
+    }
+
+    &__description-text::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    &__rating{
+      margin-bottom: 4px;
+    }
+
+    &__updatePrice{
+      display: none;
+    }
+
+    &__prices-lastPrice{
+      display: none;
+    }
+
+    &__buyBtn{
+      display: none;
+    }
+
+    &__widget{
+      top: 5px;
+      left: 4px;
+    }
+
+    &__widget:nth-child(2){
+      top: 23px;
+    }
+
+    &__widget:nth-child(3){
+      top: 40px;
+    }
+  }
+}

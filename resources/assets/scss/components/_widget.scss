@@ -35,3 +35,18 @@
   }
 
 }
+
+@media(max-width: 770px){
+  .widget{
+    max-width: 80px;
+    padding: 1px 2px;
+
+    &__text{
+      white-space: nowrap;
+      overflow-x: hidden;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 13px;
+    }
+  }
+}
