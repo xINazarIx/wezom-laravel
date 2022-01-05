@@ -1,12 +1,19 @@
 .small-cards{
   width: 100%;
-  max-width: 1420px;
+  max-width: 1440px;
   margin: 0 auto 200px;
 
   &__inner{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
     margin-bottom: 32px;
+    padding-bottom: 5px;
+  }
+
+  &__inner::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   &__btn-secondary{
@@ -15,4 +22,11 @@
     max-width: 124px;
     margin: 0 auto;
   }
+
+  &__small-card + &__small-card{
+    margin-left: 30px;
+  }
 }
+
+
+

@@ -233,14 +233,14 @@ $productOptions = (object)[
     @include('inc.about-product')
     @include('inc.reviews')
 
-    <!-- <div class="small-cards">
+    <div class="small-cards">
       <div class="small-cards__inner">
         @foreach($smallCards as $smallCard)
           @include('inc.small-card', $smallCard)
         @endforeach
       </div>
       <a class="btn-secondary small-cards__btn-secondary" href="#" >Смотреть все</a>
-    </div> -->
+    </div>
   </div>
 
 

@@ -6019,19 +6019,28 @@ img.mfp-img {
 }
 .small-cards {
   width: 100%;
-  max-width: 1420px;
+  max-width: 1440px;
   margin: 0 auto 200px;
 }
 .small-cards__inner {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
   margin-bottom: 32px;
+  padding-bottom: 5px;
+}
+.small-cards__inner::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .small-cards__btn-secondary {
   display: block;
   width: 100%;
   max-width: 124px;
   margin: 0 auto;
+}
+.small-cards__small-card + .small-cards__small-card {
+  margin-left: 30px;
 }
 
 .product {
