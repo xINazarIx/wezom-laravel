@@ -185,7 +185,7 @@ $filters = [
         <div class="curtain__checkboxes curtain__checkboxes--js">
 
           @foreach($curtain['links'] as $name => $num)
-          <label class="checkbox curtain__checkbox">
+          <label class="checkbox curtain__checkbox" data-check="false">
             <input type="checkbox" class="checkbox__real">
             <span class="checkbox__fake">
               <svg class="checkbox__fake-mark" height="18px" width="15px" stroke="black" stroke-width="2px" fill="none">
@@ -240,7 +240,7 @@ $filters = [
           </div>
           <button class="showMore goods__filters-btn-clean btn-clean-filters--js">Очистить фильтры</button>
         </div>
-        <button class="btn filter__btn goods__filter-btn showFilters--js">Фильтры</button>
+        <button class="btn filter__btn goods__filter-btn showFilters--js">Фильтры <span></span></button>
       </div>
       <img class="goods__bunner js-lazy-load fade-in" data-zzload-source-img="assets/images/goods/goods_bunner.jpg" data-zzload-source-srcset="assets/images/goods/goods_bunner.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
       <div class="goods__info">

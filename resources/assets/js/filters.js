@@ -13,3 +13,10 @@ $('.showFilters--js').on('click', function(){
   $('body').addClass('body--disable')
   $('.burgerMask').addClass('burgerMask--active')
 })
+
+let i = 0;
+
+$('.checkbox__real', $('.curtain__checkboxes--js')).on('click', function(){
+  $(this).is(':checked') == true ? i++ : i--
+  i == 0 ? $('.showFilters--js').children().text('') : $('.showFilters--js').children().text(i)
+})

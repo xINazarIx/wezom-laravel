@@ -936,6 +936,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.showFilters--js').on('click', fu
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('body--disable');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burgerMask').addClass('burgerMask--active');
 });
+var i = 0;
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.checkbox__real', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js')).on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).is(':checked') == true ? i++ : i--;
+  i == 0 ? jquery__WEBPACK_IMPORTED_MODULE_0___default()('.showFilters--js').children().text('') : jquery__WEBPACK_IMPORTED_MODULE_0___default()('.showFilters--js').children().text(i);
+});
 
 /***/ }),
 

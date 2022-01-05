@@ -1307,6 +1307,9 @@ img.mfp-img {
   padding: 6px 21px;
   text-transform: none;
 }
+.filter__btn span {
+  margin-left: 5px;
+}
 .filter__btn:hover {
   color: #2C9323;
 }
@@ -1660,7 +1663,7 @@ img.mfp-img {
   }
   .widget__text {
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
     font-weight: 300;
     font-size: 12px;
     line-height: 13px;

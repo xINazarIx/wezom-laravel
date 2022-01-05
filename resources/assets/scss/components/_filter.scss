@@ -38,6 +38,10 @@
     padding: 6px 21px;
     text-transform: none;
 
+    span{
+      margin-left: 5px;
+    }
+
     &:hover{
       color: $green;
     }
