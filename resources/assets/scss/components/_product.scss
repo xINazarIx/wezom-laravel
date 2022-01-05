@@ -231,6 +231,8 @@
 
 @media(max-width: 875px){
   .product{
+    margin-bottom: 10px;
+
     &__left-section-main{
       justify-content: center;
     }
@@ -293,7 +295,7 @@
     &__order{
       margin: 10px 0;
     }
-    
+
     &__rating{
       width: 50%;
     }

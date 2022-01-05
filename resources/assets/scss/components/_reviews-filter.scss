@@ -108,4 +108,22 @@
   }
 }
 
+@media(max-width: 495px){
+
+  .reviews-filter{
+    &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__recomend{
+      margin-left: 40px;
+    }
+
+    &__recomend-text{
+      margin-bottom: 20px;
+    }
+  }
+}
+
 

@@ -223,17 +223,17 @@ $productOptions = (object)[
               </div>
             </div>
           </div>
-          <!-- @foreach($productOptions as $productOption)
+          @foreach($productOptions as $productOption)
             @include('inc.drop-menu', $productOption)
-          @endforeach -->
+          @endforeach
         </div>
       </div>  
     </div>
  
-    <!-- @include('inc.about-product')
+    @include('inc.about-product')
     @include('inc.reviews')
 
-    <div class="small-cards">
+    <!-- <div class="small-cards">
       <div class="small-cards__inner">
         @foreach($smallCards as $smallCard)
           @include('inc.small-card', $smallCard)

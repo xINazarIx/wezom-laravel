@@ -1,4 +1,4 @@
-<div class="reviews-filter">
+<div class="reviews-filter reviews__filter">
   <div class="reviews-filter__inner">
     <div class="reviews-filter__recomend">
       <div class="reviews-circle reviews-filter__reviews-circle">

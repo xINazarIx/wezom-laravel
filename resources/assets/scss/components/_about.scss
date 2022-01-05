@@ -23,8 +23,17 @@
   &__tabs{
     display: flex;
     width: 100%;
+    max-width: 580px;
     border-bottom: 1px solid #E0E0E0;
     margin-bottom: 32px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  &__tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   &__tab{
@@ -164,5 +173,34 @@
     width: 100%;
     max-width: 1600px;
     margin: 0 auto 85px;
+  }
+}
+
+@media(max-width: 1120px){
+  .about{
+    padding: 10px 15px;
+
+    &__product{
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+
+    &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__btn-secondary{
+      margin-top: 12px;
+    }
+  }
+}
+
+@media(max-width: 470px){
+  .about{
+    &__info-result{
+      text-align: right;
+    }
   }
 }
