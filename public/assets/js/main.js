@@ -1029,12 +1029,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_slider__WEBPACK_IMPORTED_MODULE_1__);
 
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper').each(function (i, elem) {
+  // Выдаём первому слайдеру класс ектив + дататаб что он инициализирован
+  if (i == 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-check', 'true');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('slider__wrapper--active');
+  }
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.petsNav__btn').each(function (i, elem) {
+  // Выдаём первому табу класс ектив
+  if (i == 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('petsNav__btn--active');
+  }
+});
 
 if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')).children().length >= 6) {
   inicializedSlider(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-prev', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-next', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')));
 } else {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtns', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')).css('display', 'none');
-} // если в слайдере меньше 6 єлементов не инициализируем его
+} // если в слайдере меньше 6 eлементов не инициализируем его
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.petsNav__btn').on('click', function () {
@@ -1046,11 +1059,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.petsNav__btn').on('click', funct
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab')).addClass('slider__wrapper--active'); // Ищем слайдер с помощью айди таба
 
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab')).attr('data-check') == 'false') {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab')).attr('data-check') == 'false' && jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab'))).children().length >= 6) {
     // Проверяем был ли слайдер проинициализирован с помощью атрибута data-check 
     inicializedSlider(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-prev', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active')), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtn-next', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__wrapper--active'))); // Инициализируем слайдер с помощью функции, передаём имя слайдара и две кнопки, с помощью контекста slider__wrapper--active
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab')).attr('data-check', 'true'); // Меняем атрибут на true (Слайдер проинициализирован)
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__items', jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab'))).children().length <= 6 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab')).attr('data-check') == 'false') {
+    // не инициализируем слайдер если в нём меньше 6 элементов
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider__navBtns', jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-tab'))).css('display', 'none');
   }
 });
 

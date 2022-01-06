@@ -1,3 +1,34 @@
+<?php 
+
+$footerInfoLinks = [
+  'Условия использования сайта' => '#',
+  'Защита персональных данных' => '#',
+  'Карта сайта' => '#'
+];
+
+ $footerLinks = [
+    ['Компания' => ['О комапании' => '#','Адреса магазинов «ZooBonus»' => '#', 'Вакансии' => '#', 'Благотворительность' => '#', 'Контакты' => '#',]],
+    ['Покупателям' => ['Доставка и оплата' => '#', 'FAQ' => '#', 'Подарочные сертификаты' => '#', 'Акции' => '#', 'Породы животных' => '#', 'Дисконтная программа' => '#', 'Блог' => '#', 'Фотогалерея' => '#',]],
+ ];
+
+ $footerContacts = [
+    '(044) 490 31 00' => 'info@wezom.com.ua'
+ ];
+
+ $footerConnections = [
+  'Чат онлайн' => ['#', 'assets/images/spritemap.svg#sprite-chat'],
+  'Написать нам' => ['#', 'assets/images/spritemap.svg#sprite-message']
+ ];
+
+ $footerSocials = [
+  ['#','assets/images/spritemap.svg#sprite-facebook'],
+  ['#','assets/images/spritemap.svg#sprite-inst'],
+  ['#','assets/images/spritemap.svg#sprite-viber']
+]
+
+
+?>
+
 @section('footer')
 <div class="underFooter">
     <div class="container">
@@ -21,41 +52,25 @@
           <p class="footer__logo-text">© 2020 Интернет-магазин</p>
         </div>
         <ul class="social footer__social">
+          @foreach($footerSocials as $social)
           <li class="social__item">
-            <a class="social__link" href="#" target="_blank">
-              <svg class="social__img-facebook">
-                <use xlink:href="assets/images/spritemap.svg#sprite-facebook"></use>
+            <a class="social__link" href="{{$social[0]}}" target="_blank">
+              <svg class="social__img">
+                <use xlink:href="{{$social[1]}}"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link" href="#" target="_blank">
-              <svg class="social__img-inst">
-                <use xlink:href="assets/images/spritemap.svg#sprite-inst"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#" target="_blank">
-              <svg class="social__img-viber">
-                <use xlink:href="assets/images/spritemap.svg#sprite-viber"></use>
-              </svg>
-            </a>
-          </li>
+          @endforeach
         </ul>
         <div class="footer__connections">
-          <a class="connection footer__connection" href="#">
+          @foreach($footerConnections as $title => $arr)
+          <a class="connection footer__connection" href="{{$arr[0]}}">
             <svg class="connection__img" width="40" height="40">
-              <use xlink:href="assets/images/spritemap.svg#sprite-chat"></use>
+              <use xlink:href="{{$arr[1]}}"></use>
             </svg>
-            Чат онлайн
+            {{$title}}
           </a>
-          <a class="connection footer__connection" href="#">
-            <svg class="connection__img" width="40" height="40">
-              <use xlink:href="assets/images/spritemap.svg#sprite-message"></use>
-            </svg>
-            Написать нам
-          </a>
+          @endforeach
         </div>
         <button class="btnUp btnUp--js footer__btnUp">
           Вверх
@@ -68,73 +83,40 @@
       </div>
       <div class="footer__main">
         <ul class="footer__left-list">
-          <li class="footer__left-item"><a class="footer__left-link" href="#">Условия использования сайта</a></li>
-          <li class="footer__left-item"><a class="footer__left-link" href="#">Защита персональных данных</a></li>
-          <li class="footer__left-item"><a class="footer__left-link" href="#">Карта сайта</a></li>
+          @foreach($footerInfoLinks as $titleLink => $link)
+          <li class="footer__left-item"><a class="footer__left-link" href="{{$link}}">{{$titleLink}}</a></li>
+          @endforeach
         </ul>
         <div class="footer__right">
         <div class="infoBoxes footer__infoBoxes">
+          @foreach($footerLinks as $box)
           <div class="infoBoxes__box footer__infoBoxes-box">
-            <div class="infoBoxes__title footer__infoBoxes-title">Компания</div>
+            @foreach($box as $title => $links)
+            <div class="infoBoxes__title footer__infoBoxes-title">{{$title}}</div>
             <ul class="infoBoxes__list footer__infoBoxes-list">
+              @foreach($links as $titleLink => $link)
               <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">О компании</a>
+                <a class="infoBoxes__link footer__infoBoxes-link" href="{{$link}}">{{$titleLink}}</a>
               </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Адреса магазинов «ZooBonus»</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Вакансии</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Благотворительность</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Контакты</a>
-              </li>
+              @endforeach
             </ul>
+            @endforeach
           </div>
-          <div class="infoBoxes__box footer__infoBoxes-box">
-            <div class="infoBoxes__title footer__infoBoxes-title">Покупателям</div>
-            <ul class="infoBoxes__list footer__infoBoxes-list">
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Доставка и оплата</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">FAQ</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Подарочные сертификаты</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Акции</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Породы животных</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Дисконтная программа</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Блог</a>
-              </li>
-              <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link" href="#">Фотогалерея</a>
-              </li>
-            </ul>
-          </div>
+          @endforeach
           <div class="infoBoxes__box footer__infoBoxes-box">
             <div class="infoBoxes__title footer__infoBoxes-title">Контакты</div>
+            @foreach($footerContacts as $num => $email)
             <ul class="infoBoxes__list footer__infoBoxes-list">
               <li class="infoBoxes__item footer__infoBoxes-info">Информационая служба:</li>
               <li class="infoBoxes__item footer__infoBoxes-item">
-                <a class="infoBoxes__link footer__infoBoxes-link footer__infoBoxes-tel" href="tel:0444903100">(044) 490 3100</a></li>
+                <a class="infoBoxes__link footer__infoBoxes-link footer__infoBoxes-tel" href="tel:{{$num}}">{{$num}}</a></li>
               <li class="infoBoxes__item footer__infoBoxes-item">Ежедневно с 08:30-21:00</li>
               <li class="infoBoxes__item footer__infoBoxes-item">Email:
-                <a class="infoBoxes__link footer__infoBoxes-link  footer__infoBoxes-email" href="mailto:info@wezom.com.ua">
-                  info@wezom.com.ua</a>
+                <a class="infoBoxes__link footer__infoBoxes-link  footer__infoBoxes-email" href="mailto:{{$email}}">
+                {{$email}}</a>
               </li>
             </ul>
+            @endforeach
           </div>
         </div>
     

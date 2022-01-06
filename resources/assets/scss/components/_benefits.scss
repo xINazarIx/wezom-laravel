@@ -31,6 +31,11 @@
     box-shadow: 0px 2px 8px rgba(84, 143, 199, 0.2);
   }
 
+  &__item-img{
+    max-width: 44px;
+    max-height: 32px;
+  }
+
   &__item-icon:hover{
     box-shadow: 0px 2px 8px rgba(84, 143, 199, 0.6);
   }

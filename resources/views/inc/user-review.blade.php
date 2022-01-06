@@ -1,7 +1,7 @@
 <div class="reviews__user">
   <div class="reviews__user-info">
     <div class="rating reviews__rating">
-      <div class="rating__stars" data-total="{{$review['stars']}}">
+      <div class="rating__stars" data-total="{{$review->stars}}">
         <svg class="rating__stars-img product__star">
           <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
         </svg>
@@ -19,14 +19,14 @@
         </svg>
       </div>
     </div>
-    <div class="reviews__user-name">{{$review['name']}}<br><span>{{$review['date']}}</span></div>
+    <div class="reviews__user-name">{{$review->name}}<br><span>{{$review->date}}</span></div>
   </div>
   <div class="reviews__user-description">
-    <div class="reviews__user-title">{{$review['title']}}</div>
-    <div class="reviews__user-text">{{$review['text']}}</div>
+    <div class="reviews__user-title">{{$review->title}}</div>
+    <div class="reviews__user-text">{{$review->description}}</div>
     <div class="reviews__user-images">
-      @if(count($review['images']) > 0)
-        @foreach($review['images'] as $img)
+      @if(count($review->images) > 0)
+        @foreach($review->images as $img)
           <img class="reviews__user-img js-lazy-load fade-in" data-zzload-source-img="{{$img}}" data-zzload-source-srcset="{{$img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
         @endforeach
       @endif
@@ -38,6 +38,6 @@
         <use xlink:href="assets/images/spritemap.svg#sprite-like"></use>
       </svg>
     </div>
-    <span class="user-like__col">{{$review['likes']}}</span>
+    <span class="user-like__col">{{$review->likes}}</span>
   </div>
 </div>

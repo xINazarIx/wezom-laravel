@@ -22,18 +22,8 @@
     background-color: rgba(255, 255, 255, .1);
   }
 
-  &__img-inst{
-    width: 23px;
-    height: 24px;
-  }
-
-  &__img-facebook{
-    width: 12px;
-    height: 24px;
-  }
-
-  &__img-viber{
-    width: 23px;
-    height: 24px;
+  &__img{
+    max-width: 22px;
+    max-height: 24px;
   }
 }

@@ -1,32 +1,5 @@
 <?php 
 
-$smallCards = (object)[
-  ['link' => '#', 'img' => 'assets/images/small-card-1.webp', 'stars' => '4', 'comments' => '65', 'text' => 'Brit Premium (Брит Премиум) by Nature ADULT L - Сухой корм с курицей, 4 кг'],
-
-  ['link' => '#', 'img' => 'assets/images/small-card-2.webp', 'stars' => '1', 'comments' => '15', 'text' => 'Scalibor (Скалибор) ошейник 48 см'],
-
-  ['link' => '#', 'img' => 'assets/images/small-card-3.webp', 'stars' => '2', 'comments' => '4', 'text' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг'],
-
-  ['link' => '#', 'img' => 'assets/images/small-card-4.webp', 'stars' => '5', 'comments' => '24', 'text' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород'],
-
-  ['link' => '#', 'img' => 'assets/images/small-card-5.webp', 'stars' => '2', 'comments' => '1', 'text' => 'Brit Premium (Брит Премиум) by Nature ADULT L - Сухой корм с курицей, 4 кг'],
-
-  ['link' => '#', 'img' => 'assets/images/small-card-6.webp', 'stars' => '4', 'comments' => '32', 'text' => 'PetKind Beef Tripe Formula Беззерновые консервы для собак с говядиной, 500 мл'],
-];
-
-$aboutProduct = (object)[
-  ['desc' => 'Артикул', 'result' => "ТМ 34673474578"],
-  ['desc' => 'Для кого корм?', 'result' => "Для собак"],
-  ['desc' => 'Класс корма', 'result' => "Супер премиум"],
-  ['desc' => 'Форма выпуска корма', 'result' => "Сухой корм"],
-  ['desc' => 'Форма выпуска корма', 'result' => "Сухой корм"],
-  ['desc' => 'Возраст собаки', 'result' => "Взрослые собаки"],
-  ['desc' => 'Размер породы', 'result' => 'Средние породы (10-25 кг)'],
-  ['desc' => 'Основной источник протеинов в корме', 'result' => "Ягненок"],
-  ['desc' => ' Особые потребности в питании', 'result' => "Аллергии, Чувствительный желудок"]
-];
-
-
 $productOptions = (object)[
   ['city' => 'Запорожье', 'title' => 'Доставка в:', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴'],['option' => 'Самовывоз из JustIn','date' => 'Отправим сегодня', 'price' => '59 ₴']]],
 
@@ -235,11 +208,11 @@ $productOptions = (object)[
 
     <div class="small-cards">
       <div class="small-cards__inner">
-        @foreach($smallCards as $smallCard)
-          @include('inc.small-card', $smallCard)
+        @foreach(config('mock.small-cards') as $smallCard)
+          @include('inc.small-card')
         @endforeach
       </div>
-      <a class="btn-secondary small-cards__btn-secondary" href="#" >Смотреть все</a>
+      <a class="btn-secondary small-cards__btn-secondary" href="/goods" >Смотреть все</a>
     </div>
   </div>
 

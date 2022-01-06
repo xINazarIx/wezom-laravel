@@ -1,27 +1,12 @@
 <div class="slider-item">
-  <a class="slider-item__card" href="{{$card['link']}}">
+  <a class="slider-item__card" href="{{$card->url}}">
   
-    @foreach($card['info'] as $info)
-      @if($info == 'Топ продаж')
-        <div class="widget widget--purpure slider-item__widget">
-          <p class="widget__text">Топ продаж</p>
-        </div>
-      @elseif($info == 'Скидка -5%')
-        <div class="widget widget--pink slider-item__widget">
-          <p class="widget__text">Скидка -5%</p>
-        </div>
-      @elseif($info == 'Новинка')
-        <div class="widget widget--green slider-item__widget">
-          <p class="widget__text">Новинка</p>
-        </div>
-      @endif
-    @endforeach
-    <img class="slider-item__img js-lazy-load fade-in" data-zzload-source-img="{{$card['img']}}" data-zzload-source-srcset="{{$card['img']}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
+    <img class="slider-item__img js-lazy-load fade-in" data-zzload-source-img="{{$card->img}}" data-zzload-source-srcset="{{$card->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
   </a>
   <div class="slider-item__description">
-    <a class="slider-item__description-text" href="{{$card['link']}}">{{$card['description']}}</a>
+    <a class="slider-item__description-text" href="{{$card->url}}">{{$card->description}}</a>
     <div class="rating slider-item__rating">
-      <div class="rating__stars slider-item__rating-stars" data-total="{{$card['rating']['star']}}">
+      <div class="rating__stars slider-item__rating-stars" data-total="{{$card->stars}}">
         <svg class="rating__stars-img">
           <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
         </svg>
@@ -38,7 +23,7 @@
           <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
         </svg>
       </div>
-      <span class='rating__text'>({{$card['rating']['coments']}})</span>
+      <span class='rating__text'>({{$card->comments}})</span>
     </div>
     <div class="slider-item__updatePrice">
       <button class="updateBtn slider-item__updateBtn">
@@ -46,11 +31,11 @@
           <use xlink:href="assets/images/spritemap.svg#sprite-updateBtn"></use>
         </svg>
       </button>
-      <span class='slider-item__updatePrice-text'>{{$card['updatePrice']}}₴</span>
+      <span class='slider-item__updatePrice-text'>{{$card->updatePrice}}₴</span>
     </div>
     <div class="slider-item__prices">
-      <span class="slider-item__prices-lastPrice">{{$card['lastPrice']}}</span>
-      <span class="slider-item__prices-currentlyPrice">{{$card['price']}} ₴</span>
+      <span class="slider-item__prices-lastPrice">{{$card->lastPrice}}</span>
+      <span class="slider-item__prices-currentlyPrice">{{$card->price}} ₴</span>
     </div>
     <button class="buyBtn slider-item__buyBtn">
       <svg class="buyBtn__img">

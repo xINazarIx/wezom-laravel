@@ -41,11 +41,11 @@
     <div class="about__characteristic">
       <div class="title title--normal about__title">Характеристика</div>
       <div class="about__info">
-        @foreach($aboutProduct as $char)
-        <div class="about__info-item">
-          <div class="about__info-text">{{$char['desc']}}</div>
-          <div class="about__info-result">{{$char['result']}}</div>
-        </div>
+        @foreach(config('mock.about-product') as $elem)
+          <div class="about__info-item">
+            <div class="about__info-text">{{$elem->description}}</div>
+            <div class="about__info-result">{{$elem->result}}</div>
+          </div>
         @endforeach
       </div>
     </div>
