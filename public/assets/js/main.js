@@ -766,6 +766,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__tabs--js').children().first().addClass('about__tab--active');
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__content--js').first().removeClass('about__content--hidden');
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__tabs--js').children().on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.about__tabs--js').children().each(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('about__tab--active');
@@ -883,6 +885,31 @@ function scrollToTop() {
 
 /***/ }),
 
+/***/ "./resources/assets/js/catalog.js":
+/*!****************************************!*\
+  !*** ./resources/assets/js/catalog.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-catalog-item-links').each(function (i, elem) {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().length <= 5) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-catalog__showMore', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this)).remove();
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().each(function (i, elem) {
+    if (i > 3 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('js-catalog__showMore') == false) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).remove();
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/assets/js/drop-menu.js":
 /*!******************************************!*\
   !*** ./resources/assets/js/drop-menu.js ***!
@@ -980,17 +1007,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js').each(function () {
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().length == 0) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('margin-top', '0');
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__checkboxes--js').each(function (i, elem) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().each(function (i, elem) {
+    if (i >= 8 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().hasClass('curtain__showMore--js') !== true) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('curtain__checkbox--hidden');
+    }
+  });
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().length < 8) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__showMore--js', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this)).remove();
+  }
+
+  if (i >= 3) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('curtain__checkboxes--hidden');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__arrow-up', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).css('transform', 'rotate(0deg)');
-  } else {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().each(function (i, elem) {
-      if (i >= 9 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().hasClass('curtain__showMore--js') !== true) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('curtain__checkbox--hidden');
-      }
-    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__arrow-up', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent()).css('transform', 'rotate(0deg)'); // Надо пофиксить так нельзя
   }
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.curtain__showMore--js').on('click', function () {
@@ -1165,7 +1195,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./about */ "./resources/assets/js/about.js");
 /* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./reviews */ "./resources/assets/js/reviews.js");
 /* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./order */ "./resources/assets/js/order.js");
-/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+/* harmony import */ var _catalog__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./catalog */ "./resources/assets/js/catalog.js");
+/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+
 
 
 

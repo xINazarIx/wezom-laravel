@@ -1,17 +1,3 @@
-<?php 
-
-$productOptions = (object)[
-  ['city' => 'Запорожье', 'title' => 'Доставка в:', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴'],['option' => 'Самовывоз из JustIn','date' => 'Отправим сегодня', 'price' => '59 ₴']]],
-
-  ['city' => '', 'title' => 'Варианты оплаты', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴'],['option' => 'Самовывоз из JustIn','date' => 'Отправим сегодня', 'price' => '59 ₴']]],
-
-  ['city' => '', 'title' => 'Гарантия и возврат', 'options' => [['option' => 'Самовывоз из наших магазинов','date' => 'Забрать сегодня с 16:00', 'price' => 'Бесплатно'],['option' => 'Самовывоз из Новой Почты','date' => 'Отправим завтра', 'price' => '50 ₴']]]
-]
-
-?>
-
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -29,6 +15,7 @@ $productOptions = (object)[
   </div>
   <div class="title title--regular product__title">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</div>
   <div class="page-product__content">
+    @foreach(config('mock.product-card') as $item)
     <div class="product">
       <div class="product__inner">
         <div class="product__left-section">
@@ -36,18 +23,11 @@ $productOptions = (object)[
       
             <div class="product-card">
               <div class="product-card__images">
+                @foreach($item->images as $img)
                 <div class="product-card__sub-img">
-                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-1.png" data-zzload-source-srcset="assets/images/product-1.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                  <img class="js-lazy-load fade-in" data-zzload-source-img="{{$img->img}}" data-zzload-source-srcset="{{$img->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
                 </div>
-                <div class="product-card__sub-img">
-                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-2.png" data-zzload-source-srcset="assets/images/product-2.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-                </div>
-                <div class="product-card__sub-img">
-                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-3.png" data-zzload-source-srcset="assets/images/product-3.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-                </div>
-                <div class="product-card__sub-img">
-                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/product-4.png" data-zzload-source-srcset="assets/images/product-4.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-                </div>
+                @endforeach
                 <a class="video-review product__video-review" href="#">
                   <svg class="video-review__svg">
                     <use xlink:href="assets/images/spritemap.svg#sprite-video-review"></use>
@@ -56,10 +36,10 @@ $productOptions = (object)[
                 </a>
               </div>
               <div class="product-card__inner">
-                <img class="product-card__img js-lazy-load fade-in" data-zzload-source-img="assets/images/product-main.png" data-zzload-source-srcset="assets/images/product-main.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                <img class="product-card__img js-lazy-load fade-in" data-zzload-source-img="{{$item->img}}" data-zzload-source-srcset="{{$item->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
 
                 <div class="widget widget--pink product-card__widget">
-                  <p class="widget__text">Скидка -5%</p>
+                  <p class="widget__text">Скидка -{{$item->discount}}</p>
                 </div>
                 <div class="product-card__avatar">
                   <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-dog-avatar.png" data-zzload-source-srcset="assets/images/catalog-dog-avatar.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
@@ -75,16 +55,13 @@ $productOptions = (object)[
 
           <div class="share product__share">
             <div class="share__text">Поделиться</div>
-            <a class="share__icon-link" href="#" target="_blank">
+            @foreach(config('mock.share') as $item)
+            <a class="share__icon-link" href="{{$item->url}}" target="_blank">
               <svg class="share__icon-svg" height='40px' width='40px'>
-                <use xlink:href="assets/images/spritemap.svg#sprite-page-product-fc"></use>
+                <use xlink:href="{{$item->img}}"></use>
               </svg>
             </a>
-            <a class="share__icon-link" href="#" target="_blank">
-              <svg class="share__icon-svg" height='40px' width='40px'>
-                <use xlink:href="assets/images/spritemap.svg#sprite-page-product-tw"></use>
-              </svg>
-            </a>
+            @endforeach
           </div>
         </div>
 
@@ -92,14 +69,17 @@ $productOptions = (object)[
           <div class="product__right-section-main">
             <div class="product__description">
               <div class="product__description-head">
+                @foreach(config('mock.product-card') as $item)
                 <div class="manufacturer">
+                  @foreach($item->manufacturer as $elem)
                   <div class="manufacturer__img">
-                    <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/page-product-chexia.png" data-zzload-source-srcset="assets/images/page-product-chexia.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                    <img class="js-lazy-load fade-in" data-zzload-source-img="{{$elem->img}}" data-zzload-source-srcset="{{$elem->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
                   </div>
-                  <span class="manufacturer__text">Чехия</span>
+                  <span class="manufacturer__text">{{$elem->title}}</span>
+                  @endforeach
                 </div>
                 <div class="rating  product__rating">
-                  <div class="rating__stars product__stars" data-total="4">
+                  <div class="rating__stars product__stars" data-total="{{$item->stars}}">
                     <svg class="rating__stars-img product__star">
                       <use xlink:href='assets/images/spritemap.svg#sprite-star'></use>
                     </svg>
@@ -117,33 +97,37 @@ $productOptions = (object)[
                     </svg>
                   </div>
                 </div>
-                <a class="link link--border" href="#">Отзывы<span>(65)</span></a>
-                <a class="link link--border product__link-question" href="#">Вопросы<span>(3)</span></a>
+
+                @foreach($item->reviews as $review)
+                <a class="link link--border  product__description-reviews" href="{{$review->url}}">{{$review->link}}<span>({{$review->number}}) </span></a>
+                @endforeach
+
+                @foreach($item->questions as $question)
+                <a class="link link--border product__description-reviews" href="{{$question->url}}"> {{$question->link}}<span>({{$question->number}})</span></a>
+                @endforeach
+
+                @endforeach
               </div>
 
               <div class="product__description-inner">
+                @foreach(config('mock.product-card') as $item)
                 <div class="product__about">
-                  <span class="product__about-mass">Вес: 7 кг</span>
+                  <span class="product__about-mass">Вес: {{$item->weight}}</span>
                   <div class="product__choose-masses">
+                    @foreach($item->weights as $weight)
                     <a class="choose-mass" href="#">
-                      <div class="choose-mass__text">2,72 кг<span>184,50 грн/кг</span></div>
+                      <div class="choose-mass__text">{{$weight->weight}}<span>{{$weight->price}}</span></div>
                     </a>
-                    <a class="choose-mass choose-mass--active" href="#">
-                      <div class="choose-mass__text">7 кг<span>162,00 грн/кг</span></div>
-                    </a>
-                    <a class="choose-mass" href="#">
-                      <div class="choose-mass__text">15 кг<span>154,20 грн/кг</span></div>
-                    </a>
+                    @endforeach
                   </div>
                   <div class="product__price">
                     <div class="product__price-inner">
-                      <span class="product__price-text">Цена<br>со скидкой:</span>
-                      <div class="product__price-cost">1241,00 ₴
-                        <span class="product__price-cost-subprice">1280,00 ₴</span>
-                        <span class="product__price-discount">-5%</span>
+                      <span class="product__price-text">{{$item->pricetext}}</span>
+                      <div class="product__price-cost">{{$item->price}} ₴
+                        <span class="product__price-cost-subprice">{{$item->lastprice}} ₴</span>
+                        <span class="product__price-discount">-{{$item->discount}}</span>
                       </div>
-                      <span class="product__price-info">Бесплатная доставка
-                        для этого товара</span>
+                      <span class="product__price-info">{{$item->pricesubtext}}</span>
                     </div>
                     <div class="product__price-inner">
                       <div class="product__price-auto-order">
@@ -152,18 +136,21 @@ $productOptions = (object)[
                             <use xlink:href="assets/images/spritemap.svg#sprite-updateBtn"></use>
                           </svg>
                         </button>
-                        <span class="product__price-text">Автозаказ</span>
+                        <span class="product__price-text">{{$item->secondpricetext}}</span>
                       </div>
-                      <div class="product__price-cost">1180,20 ₴<br>
-                        <div class="product__price-cost-subtext">Экономия до 10% на заказах с регулярными поставками
-                          <svg class="product__price-cost-subtext-svg">
-                            <use xlink:href="assets/images/spritemap.svg#sprite-question"></use>
-                          </svg>
+                      <div class="product__price-cost">{{$item->subprice}} ₴<br>
+                        <div class="product__price-cost-subtext">{{$item->infotext}}
+                          <a class="product__price-link" href="#">
+                            <svg class="product__price-cost-subtext-svg">
+                              <use xlink:href="assets/images/spritemap.svg#sprite-question"></use>
+                            </svg>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                @endforeach
               </div>
             </div>
 
@@ -177,7 +164,7 @@ $productOptions = (object)[
                   </button>
                 </div>
 
-                <div class="order__input-text"><span>Заказать упаковку х 8шт.</span><span>(+2% к скидке)</span></div>
+                <div class="order__input-text"><span>{{$item->orderinfo}}</span></div>
               </div>
               <button class="btn order__btn">
                 <svg class="btn__svg">
@@ -192,16 +179,17 @@ $productOptions = (object)[
                     <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
                   </svg>
                 </div>
-                <span class="order__info-text">В наличии в 7 магазинах</span>
+                <span class="order__info-text">{{$item->info}}</span>
               </div>
             </div>
           </div>
-          @foreach($productOptions as $productOption)
-            @include('inc.drop-menu', $productOption)
+          @foreach(config('mock.options') as $option)
+            @include('inc.drop-menu')
           @endforeach
         </div>
       </div>  
     </div>
+    @endforeach
  
     @include('inc.about-product')
     @include('inc.reviews')

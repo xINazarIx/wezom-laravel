@@ -33,129 +33,67 @@
       </div>
       <div class="consultation burgerMenu__consultation">
         <p class="consultation__text burgerMenu__consultation-text">Консультация:</p>
+        @foreach(config('mock.consultation-number') as $number)
         <a class="consultation__phone burgerMenu__consultation-phone" href="tel:0444903100">
-          (044) 490 31 00
+          {{$number->number}}
             <svg class='consultation__img burgerMenu__consultation-img'>
               <use xlink:href='assets/images/spritemap.svg#sprite-arrow-down'></use>
             </svg>
         </a>
+        @endforeach
       </div>
       <ul class="menu burgerMenu__menu">
+        @foreach(config('mock.header-links') as $link)
         <li class="menu__item burgerMenu__menu-item">
-          <a class="menu__link burgerMenu__menu-link" href="/catalog">
-            Товары по питомцам
-              <svg class="menu__img burgerMenu__menu-img">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
+          <a class="menu__link burgerMenu__menu-link" href="{{$link->url}}">
+            {{$link->link}}
+              
+            @if(count($link->subLinks) >= 1)
+            <svg class="menu__img header__menu-img">
+              <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
+            </svg>
+            @endif
+
           </a>
         </li>
-        <li class="menu__item burgerMenu__menu-item">
-          <a class="menu__link burgerMenu__menu-link" href="/goods">
-            Бренды
-              <svg class="menu__img burgerMenu__menu-img">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
-          </a>
-        </li>
-        <li class="menu__item burgerMenu__menu-item">
-          <a class="menu__link burgerMenu__menu-link" href="#">
-            Ветаптека
-              <svg class="menu__img burgerMenu__menu-img">
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
-          </a>
-        </li>
-        <li class="menu__item burgerMenu__menu-item">
-          <a class="menu__link burgerMenu__menu-link" href="#">
-            Найди друга
-          </a>
-        </li>
-        <li class="menu__item burgerMenu__menu-item">
-          <a class="menu__link burgerMenu__menu-link" href="#">
-            Ветклиники
-          </a>
-        </li>
+        @endforeach
       </ul>
 
       <ul class="info burgerMenu__info">
+        @foreach(config('mock.head-links') as $link)
         <li class="info__item burgerMenu__info-item">
-          <a class="info__link burgerMenu__info-link" href="#">Магазины</a>
+          <a class="info__link burgerMenu__info-link" href="{{$link->url}}">{{$link->link}}</a>
         </li>
-        <li class="info__item burgerMenu__info-item">
-          <a class="info__link burgerMenu__info-link" href="#">Блог</a>
-        </li>
-        <li class="info__item burgerMenu__info-item">
-          <a class="info__link burgerMenu__info-link" href="#">
-            Покупателям
-              <svg class='info__img burgerMenu__info-img'>
-                <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
-              </svg>
-          </a>
-        </li>
+        @endforeach
       </ul>
       <div class="burgerMenu__infoBoxes">
+        @foreach(config('mock.footer-links') as $item)
         <div class="infoBoxes__box burgerMenu__infoBoxes-box">
-          <div class="infoBoxes__title burgerMenu__infoBoxes-title">Компания</div>
+          <div class="infoBoxes__title burgerMenu__infoBoxes-title">{{$item->title}}</div>
           <ul class="infoBoxes__list burgerMenu__infoBoxes-list">
+            @foreach($item->links as $link)
             <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">О компании</a>
+              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="{{$link->url}}">{{$link->link}}</a>
             </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Адреса магазинов «ZooBonus»</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Вакансии</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Благотворительность</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Контакты</a>
-            </li>
+            @endforeach
           </ul>
         </div>
-        <div class="infoBoxes__box burgerMenu__infoBoxes-box">
-          <div class="infoBoxes__title burgerMenu__infoBoxes-title">Покупателям</div>
-          <ul class="infoBoxes__list burgerMenu__infoBoxes-list">
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Доставка и оплата</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link footer__infoBoxes-link" href="#">FAQ</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Подарочные сертификаты</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Акции</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Породы животных</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Дисконтная программа</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Блог</a>
-            </li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link" href="#">Фотогалерея</a>
-            </li>
-          </ul>
-        </div>
+        @endforeach
+        @foreach(config('mock.contacts') as $item)
         <div class="infoBoxes__box burgerMenu__infoBoxes-box">
           <div class="infoBoxes__title burgerMenu__infoBoxes-title">Контакты</div>
           <ul class="infoBoxes__list burgerMenu__infoBoxes-list">
             <li class="infoBoxes__item burgerMenu__infoBoxes-info">Информационая служба:</li>
             <li class="infoBoxes__item burgerMenu__infoBoxes-item">
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link burgerMenu__infoBoxes-tel" href="tel:0444903100">(044) 490 3100</a></li>
-            <li class="infoBoxes__item burgerMenu__infoBoxes-text">Ежедневно с 08:30-21:00</li>
+              <a class="infoBoxes__link burgerMenu__infoBoxes-link burgerMenu__infoBoxes-tel" href="tel:{{$item->tel}}">{{$item->tel}}</a></li>
+            <li class="infoBoxes__item burgerMenu__infoBoxes-text">{{$item->text}}</li>
             <li class="infoBoxes__item burgerMenu__infoBoxes-text">Email:
-              <a class="infoBoxes__link burgerMenu__infoBoxes-link  burgerMenu__infoBoxes-email" href="mailto:info@wezom.com.ua">
-                info@wezom.com.ua</a>
+              <a class="infoBoxes__link burgerMenu__infoBoxes-link  burgerMenu__infoBoxes-email" href="mailto:{{$item->email}}">
+                {{$item->email}}</a>
             </li>
           </ul>
         </div>
+        @endforeach
       </div>
     </div>
   </div>

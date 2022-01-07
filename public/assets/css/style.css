@@ -5756,6 +5756,7 @@ img.mfp-img {
   margin-bottom: 0;
 }
 .about__content-inner h6 {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 140%;
@@ -6176,6 +6177,9 @@ img.mfp-img {
   margin-right: 22px;
   max-width: 820px;
   margin-left: 23px;
+}
+.product__description-reviews {
+  margin-right: 32px;
 }
 .product__description-head {
   display: flex;

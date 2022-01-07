@@ -3,49 +3,6 @@
 <?php
 
 
-$goodsCards = (object)[
-  [
-    'link' => 'page-product',
-    'info' => ['Новинка' => 'Новинка'],
-    'img' => 'assets/images/slider-1.webp',
-    'description' => 'Brit Premium (Брит Премиум) by Nature ADULT L - Сухой корм с курицей, 4 кг',
-    'rating' => ['star' => 0, 'coments' => 0],
-    'updatePrice' => '1 550,22',
-    'lastPrice' => '1722,22',
-    'price' => '1 600,22'
-  ],
-  [
-    'link' => 'page-product',
-    'info' => [],
-    'img' => 'assets/images/slider-2.webp',
-    'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
-    'rating' => ['star' => 5, 'coments' => 12],
-    'updatePrice' => '198,22',
-    'lastPrice' => 'от 260,22',
-    'price' => 'от 206,71'
-  ],
-  [
-    'link' => 'page-product',
-    'info' => ['Новинка' => 'Новинка'],
-    'img' => 'assets/images/slider-3.webp',
-    'description' => 'PetKind Beef Tripe Formula Беззерновые консервы для собак с говядиной, 500 мл',
-    'rating' => ['star' => 4, 'coments' => 65],
-    'updatePrice' => 'Автозаказ',
-    'lastPrice' => false,
-    'price' => '1 600,22'
-  ],
-  [
-    'link' => 'page-product',
-    'info' => ['Top' => 'Топ продаж', 'Скидка' => 'Скидка -5%', 'Новинка' => 'Новинка'],
-    'img' => 'assets/images/slider-4.webp',
-    'description' => 'Scalibor (Скалибор) ошейник 48 см',
-    'rating' => ['star' => 0, 'coments' => 0],
-    'updatePrice' => '520,00',
-    'lastPrice' => '640,22',
-    'price' => '560,22'
-  ]
-];
-
 $filters = [
   'categories' => [
     ['title' => 'Сухой корм', 'num' => '584', 'url' => '#'],
@@ -84,42 +41,20 @@ $filters = [
 
   <div class="goods">
     <div class="goods__sidebar goods__sidebar--js">
-
-      <div class="avatar goods__sidebar--avatar">
-        <div class="avatar__header">
-          <div class="avatar__text">Товары для</div>
-          <img class="avatar__bg js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-avatar-bg.png" data-zzload-source-srcset="assets/images/catalog-avatar-bg.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-          <a class="link__question" href="#">
-            <svg class="avatar__header-img" height='19px' width='15px' fill='white'>
-              <use xlink:href='assets/images/spritemap.svg#sprite-question'></use>
-            </svg>
-          </a>
-          <div class="avatar__img">
-            <img class="avatar__dog js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-dog-avatar.png" data-zzload-source-srcset="assets/images/catalog-dog-avatar.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-          </div>
-        </div>
-        <div class="avatar__name">Джексон
-          <svg class="avatar__arrow-down" height='8px' width='13px' fill='none' stroke='#202454' stroke-width='2px'>
-            <use xlink:href='assets/images/spritemap.svg#sprite-arrow-down'></use>
-          </svg>
-        </div>
-        <div class="avatar__dog-description">
-          Английский кокер-спаниель Взрослая
-        </div>
-      </div>
+      
+      @foreach(config('mock.avatar-auth') as $item)
+        @include('inc.avatar-auth')
+      @endforeach
 
       <div class="categories">
         <div class="categories__title">Категории</div>
         <div class="categories__links">
-
-          @foreach($filters['categories'] as $result)
+          @foreach(config('mock.categories') as $link)
           <div class="categories__item">
-            <a class="categories__link" href="{{$result['url']}}">{{$result['title']}}</a>
-            <div class="categories__num">({{$result['num']}})</div>
+            <a class="categories__link" href="{{$link->url}}">{{$link->link}}</a>
+            <div class="categories__num">({{$link->number}})</div>
           </div>
           @endforeach
-
-
         </div>
       </div>
 
@@ -151,8 +86,8 @@ $filters = [
       </div>
 
 
-      @foreach($filters['curtains'] as $curtain)
-      @if($curtain['title'] == 'Цена')
+      @foreach(config('mock.filters') as $item)
+      @if($item->title == 'Цена')
       <div class="curtain">
         <div class="curtain__header">
           <div class="curtain__title">Цена, ₴</div>
@@ -177,14 +112,14 @@ $filters = [
       @else
       <div class="curtain">
         <div class="curtain__header">
-          <div class="curtain__title">{{$curtain['title']}}</div>
+          <div class="curtain__title">{{$item->title}}</div>
           <svg class="curtain__arrow-up" stroke="#202454" stroke-width="2px">
             <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
           </svg>
         </div>
         <div class="curtain__checkboxes curtain__checkboxes--js">
 
-          @foreach($curtain['links'] as $name => $num)
+          @foreach($item->items as $item)
           <label class="checkbox curtain__checkbox" data-check="false">
             <input type="checkbox" class="checkbox__real">
             <span class="checkbox__fake">
@@ -192,15 +127,14 @@ $filters = [
                 <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
               </svg>
             </span>
-            <div class="checkbox__text">{{$name}}<span>({{$num}})</span></div>
+            <div class="checkbox__text">{{$item->text}}<span>({{$item->number}})</span></div>
           </label>
           @endforeach
 
-          @if(count($curtain['links']) > 8)
           <div class="showMore checkbox__showMore checkbox__showMore--js">
             <button class="showMore-link curtain__showMore--js">+ показать все</button>
           </div>
-          @endif
+  
         </div>
       </div>
       @endif
@@ -211,7 +145,9 @@ $filters = [
       <div class="sort goods__sort">
         <div>
           <div class="sort__subtext">Сортировать по</div>
-          <div class="sort__text">Подходящим для питомца</div>
+          @foreach(config('mock.sort') as $item)
+          <div class="sort__text">{{$item->text}}</div>
+          @endforeach
         </div>
         <svg class="sort__svg">
           <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
@@ -250,8 +186,8 @@ $filters = [
 
       <div class="goods__cards goods__cards--js">
         @for($i = 1; $i <= 10; $i++)
-          @foreach($goodsCards as $card)
-            @include('inc.slider-card', $card)
+          @foreach(config('mock.goods-cards') as $card)
+            @include('inc.slider-card')
           @endforeach
         @endfor
       </div>

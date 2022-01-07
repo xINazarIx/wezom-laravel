@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+$('.about__tabs--js').children().first().addClass('about__tab--active')
+$('.about__content--js').first().removeClass('about__content--hidden')
+
+
 $('.about__tabs--js').children().on('click', function(){
   $('.about__tabs--js').children().each(function(){
     $(this).removeClass('about__tab--active')

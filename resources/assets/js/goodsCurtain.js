@@ -1,18 +1,26 @@
 import $ from 'jquery';
 
 
-$('.curtain__checkboxes--js').each(function(){
-  if($(this).children().length == 0){
-    $(this).css('margin-top', '0')
-    $(this).addClass('curtain__checkboxes--hidden')
-    $('.curtain__arrow-up', $(this).parent()).css('transform', 'rotate(0deg)')
-  }else{
+
+$('.curtain__checkboxes--js').each(function(i,elem){
   $(this).children().each(function(i,elem){
-    if(i >= 9 && $(this).children().hasClass('curtain__showMore--js') !== true){
+    if(i >= 8 && $(this).children().hasClass('curtain__showMore--js') !== true){
       $(this).addClass('curtain__checkbox--hidden')
     }
-  })}
+  })
+
+  if($(this).children().length < 8){
+    $('.curtain__showMore--js', $(this)).remove()
+  }
+
+  if(i >= 3){
+    $(this).addClass('curtain__checkboxes--hidden')
+    $('.curtain__arrow-up', $(this).parent()).css('transform', 'rotate(0deg)') // Надо пофиксить так нельзя
+  }
 })
+
+
+
 
 $('.curtain__showMore--js').on('click', function(){
   $('.curtain__checkboxes--js').children().each(function(){
