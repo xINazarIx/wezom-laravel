@@ -3260,7 +3260,7 @@ img.mfp-img {
   top: 100px;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 3;
   max-width: 1420px;
   margin: 0 auto;
   background-color: #fff;
