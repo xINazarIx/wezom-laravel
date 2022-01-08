@@ -10,212 +10,39 @@
     <div class="search-popup__content">
       <div class="search-popup__content-inner">
         <div class="search-popup__menu">
-          <div class="search-popup__menu-item search-popup__menu-item--active">
-            <div class="search-popup__menu-item-text">Товары <span>256</span></div>
-            <div class="search-popup__menu-links">
-              <a href="#" class="search-popup__menu-link">Корм для собак (86)</a>
-              <a href="#" class="search-popup__menu-link">Корм для котов (65)</a>
-              <a href="#" class="search-popup__menu-link">Корм для птиц (32)</a>
-              <a href="#" class="search-popup__menu-link">Корма для грызунов (18)</a>
-              <a href="#" class="search-popup__menu-link">Аксессуары для кормления животных (3)</a>
-              <a href="#" class="search-popup__menu-link">Кормушки, поилки для собак (18)</a>
-            </div>
-          </div>
+          @foreach(config('mock.search-links') as $item)
           <div class="search-popup__menu-item">
-            <div class="search-popup__menu-item-text">Статьи<span>24</span></div>
+            <div class="search-popup__menu-item-text">{{$item->title}} <span>{{$item->number}}</span></div>
             <div class="search-popup__menu-links">
-              <a href="#" class="search-popup__menu-link">Корм для собак (86)</a>
-              <a href="#" class="search-popup__menu-link">Корм для котов (65)</a>
-              <a href="#" class="search-popup__menu-link">Корм для птиц (32)</a>
-              <a href="#" class="search-popup__menu-link">Корма для грызунов (18)</a>
-              <a href="#" class="search-popup__menu-link">Аксессуары для кормления животных (3)</a>
-              <a href="#" class="search-popup__menu-link">Кормушки, поилки для собак (18)</a>
+              @foreach($item->links as $link)
+              <a href="{{$link->url}}" class="search-popup__menu-link">{{$link->link}} ({{$link->number}})</a>
+              @endforeach
             </div>
-          </div>
-          <div class="search-popup__menu-item">
-            <div class="search-popup__menu-item-text">Ветклиники<span>5</span></div>
-          </div>
+          </div> 
+          @endforeach   
         </div>
 
         <div class="search-popup__goods">
+          @foreach(config('mock.search-cards') as $card)
           <div class="search-popup__goods-box">
             <div class="search-popup__goods-title">
-              Корм для собак
+              {{$card->title}}
             </div>
+            @foreach($card->items as $link)
             <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-1.png" data-zzload-source-srcset="assets/images/search-goods-1.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
+              <a class="search-popup__good-link" href="{{$link->url}}">
+                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="{{$link->img}}" data-zzload-source-srcset="{{$link->img}}" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
               </a>
               <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">TOMi 3 kinds of poultry ТОМи 3 ВИДА ПТИЦЫ супер премиум корм, консервы...</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
+                <a class="search-popup__good-link" href="{{$link->url}}"><div class="search-popup__good-description-text">{{$link->description}}</div></a>
+                <span class="search-popup__good-last-price">{{$link->lastprice}}</span>
+                <span class="search-popup__good-price">{{$link->price}} ₴</span>
               </div>
             </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-2.png" data-zzload-source-srcset="assets/images/search-goods-2.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">1st Choice Puppy Toy&Small Lamb&Fish ФЕСТ ЧОЙС ЩЕНОК МИНИ ЯГНЕНОК...</div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-3.png" data-zzload-source-srcset="assets/images/search-goods-3.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">1st Choice контейнер для хранения корма прямоугольный, 15 кг</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-4.png" data-zzload-source-srcset="assets/images/search-goods-4.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Schesir Dog Small Adult Lamb ШЕЗИР ВЗРОСЛЫЙ МАЛЫХ ЯГНЕНОК сухой...</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-5.png" data-zzload-source-srcset="assets/images/search-goods-5.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">TOMi 3 kinds of poultry ТОМи 3 ВИДА ПТИЦЫ супер премиум корм, консервы...</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <a class="search-popup__goods-more" href="#">Смотреть все ></a>
+            @endforeach
+            <a class="search-popup__goods-more" href="{{$card->url}}">{{$card->link}}></a>
           </div>
-
-          <div class="search-popup__goods-box">
-            <div class="search-popup__goods-title">
-              Корм для котов
-            </div>
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-6.png" data-zzload-source-srcset="assets/images/search-goods-6.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Schesir Chicken Fillet ШЕЗИР ФИЛЕ КУРИЦЫ в желе натуральные консерв...</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-7.png" data-zzload-source-srcset="assets/images/search-goods-7.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Stuzzy Cat Rabbit ШТУЗИ КЕТ КРОЛИК в желе корм для кошек, пауч, 100г </div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-8.png" data-zzload-source-srcset="assets/images/search-goods-8.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Schesir Tuna Chicken ШЕЗИР ТУНЕЦ С ФИЛЕ КУРИЦЫ в желе натуральные...</div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-9.png" data-zzload-source-srcset="assets/images/search-goods-9.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">1st Choice Weight Control Adult ФЕСТ ЧОЙС КОНТРОЛЬ ВЕСА сухой супер премиум...</div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-10.png" data-zzload-source-srcset="assets/images/search-goods-10.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">1st Choice контейнер для хранения корма прямоугольный, 15 кг</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <a class="search-popup__goods-more" href="#">Смотреть все ></a>
-          </div>
-
-          <div class="search-popup__goods-box">
-            <div class="search-popup__goods-title">
-              Корм для птиц
-            </div>
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-11.png" data-zzload-source-srcset="assets/images/search-goods-11.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Versele-Laga Prestige Вudgies ВЕРСЕЛЕ-ЛАГА ПРЕСТИЖ ПОПУГАЙЧИК...</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-12.png" data-zzload-source-srcset="assets/images/search-goods-12.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Versele-Laga Prestige Premium Tropical Finches ВЕРСЕЛЕ-ЛАГА ПРЕСТИЖ...</div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-13.png" data-zzload-source-srcset="assets/images/search-goods-13.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">Versele-Laga Prestige Premium Parrots ВЕРСЕЛЕ-ЛАГА ПРЕСТИЖ ПРЕМИУМ...</div></a>
-                <span class="search-popup__good-last-price">1 700,22</span>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-14.png" data-zzload-source-srcset="assets/images/search-goods-14.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">1st Choice Weight Control Adult ФЕСТ ЧОЙС КОНТРОЛЬ ВЕСА сухой супер премиум...</div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <div class="search-popup__good">
-              <a class="search-popup__good-link" href="#">
-                <img class="search-popup__good-img js-lazy-load fade-in" data-zzload-source-img="assets/images/search-goods-15.png" data-zzload-source-srcset="assets/images/search-goods-15.png" src="data:image/svg+xml,&lt;svg" xmlns="http://www.w3.org/2000/svg" alt="#">
-              </a>
-              <div class='search-popup__good-description'>
-                <a class="search-popup__good-link" href="#"><div class="search-popup__good-description-text">1st Choice контейнер для хранения корма прямоугольный, 15 кг</div></a>
-                <span class="search-popup__good-price">1 600,22 ₴</span>
-              </div>
-            </div>
-
-            <a class="search-popup__goods-more" href="#">Смотреть все ></a>
-          </div>
+          @endforeach
         </div>
       </div>
 

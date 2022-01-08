@@ -6,12 +6,12 @@
           <svg class='location__img burgerMenu__location-img'>
             <use xlink:href="assets/images/spritemap.svg#sprite-location"></use>
           </svg>
-          <span class="location__text burgerMenu__location-text">Херсон</span>
+          <span class="location__text burgerMenu__location-text">@lang('local.kherson')</span>
         </button>
         <div class="languages burgerMenu__languages">
-          <a class="languages__link burgerMenu__languages-link" href="">УКР</a>
-          <a class="languages__link burgerMenu__languages-link--active burgerMenu__languages-link" href="">РУС</a>
-          <a class="languages__link burgerMenu__languages-link" href="">ENG</a>
+          <a class="languages__link burgerMenu__languages-link" href="">@lang('local.ua')</a>
+          <a class="languages__link burgerMenu__languages-link--active burgerMenu__languages-link" href="">@lang('local.ru')</a>
+          <a class="languages__link burgerMenu__languages-link" href="">@lang('local.en')</a>
         </div>
       </div>
       <div class="userIcons burgerMenu__userIcons">
@@ -32,7 +32,7 @@
         </button>
       </div>
       <div class="consultation burgerMenu__consultation">
-        <p class="consultation__text burgerMenu__consultation-text">Консультация:</p>
+        <p class="consultation__text burgerMenu__consultation-text">@lang('local.consultation'):</p>
         @foreach(config('mock.consultation-number') as $number)
         <a class="consultation__phone burgerMenu__consultation-phone" href="tel:0444903100">
           {{$number->number}}
@@ -81,9 +81,9 @@
         @endforeach
         @foreach(config('mock.contacts') as $item)
         <div class="infoBoxes__box burgerMenu__infoBoxes-box">
-          <div class="infoBoxes__title burgerMenu__infoBoxes-title">Контакты</div>
+          <div class="infoBoxes__title burgerMenu__infoBoxes-title">@lang('local.contacts')</div>
           <ul class="infoBoxes__list burgerMenu__infoBoxes-list">
-            <li class="infoBoxes__item burgerMenu__infoBoxes-info">Информационая служба:</li>
+            <li class="infoBoxes__item burgerMenu__infoBoxes-info">@lang('local.infoService'):</li>
             <li class="infoBoxes__item burgerMenu__infoBoxes-item">
               <a class="infoBoxes__link burgerMenu__infoBoxes-link burgerMenu__infoBoxes-tel" href="tel:{{$item->tel}}">{{$item->tel}}</a></li>
             <li class="infoBoxes__item burgerMenu__infoBoxes-text">{{$item->text}}</li>

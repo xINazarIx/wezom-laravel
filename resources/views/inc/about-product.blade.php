@@ -1,7 +1,7 @@
 <div class="about">
   <div class="about__inner">
     <div class="about__product">
-      <div class="title title--normal about__title">О товаре</div>
+      <div class="title title--normal about__title">@lang('local.aboutProduct')</div>
 
       <div class="about__tabs about__tabs--js">
         @foreach(config('mock.about-product-content') as $item)
@@ -17,13 +17,13 @@
           <div>{{$elem->text}}</div>
           @endforeach
         </div>
-        <button class="btn-secondary about__btn-secondary about__btn-secondary--js">Читать полностью</button>
+        <button class="btn-secondary about__btn-secondary about__btn-secondary--js">@lang('local.readAll')</button>
       </div>
       @endforeach
     </div>
 
     <div class="about__characteristic">
-      <div class="title title--normal about__title">Характеристика</div>
+      <div class="title title--normal about__title">@lang('local.characteristics')</div>
       <div class="about__info">
         @foreach(config('mock.about-product') as $elem)
           <div class="about__info-item">

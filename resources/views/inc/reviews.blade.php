@@ -1,6 +1,13 @@
 <div class="reviews">
-  <span class="title title--normal reviews__title reviews__title--js reviews__title--active" data-id='#reviews-content'>Отзывы (65)</span>
-  <span class="title title--normal reviews__title reviews__title--js" data-id='#reviews-questions'>Вопросы (3)</span>
+
+  @foreach(config('mock.number-of-reviews') as $item)
+  <span class="title title--normal reviews__title reviews__title--js reviews__title--active" data-id='#reviews-content'>@lang('local.reviews') ({{$item->number}})</span>
+  @endforeach
+
+  @foreach(config('mock.number-of-questions') as $item)
+  <span class="title title--normal reviews__title reviews__title--js" data-id='#reviews-questions'>@lang('local.questions') ({{$item->number}})</span>
+  @endforeach
+
   <div class="reviews__inner">
     <div class="reviews__content reviews__content--js">
 
@@ -12,7 +19,7 @@
           @endforeach
 
          </div>
-          <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">Показать все отзывы</button>
+          <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">@lang('local.showAllReviews')</button>
         </div>
 
         <div class="reviews__questions" id='reviews-questions'>
@@ -23,7 +30,7 @@
             @endforeach
 
            </div>
-            <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">Показать все вопросы</button>
+            <button class="btn-secondary reviews__btn-secondary reviews__showMore--js">@lang('local.showAllQuestions')</button>
           </div>
         </div>
         @foreach(config('mock.reviews-rating') as $elem)

@@ -31,7 +31,7 @@
     </div>
 
     <div class="blog__showMore">
-      <button class="showMore blog__showMore--js">Показать все</button>
+      <button class="showMore blog__showMore--js">@lang('local.showAll')</button>
     </div>
   </div>
 </div>

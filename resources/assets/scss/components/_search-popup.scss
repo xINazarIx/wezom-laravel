@@ -1,7 +1,7 @@
 .search-popup{
   display: none;
   padding: 20px 0 72px;
-  position: fixed;
+  position: absolute;
   top: 100px;
   left: 0;
   right: 0;
@@ -238,6 +238,47 @@
         font-size: 30px;
         line-height: 37px;
       }
+    }
+  }
+}
+
+@media(max-width: 1330px){
+  .search-popup{
+
+    &__menu{
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+
+    &__content-inner{
+      display: block;
+    }
+
+    &__goods{
+      justify-content: center;
+    }
+  }
+}
+
+@media(max-width: 770px){
+  .search-popup{
+    &__goods{
+      flex-wrap: wrap;
+    }
+
+    &__goods-box{
+      text-align: center;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    &__good{
+      justify-content: center;
+    }
+
+    &__good-price,
+    &__good-last-price{
+      display: flex;
     }
   }
 }

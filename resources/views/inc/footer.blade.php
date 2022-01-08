@@ -2,8 +2,10 @@
 <div class="underFooter">
     <div class="container">
       <div class="underFooter__inner">
-        <div class="underFooter__title">Акции, скидки и специальные предложения для зарегистрированных пользователей</div>
-        <button class="btn underFooter__btn">Зарегестрироваться</button>
+        @foreach(config('mock.popup-info') as $item)
+        <div class="underFooter__title">{{$item->text}}</div>
+        @endforeach
+        <button class="btn underFooter__btn">@lang('local.toDoReg')</button>
         <img  class="underFooter__img js-lazy-load fade-in" data-zzload-source-img="assets/images/cat-dog.png" data-zzload-source-srcset="assets/images/cat-dog.webp"  src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
       </div>
     </div>
@@ -18,7 +20,7 @@
               <use xlink:href='assets/images/spritemap.svg#sprite-logo'></use>
             </svg>
           </a>
-          <p class="footer__logo-text">© 2020 Интернет-магазин</p>
+          <p class="footer__logo-text">© 2020 @lang('local.onlineShop')</p>
         </div>
         <ul class="social footer__social">
           @foreach(config('mock.socials') as $link)
@@ -42,7 +44,7 @@
           @endforeach
         </div>
         <button class="btnUp btnUp--js footer__btnUp">
-          Вверх
+          @lang('local.up')
           <span class="btnUp__img">
               <svg class="btnUp__img-sprite">
                 <use xlink:href="assets/images/spritemap.svg#sprite-arrow-up"></use>
@@ -71,10 +73,10 @@
           </div>
           @endforeach
           <div class="infoBoxes__box footer__infoBoxes-box">
-            <div class="infoBoxes__title footer__infoBoxes-title">Контакты</div>
+            <div class="infoBoxes__title footer__infoBoxes-title">@lang('local.contacts')</div>
             @foreach(config('mock.contacts') as $item)
             <ul class="infoBoxes__list footer__infoBoxes-list">
-              <li class="infoBoxes__item footer__infoBoxes-info">Информационая служба:</li>
+              <li class="infoBoxes__item footer__infoBoxes-info">@lang('local.infoService'):</li>
               <li class="infoBoxes__item footer__infoBoxes-item">
                 <a class="infoBoxes__link footer__infoBoxes-link footer__infoBoxes-tel" href="tel:{{$item->tel}}">{{$item->tel}}</a></li>
               <li class="infoBoxes__item footer__infoBoxes-item">{{$item->text}}</li>
@@ -93,7 +95,7 @@
             <img class="payment__item js-lazy-load fade-in" data-zzload-source-img="{{$item->img}}" data-zzload-source-srcset="{{$item->img}}" alt="#" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;'>
             @endforeach
           </div>
-          <a class="footer__bottom-text" href='#' target="_blank">Разработано в <span>WEZOM</span></a>
+          <a class="footer__bottom-text" href='#' target="_blank">@lang('local.develop') <span>WEZOM</span></a>
         </div>
         </div>
       </div>

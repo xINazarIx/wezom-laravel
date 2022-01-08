@@ -6,7 +6,7 @@
             <svg class='location__img header__location-img'>
               <use xlink:href="assets/images/spritemap.svg#sprite-location"></use>
             </svg>
-          <span class="location__text header__location-text">Херсон</span>
+          <span class="location__text header__location-text">@lang('local.kherson')</span>
         </button>
         <ul class="info header__info">
           @foreach(config('mock.head-links') as $link)
@@ -16,7 +16,7 @@
           @endforeach
         </ul>
         <div class="consultation header__consultation">
-          <p class="consultation__text header__consultation-text">Консультация:</p>
+          <p class="consultation__text header__consultation-text">@lang('local.consultation'):</p>
           @foreach(config('mock.consultation-number') as $number)
           <a class="consultation__phone header__consultation-phone" href="tel:{{$number->number}}">
             {{$number->number}}
@@ -28,9 +28,9 @@
         </div>
 
         <div class="languages header__languages">
-          <a class="languages__link header__languages-link" href="#">УКР</a>
-          <a class="languages__link header__languages-link languages__link--active" href="#">РУС</a>
-          <a class="languages__link header__languages-link" href="#">ENG</a>
+          <a class="languages__link header__languages-link" href="#">@lang('local.ua')</a>
+          <a class="languages__link header__languages-link languages__link--active" href="#">@lang('local.ru')</a>
+          <a class="languages__link header__languages-link" href="#">@lang('local.en')</a>
         </div>
 
       </div>
@@ -77,7 +77,7 @@
                       <a class="menu__sub-menu-box-link" href='{{$url}}'>{{$link}}</a>
                       @endforeach
                       @if(count($subLink['links']) > 3)
-                      <a class="menu__sub-menu-box-watchAll" href='#'>Смотреть все ></a>
+                      <a class="menu__sub-menu-box-watchAll" href='#'>@lang('local.watchAll') ></a>
                       @endif
                     </div>
                     @endforeach
@@ -99,7 +99,8 @@
               <svg class="search__img">
                 <use xlink:href="assets/images/spritemap.svg#sprite-search"></use>
               </svg>
-            Поиск</a>
+              @lang('local.search')
+          </a>
         </div>
 
         <div class="userIcons header__userIcons">

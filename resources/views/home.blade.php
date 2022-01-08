@@ -7,7 +7,9 @@
       <div class="slider__inner">
 
         <div class="slider__top">
-          <h2 class="slider__title">Лучшие предложения недели</h2>
+          @foreach(config('mock.main-title') as $item)
+          <h2 class="slider__title">{{$item->text}}</h2>
+          @endforeach
           <ul class="petsNav slider__petsNav">
           @foreach(config('mock.main-cards') as $tab)
             <li class="petsNav__item"><button class="petsNav__btn" data-tab='#{{$tab->id}}'>{{$tab->tab}}</button>
@@ -45,10 +47,12 @@
     <div class="container">
       <div class="useful__inner">
         <div class="useful__find">
-          <div class="useful__find-subtitle">Объявления о продаже</div>
-            <img class="useful__find-paw js-lazy-load fade-in" data-zzload-source-img="assets/images/paw.png" data-zzload-source-srcset="assets/images/paw.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
-          <div class="useful__find-title">Найди друга</div>
-          <div class="useful__find-text">Ищете питомца? Посмотрите сотни объявлений от проверенных разводителей.</div>
+          @foreach(config('mock.announcement') as $item) 
+          <div class="useful__find-subtitle">{{$item->title}}</div>
+            <img class="useful__find-paw js-lazy-load fade-in" data-zzload-source-img="{{$item->img}}" data-zzload-source-srcset="{{$item->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
+          <div class="useful__find-title">{{$item->text}}</div>
+          <div class="useful__find-text">{{$item->description}}</div>
+          @endforeach
           <div class="useful__find-images">
             @foreach(config('mock.find-friend') as $link)
             <a class="useful__find-link" href='{{$link->url}}' target="_blank">
@@ -56,7 +60,7 @@
             </a>
             @endforeach
           </div>
-          <div class="btn useful__find-btn">Все объявления
+          <div class="btn useful__find-btn">@lang('local.announcementsBtn')
             <svg class='useful__find-btn-svg' fill='none' height='13px' width='9px' stroke='white' stroke-width='2'>
               <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
             </svg>
@@ -64,14 +68,16 @@
         </div>
         <div class="useful__materials">
           <div class="useful__materials-inner">
-            <div class="useful__materials-title">Полезные материалы</div>
+            @foreach(config('mock.useful-title') as $item)
+            <div class="useful__materials-title">{{$item->title}}</div>
+            @endforeach
             <div class="useful__materials-header">
               <div class="useful__materials-links">
                 @foreach(config('mock.useful-materials-links') as $link)
                 <a class="useful__materials-link" href="{{$link->url}}" target="_blank">{{$link->link}}</a>
                 @endforeach
               </div>
-              <a class="btn-secondary" href='#' target="_blank">Перейти в блог</a>
+              <a class="btn-secondary" href='#' target="_blank">@lang('local.goTo')</a>
             </div>
             <div class="useful__materials-items">
               @foreach(config('mock.useful-materials-card') as $card)

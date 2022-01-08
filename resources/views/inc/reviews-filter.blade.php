@@ -14,10 +14,10 @@
           <text x="19.5" y="21" class="reviews-circle__text">{{$elem->mainProcent}}%</text>
         </svg>
       </div>
-      <div class="reviews-filter__recomend-text">пользователей рекомендуют этот продукт</div>
+      <div class="reviews-filter__recomend-text">@lang('local.usersRec')</div>
     </div>
     <div class="reviews-filter__values">
-      <div class="reviews-filter__title">Фильтровать по оценке</div>
+      <div class="reviews-filter__title">@lang('local.filterFor')</div>
       <div class="reviews-filter__items">
         @foreach($elem->procentes as $item)
         <div class="reviews-filter__item">
@@ -36,5 +36,5 @@
       </div>
     </div>
   </div>
-  <button class="btn reviews-filter__btn">Написать отзыв</button>
+  <button class="btn reviews-filter__btn">@lang('local.writeTheReview')</button>
 </div>

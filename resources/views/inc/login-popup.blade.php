@@ -1,10 +1,10 @@
 @section('login-popup')
 <div class="popup-auntification mfp-hide" id="login-popup">
-  <div class="popup-title">Вход/Регистрация</div>
+  <div class="popup-title">@lang('local.popupTitle')</div>
   <div class="popup-auntification__inner">
     <label class="popup-label popup-label--login">
       <div class="popup-label__inner">
-        <span class="popup-label__phone-text">Ваш номер телефона</span>
+        <span class="popup-label__phone-text">@lang('local.yourNumber')</span>
         <input class="popup-label__input" type="number" placeholder="+380 (97) 015-61-72">
       </div>
       <svg class="login-popup__label-svg-check">
@@ -12,27 +12,26 @@
       </svg>
     </label>
     <label class="popup-label popup-label--password">
-      <input type="password" class="popup-label__input--password" placeholder="Пароль">
+      <input type="password" class="popup-label__input--password" placeholder="@lang('local.password')">
       <svg class="login-popup__label-svg-showPassword">
         <use xlink:href="assets/images/spritemap.svg#sprite-show-password"></use>
       </svg>
     </label>
     <div class="login-popup__remaind">
-      <a class="login-popup__remaind-link" href="#">Напомнить пароль</a>
+      <a class="login-popup__remaind-link" href="#">@lang('local.remindPass')</a>
     </div>
-    <a class="btn btn--popup" href="#">Войти</a>
-    <div class="popup-with-help">или с помощью</div>
+    <a class="btn btn--popup" href="#">@lang('local.enter')</a>
+    <div class="popup-with-help">@lang('local.orWithHelp')</div>
     <div class="popup-socials">
-      <a href="" class="popup-socials__link" href="#">
+
+      @foreach(config('mock.into-with') as $link)
+      <a href="" class="popup-socials__link" href="{{$link->url}}">
         <svg class="popup-socials__link-svg" height='20px' width='20px'>
-          <use xlink:href='assets/images/spritemap.svg#sprite-login-popup-social-1'></use>
+          <use xlink:href='{{$link->img}}'></use>
         </svg>
       </a>
-      <a href="" class="popup-socials__link" href="#">
-        <svg class="popup-socials__link-svg" height='24px' width='12px'>
-          <use xlink:href='assets/images/spritemap.svg#sprite-login-popup-social-2'></use>
-        </svg>
-      </a>
+      @endforeach
+
     </div>
     <label class="checkbox checkbox--popup">
       <input type="checkbox" class="checkbox__real">
@@ -41,13 +40,17 @@
           <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
         </svg>
       </span>
-      <div class="checkbox__text checkbox__text--popup">Даю согласие на обработку своих персональных данных в соответствии с данной офертой c <span>данной офертой</span></div>
+      @foreach(config('mock.popup-agree') as $item)
+      <div class="checkbox__text checkbox__text--popup">{{$item->text}}</div>
+      @endforeach
     </label>
     <div class="popup-info">
       <svg class="popup-info__svg" stroke='#202454' stroke-width='2px'>
         <use xlink:href='assets/images/spritemap.svg#sprite-user'></use>
       </svg>
-      <div class="popup-info__text">Акции, скидки и специальные предложения для зарегистрированных пользователей</div>
+      @foreach(config('mock.popup-info') as $item)
+      <div class="popup-info__text">{{$item->text}}</div>
+      @endforeach
     </div>
   </div>
 </div>

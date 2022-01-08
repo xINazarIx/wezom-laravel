@@ -16,6 +16,8 @@
       'img' => 'assets/images/product-main.webp',
       'info' => 'В наличии в 7 магазинах',
       'orderinfo' => 'Заказать упаковку х 8шт. (+2% к скидке)',
+      'sublink' => '#',
+      'avatar' => 'assets/images/catalog-dog-avatar.webp',
 
       'manufacturer' => (object)[
         (object)[

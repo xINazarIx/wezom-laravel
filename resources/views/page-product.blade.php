@@ -3,17 +3,21 @@
 @section('content')
 <div class="container">
   <div class="breadcrumbs">
-    <a class="breadcrumbs__link" href="/">Собаки</a>
+    <a class="breadcrumbs__link" href="/">@lang('local.dogs')</a>
     <svg class="breadcrumbs__arrow">
       <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
     </svg>
-    <a class="breadcrumbs__link" href="/">Корм для собак</a>
+    <a class="breadcrumbs__link" href="/">@lang('local.dogFood')</a>
     <svg class="breadcrumbs__arrow">
       <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
     </svg>
-    <a class="breadcrumbs__link">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</a>
+    @foreach(config('mock.product-card') as $item)
+    <a class="breadcrumbs__link">{{$item->title}}</a>
+    @endforeach
   </div>
-  <div class="title title--regular product__title">Royal Canin Maxi Adult Сухой корм для собак крупных пород, 7 кг</div>
+  @foreach(config('mock.product-card') as $item)
+  <div class="title title--regular product__title">{{$item->title}}</div>
+  @endforeach
   <div class="page-product__content">
     @foreach(config('mock.product-card') as $item)
     <div class="product">
@@ -28,21 +32,21 @@
                   <img class="js-lazy-load fade-in" data-zzload-source-img="{{$img->img}}" data-zzload-source-srcset="{{$img->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
                 </div>
                 @endforeach
-                <a class="video-review product__video-review" href="#">
+                <a class="video-review product__video-review" href="{{$item->sublink}}">
                   <svg class="video-review__svg">
                     <use xlink:href="assets/images/spritemap.svg#sprite-video-review"></use>
                   </svg>
-                  <div class="video-review__text">Видеообзор</div>
+                  <div class="video-review__text">@lang('local.videoReview')</div>
                 </a>
               </div>
               <div class="product-card__inner">
                 <img class="product-card__img js-lazy-load fade-in" data-zzload-source-img="{{$item->img}}" data-zzload-source-srcset="{{$item->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
 
                 <div class="widget widget--pink product-card__widget">
-                  <p class="widget__text">Скидка -{{$item->discount}}</p>
+                  <p class="widget__text">@lang('local.discount') -{{$item->discount}}</p>
                 </div>
                 <div class="product-card__avatar">
-                  <img class="js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-dog-avatar.png" data-zzload-source-srcset="assets/images/catalog-dog-avatar.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                  <img class="js-lazy-load fade-in" data-zzload-source-img="{{$item->avatar}}" data-zzload-source-srcset="{{$item->avatar}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
                 </div>
                 <div class="fav product-card__fav">
                   <svg class="fav__svg">
@@ -54,7 +58,7 @@
           </div>
 
           <div class="share product__share">
-            <div class="share__text">Поделиться</div>
+            <div class="share__text">@lang('local.share')</div>
             @foreach(config('mock.share') as $item)
             <a class="share__icon-link" href="{{$item->url}}" target="_blank">
               <svg class="share__icon-svg" height='40px' width='40px'>
@@ -170,9 +174,9 @@
                 <svg class="btn__svg">
                   <use xlink:href="assets/images/spritemap.svg#sprite-userBuying"></use>
                 </svg>
-                <span>Купить</span>
+                <span>@lang('local.btnBuy')</span>
               </button>
-              <button class="btn-secondary order__btn">Купить в 1 клик</button>
+              <button class="btn-secondary order__btn">@lang('local.buyOneClick')</button>
               <div class="order__info">
                 <div class="order__info-mark">
                   <svg class="order__info-svg">
@@ -200,7 +204,7 @@
           @include('inc.small-card')
         @endforeach
       </div>
-      <a class="btn-secondary small-cards__btn-secondary" href="/goods" >Смотреть все</a>
+      <a class="btn-secondary small-cards__btn-secondary" href="/goods">@lang('local.watchAll')</a>
     </div>
   </div>
 

@@ -1,21 +1,18 @@
 @section('check-popup')
 <div class="popup-auntification mfp-hide" id="check-popup">
-  <div class="popup-title">Вход/Регистрация</div>
+  <div class="popup-title">@lang('local.popupTitle')</div>
   <div class="popup-auntification__inner">
-    <input type="number" class="popup-input" placeholder="Ваш номер телефона">
-    <a class="btn btn--popup open-popup-link" href="#reg-popup">Далее</a>
-    <div class="popup-with-help">или с помощью</div>
+    <input type="number" class="popup-input" placeholder="@lang('local.yourNumber')">
+    <a class="btn btn--popup open-popup-link" href="#reg-popup">@lang('local.next')</a>
+    <div class="popup-with-help">@lang('local.orWithHelp')</div>
     <div class="popup-socials">
-      <a href="" class="popup-socials__link" href="#">
+      @foreach(config('mock.into-with') as $link)
+      <a href="" class="popup-socials__link" href="{{$link->url}}">
         <svg class="popup-socials__link-svg" height='20px' width='20px'>
-          <use xlink:href='assets/images/spritemap.svg#sprite-login-popup-social-1'></use>
+          <use xlink:href='{{$link->img}}'></use>
         </svg>
       </a>
-      <a href="" class="popup-socials__link" href="#">
-        <svg class="popup-socials__link-svg" height='24px' width='12px'>
-          <use xlink:href='assets/images/spritemap.svg#sprite-login-popup-social-2'></use>
-        </svg>
-      </a>
+      @endforeach
     </div>
     <label class="checkbox checkbox--popup">
       <input type="checkbox" class="checkbox__real">
@@ -24,13 +21,17 @@
           <use xlink:href="assets/images/spritemap.svg#sprite-check-mark"></use>
         </svg>
       </span>
-      <div class="checkbox__text checkbox__text--popup">Даю согласие на обработку своих персональных данных в соответствии с данной офертой c <span>данной офертой</span></div>
+      @foreach(config('mock.popup-agree') as $item)
+      <div class="checkbox__text checkbox__text--popup">{{$item->text}}</div>
+      @endforeach
     </label>
     <div class="popup-info">
       <svg class="popup-info__svg" stroke='#202454' stroke-width='2px'>
         <use xlink:href='assets/images/spritemap.svg#sprite-user'></use>
       </svg>
-      <div class="popup-info__text">Акции, скидки и специальные предложения для зарегистрированных пользователей</div>
+      @foreach(config('mock.popup-info') as $item)
+      <div class="popup-info__text">{{$item->text}}</div>
+      @endforeach
     </div>
   </div>
 </div>

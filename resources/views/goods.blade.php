@@ -1,42 +1,13 @@
 @extends('layouts.app')
 
-<?php
-
-
-$filters = [
-  'categories' => [
-    ['title' => 'Сухой корм', 'num' => '584', 'url' => '#'],
-    ['title' => 'Консервы', 'num' => '317', 'url' => '#'],
-    ['title' => 'Ветеринарные диеты', 'num' => '158', 'url' => '#'],
-    ['title' => 'Заменители молока', 'num' => '59', 'url' => '#']
-  ],
-
-  'curtains' => [
-
-    ['title' => 'Бренд', 'links' => ['ROYAL CANIN' => '24', '1st Choice' => '36', 'Home Food' => '12', 'Acana' => '15', 'Natures Protection' => '38', 'Purina Pro Plan' => '49', 'Advance' => '4', 'AnimAll VetLine' => '17', 'Brit Care' => '19', '10' => '15', '11' => '15', '12' => '15']],
-
-    ['title' => 'Цена', 'links' => []],
-
-    ['title' => 'Класс', 'links' => ['Премиум' => '24', 'Суперпремиум' => '36', 'Холистик' => '12']],
-    ['title' => 'Ингридиенты', 'links' => []],
-    ['title' => 'Особенности', 'links' => []],
-    ['title' => 'Вес упаковки', 'links' => []],
-    ['title' => 'Порода', 'links' => []],
-
-  ]
-];
-?>
-
-
-
 @section('content')
 <div class="container">
   <div class="breadcrumbs">
-    <a class="breadcrumbs__link" href="#">Собаки</a>
+    <a class="breadcrumbs__link" href="#">@lang('local.dogs')</a>
     <svg class="breadcrumbs__arrow">
       <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
     </svg>
-    <div class="breadcrumbs__link">Корм для собак</div>
+    <div class="breadcrumbs__link">@lang('local.dogFood')</div>
   </div>
 
   <div class="goods">
@@ -47,7 +18,7 @@ $filters = [
       @endforeach
 
       <div class="categories">
-        <div class="categories__title">Категории</div>
+        <div class="categories__title">@lang('local.categories')</div>
         <div class="categories__links">
           @foreach(config('mock.categories') as $link)
           <div class="categories__item">
@@ -74,7 +45,7 @@ $filters = [
             </svg>
           </button>
           <label class="auto-order__label" for="auto-order">
-            <div class="auto-order__text">Автозаказ</div>
+            <div class="auto-order__text">@lang('local.autoOrder')</div>
           </label>
           <a class="auto-order__question-link" href="#">
             <svg class="auto-order__question-svg" height="15px" width="15px">
@@ -82,7 +53,9 @@ $filters = [
             </svg>
           </a>
         </div>
-        <div class="auto-order__subtext">Экономия до 10% на заказах</div>
+        @foreach(config('mock.auto-order-text') as $item)
+        <div class="auto-order__subtext">{{$item->text}}</div>
+        @endforeach
       </div>
 
 
@@ -132,7 +105,7 @@ $filters = [
           @endforeach
 
           <div class="showMore checkbox__showMore checkbox__showMore--js">
-            <button class="showMore-link curtain__showMore--js">+ показать все</button>
+            <button class="showMore-link curtain__showMore--js">+ @lang('local.showAll')</button>
           </div>
   
         </div>
@@ -144,7 +117,7 @@ $filters = [
     <div class="goods__content">
       <div class="sort goods__sort">
         <div>
-          <div class="sort__subtext">Сортировать по</div>
+          <div class="sort__subtext">@lang('local.sort')</div>
           @foreach(config('mock.sort') as $item)
           <div class="sort__text">{{$item->text}}</div>
           @endforeach
@@ -153,7 +126,9 @@ $filters = [
           <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
         </svg>
       </div>
-      <div class="title goods__title">Корм для собак <span>Найдено 1074 товара</span></div>
+      @foreach(config('mock.goods-result') as $item)
+      <div class="title goods__title">{{$item->text}} <span>Найдено {{$item->result}} товара</span></div>
+      @endforeach
       <div class="goods__filters">
         <div class="goods__filters-inner filters--js">
           <div class="filter goods__filter">
@@ -174,14 +149,16 @@ $filters = [
               <use xlink:href='assets/images/spritemap.svg#sprite-filter-close'></use>
             </svg>
           </div>
-          <button class="showMore goods__filters-btn-clean btn-clean-filters--js">Очистить фильтры</button>
+          <button class="showMore goods__filters-btn-clean btn-clean-filters--js">@lang('local.clearFilters')</button>
         </div>
-        <button class="btn filter__btn goods__filter-btn showFilters--js">Фильтры <span></span></button>
+        <button class="btn filter__btn goods__filter-btn showFilters--js">@lang('local.filters') <span></span></button>
       </div>
       <img class="goods__bunner js-lazy-load fade-in" data-zzload-source-img="assets/images/goods/goods_bunner.jpg" data-zzload-source-srcset="assets/images/goods/goods_bunner.jpeg" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
       <div class="goods__info">
-        <img class="goods__info-img js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-dog-avatar.png" data-zzload-source-srcset="assets/images/catalog-dog-avatar.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
-        <div class="goods__info-text">Товары с аватаром животного – наиболее подходящие для данного питомца</div>
+        @foreach(config('mock.avatar-info') as $item)
+        <img class="goods__info-img js-lazy-load fade-in" data-zzload-source-img="{{$item->img}}" data-zzload-source-srcset="{{$item->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+        <div class="goods__info-text">{{$item->text}}</div>
+        @endforeach
       </div>
 
       <div class="goods__cards goods__cards--js">

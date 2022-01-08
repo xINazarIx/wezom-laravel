@@ -1465,6 +1465,7 @@ img.mfp-img {
   padding: 3px;
   transition: all 0.3s;
   color: #7B94B0;
+  text-transform: uppercase;
 }
 .languages__link:hover {
   background: #F4F5F8;
@@ -2174,6 +2175,7 @@ img.mfp-img {
   margin-top: 8px;
 }
 .slider__title {
+  max-width: 700px;
   margin-right: 24px;
   font-size: 32px;
   line-height: 37px;
@@ -3254,7 +3256,7 @@ img.mfp-img {
 .search-popup {
   display: none;
   padding: 20px 0 72px;
-  position: fixed;
+  position: absolute;
   top: 100px;
   left: 0;
   right: 0;
@@ -3472,6 +3474,34 @@ img.mfp-img {
   .search-popup__input::placeholder {
     font-size: 30px;
     line-height: 37px;
+  }
+}
+@media (max-width: 1330px) {
+  .search-popup__menu {
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  .search-popup__content-inner {
+    display: block;
+  }
+  .search-popup__goods {
+    justify-content: center;
+  }
+}
+@media (max-width: 770px) {
+  .search-popup__goods {
+    flex-wrap: wrap;
+  }
+  .search-popup__goods-box {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .search-popup__good {
+    justify-content: center;
+  }
+  .search-popup__good-price, .search-popup__good-last-price {
+    display: flex;
   }
 }
 @media (max-width: 700px) {

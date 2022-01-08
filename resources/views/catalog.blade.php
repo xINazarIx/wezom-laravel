@@ -8,8 +8,10 @@
       @include('inc.avatar')
 
       <div class="catalog__content">
-        <div class="catalog__title">Каталог товаров<br> <span>для собак</span></div>
-        <div class="catalog__subtitle">Товары и аксессуары для собак и щенков </div>
+        @foreach(config('mock.catalog-text') as $item)
+        <div class="catalog__title">{{$item->text}}<br> <span>{{$item->info}}</span></div>
+        <div class="catalog__subtitle">{{$item->subtext}}</div>
+        @endforeach
         <div class="catalog__links">
 
         @foreach(config('mock.catalog-links') as $link)

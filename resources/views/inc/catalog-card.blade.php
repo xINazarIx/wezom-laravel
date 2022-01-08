@@ -5,7 +5,7 @@
     </a>
 
     <div class="catalog-item__card-description">{{$card->title}}</div>
-    <a class="catalog-item__card-watchAll" href="{{$card->url}}">Смотреть все
+    <a class="catalog-item__card-watchAll" href="{{$card->url}}">@lang('local.watchAll')
       <svg class="catalog-item__card-svg" fill='none' height='10px' width='6px' stroke='white' stroke-width='2px'>
         <use xlink:href='assets/images/spritemap.svg#sprite-arrow-next'></use>
       </svg>
@@ -20,7 +20,7 @@
     @endforeach
 
     <a class="showMore showMore--solid js-catalog__showMore" href="/goods">
-      Показать больше
+      @lang('local.showAll')
     </a>
   </div>
 </div>

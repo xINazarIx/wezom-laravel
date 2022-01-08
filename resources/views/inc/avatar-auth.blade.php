@@ -1,6 +1,6 @@
 <div class="avatar goods__sidebar--avatar">
   <div class="avatar__header">
-    <div class="avatar__text">Товары для</div>
+    <div class="avatar__text">@lang('local.goodsFor')</div>
     <img class="avatar__bg js-lazy-load fade-in" data-zzload-source-img="assets/images/catalog-avatar-bg.png" data-zzload-source-srcset="assets/images/catalog-avatar-bg.webp" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
     <a class="link__question" href="#">
       <svg class="avatar__header-img" height='19px' width='15px' fill='white'>

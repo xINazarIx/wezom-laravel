@@ -16,7 +16,7 @@
     @endforeach
 
 
-    <a class="drop-menu__showMore" href="{{$option->url}}">Все варианты и правила доставки
+    <a class="drop-menu__showMore" href="{{$option->url}}">{{$option->link}}
       <svg class="drop-menu__showMore-svg">
         <use xlink:href="assets/images/spritemap.svg#sprite-arrow-down"></use>
       </svg>
