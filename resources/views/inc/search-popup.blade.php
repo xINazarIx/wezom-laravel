@@ -46,6 +46,6 @@
         </div>
       </div>
 
-      <a class="btn search-popup__btn" href="#">Все товары</a>
+      <a class="btn search-popup__btn" href="/goods">@lang('local.allGoods')</a>
     </div>
   </div>

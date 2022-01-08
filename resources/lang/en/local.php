@@ -55,6 +55,7 @@
     'sort' => 'Sort by',
     'clearFilters' => 'Clear filters',
     'filters' => 'Filters',
+    'allGoods' => 'All goods'
   ]
 
 ?>
