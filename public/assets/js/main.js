@@ -1196,7 +1196,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./reviews */ "./resources/assets/js/reviews.js");
 /* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./order */ "./resources/assets/js/order.js");
 /* harmony import */ var _catalog__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./catalog */ "./resources/assets/js/catalog.js");
-/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+/* harmony import */ var _product_images__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./product-images */ "./resources/assets/js/product-images.js");
+/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+
 
 
 
@@ -1264,6 +1266,32 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.pagination--js').children().on('
 
 /***/ }),
 
+/***/ "./resources/assets/js/product-images.js":
+/*!***********************************************!*\
+  !*** ./resources/assets/js/product-images.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+switchImages(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-product-card__img').first(), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-product-card__sub-images').first());
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-product-card__sub-images').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-product-card__img').addClass('product-card__img--hidden');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-product-card__sub-images').removeClass('product-card__sub-images--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('product-card__sub-images--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('id')).removeClass('product-card__img--hidden');
+});
+
+function switchImages(img, subImg) {
+  img.removeClass('product-card__img--hidden');
+  subImg.addClass('product-card__sub-images--active');
+}
+
+/***/ }),
+
 /***/ "./resources/assets/js/rangeSlider.js":
 /*!********************************************!*\
   !*** ./resources/assets/js/rangeSlider.js ***!
@@ -1320,12 +1348,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__title--js').on('click', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__title--js').removeClass('reviews__title--active');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('reviews__title--active');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__content--js').children().removeClass('reviews__content--active');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id')).addClass('reviews__content--active');
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-reviews-scroll').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('html').animate({
+    scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href')).offset().top - 50
+  }, 500);
+  switchReviews(jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id')));
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__title--js').on('click', function () {
+  switchReviews(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this));
+});
+
+function switchReviews(elem) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__title--js').removeClass('reviews__title--active');
+  elem.addClass('reviews__title--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__content--js').children().removeClass('reviews__content--active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(elem.attr('data-href')).addClass('reviews__content--active');
+}
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.reviews__users--js').each(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().each(function (i, elem) {
     if (i >= 4) {

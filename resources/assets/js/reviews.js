@@ -1,11 +1,21 @@
 import $ from 'jquery';
 
-$('.reviews__title--js').on('click', function(){
-  $('.reviews__title--js').removeClass('reviews__title--active')
-  $(this).addClass('reviews__title--active')
-  $('.reviews__content--js').children().removeClass('reviews__content--active')
-  $($(this).attr('data-id')).addClass('reviews__content--active')
+$('.js-reviews-scroll').on('click', function(){
+  $('html').animate({scrollTop: $($(this).attr('href')).offset().top - 50}, 500);
+  switchReviews($($(this).attr('data-id')))
 })
+
+$('.reviews__title--js').on('click', function(){
+  switchReviews($(this))
+})
+
+function switchReviews(elem){
+  $('.reviews__title--js').removeClass('reviews__title--active')
+  elem.addClass('reviews__title--active')
+  $('.reviews__content--js').children().removeClass('reviews__content--active')
+  $(elem.attr('data-href')).addClass('reviews__content--active')
+}
+
 
 $('.reviews__users--js').each(function(){
   $(this).children().each(function(i,elem){

@@ -10,7 +10,7 @@
       'updatePrice' => '1 550,22',
       'lastPrice' => '1722,22',
       'price' => '1 600,22',
-      'info' => (object)['top','discount']
+      'info' => (object)['Топ продаж','Скидка -5%']
     ],
     (object)[
       'url' => 'page-product',
@@ -21,7 +21,7 @@
       'updatePrice' => 'от 198,22 ₴',
       'lastPrice' => 'от 260,22',
       'price' => 'от 206,71 ₴',
-      'info' => (object)['discount']
+      'info' => (object)['Скидка -5%']
     ],
     (object)[
       'url' => 'page-product',
@@ -32,7 +32,7 @@
       'updatePrice' => 'Автозаказ',
       'lastPrice' => '',
       'price' => '1 600,22 ₴',
-      'info' => (object)['new']
+      'info' => (object)['Новинка']
     ],
     (object)[
       'url' => 'page-product',
@@ -43,7 +43,7 @@
       'updatePrice' => '520,00 ₴',
       'lastPrice' => '640,22',
       'price' => '560,22 ₴',
-      'info' => (object)['top','discount']
+      'info' => (object)['Топ продаж','Скидка -5%','Новинка']
     ],
   ]
 

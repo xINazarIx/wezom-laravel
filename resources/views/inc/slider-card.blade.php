@@ -1,6 +1,12 @@
 <div class="slider-item">
   <a class="slider-item__card" href="{{$card->url}}">
-  
+
+    @foreach($card->info as $item)
+    <div class="widget widget--purpure slider-item__widget">
+      <p class="widget__text">{{$item}}</p>
+    </div>
+    @endforeach
+
     <img class="slider-item__img js-lazy-load fade-in" data-zzload-source-img="{{$card->img}}" data-zzload-source-srcset="{{$card->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
   </a>
   <div class="slider-item__description">

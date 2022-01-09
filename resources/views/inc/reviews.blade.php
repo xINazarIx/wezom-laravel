@@ -1,11 +1,11 @@
-<div class="reviews">
+<div class="reviews" id='reviews-scroll'>
 
   @foreach(config('mock.number-of-reviews') as $item)
-  <span class="title title--normal reviews__title reviews__title--js reviews__title--active" data-id='#reviews-content'>@lang('local.reviews') ({{$item->number}})</span>
+  <span class="title title--normal reviews__title reviews__title--js reviews__title--active" id="reviews-btn" data-href='#reviews-content'>@lang('local.reviews') ({{$item->number}})</span>
   @endforeach
 
   @foreach(config('mock.number-of-questions') as $item)
-  <span class="title title--normal reviews__title reviews__title--js" data-id='#reviews-questions'>@lang('local.questions') ({{$item->number}})</span>
+  <span class="title title--normal reviews__title reviews__title--js" id="questions-btn" data-href='#reviews-questions'>@lang('local.questions') ({{$item->number}})</span>
   @endforeach
 
   <div class="reviews__inner">

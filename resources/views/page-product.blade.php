@@ -28,7 +28,7 @@
             <div class="product-card">
               <div class="product-card__images">
                 @foreach($item->images as $img)
-                <div class="product-card__sub-img">
+                <div class="product-card__sub-images js-product-card__sub-images" id='#{{$img->id}}'>
                   <img class="js-lazy-load fade-in" data-zzload-source-img="{{$img->img}}" data-zzload-source-srcset="{{$img->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
                 </div>
                 @endforeach
@@ -40,7 +40,10 @@
                 </a>
               </div>
               <div class="product-card__inner">
-                <img class="product-card__img js-lazy-load fade-in" data-zzload-source-img="{{$item->img}}" data-zzload-source-srcset="{{$item->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+
+                @foreach($item->images as $img)
+                <img class="product-card__img product-card__img--hidden js-lazy-load fade-in js-product-card__img" id='{{$img->id}}' data-zzload-source-img="{{$img->imgbig}}" data-zzload-source-srcset="{{$img->imgbig}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"&gt;&lt;/svg&gt;' alt="#">
+                @endforeach
 
                 <div class="widget widget--pink product-card__widget">
                   <p class="widget__text">@lang('local.discount') -{{$item->discount}}</p>
@@ -103,11 +106,11 @@
                 </div>
 
                 @foreach($item->reviews as $review)
-                <a class="link link--border  product__description-reviews" href="{{$review->url}}">{{$review->link}}<span>({{$review->number}}) </span></a>
+                <a class="link link--border  product__description-reviews js-reviews-scroll" data-id="#reviews-btn" href="#reviews-scroll">{{$review->link}}<span>({{$review->number}}) </span></a>
                 @endforeach
 
                 @foreach($item->questions as $question)
-                <a class="link link--border product__description-reviews" href="{{$question->url}}"> {{$question->link}}<span>({{$question->number}})</span></a>
+                <a class="link link--border product__description-reviews js-reviews-scroll" data-id="#questions-btn" href="#reviews-scroll"> {{$question->link}}<span>({{$question->number}})</span></a>
                 @endforeach
 
                 @endforeach

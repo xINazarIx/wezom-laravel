@@ -13,7 +13,7 @@
           'updatePrice' => '1 550,22',
           'lastPrice' => '1722,22',
           'price' => '1 600,22',
-          'info' => (object)['top','discount']
+          'info' => ['Топ продаж','Скидка -5%','Новинка']
         ],
         (object)[
           'url' => 'page-product',
@@ -24,7 +24,7 @@
           'updatePrice' => 'от 198,22 ₴',
           'lastPrice' => 'от 260,22',
           'price' => 'от 206,71 ₴',
-          'info' => (object)['discount']
+          'info' => ['Скидка -5%']
         ],
         (object)[
           'url' => 'page-product',
@@ -35,7 +35,7 @@
           'updatePrice' => 'Автозаказ',
           'lastPrice' => '',
           'price' => '1 600,22 ₴',
-          'info' => (object)['new']
+          'info' => ['Новинка']
         ],
         (object)[
           'url' => 'page-product',
@@ -46,7 +46,7 @@
           'updatePrice' => '520,00 ₴',
           'lastPrice' => '640,22',
           'price' => '560,22 ₴',
-          'info' => (object)['top','discount']
+          'info' => ['Топ продаж','Скидка -5%']
         ],
         (object)[
           'url' => 'page-product',
@@ -57,7 +57,7 @@
           'updatePrice' => '1 550,22 ₴',
           'lastPrice' => '',
           'price' => '1 600,22 ₴',
-          'info' => (object)['top']
+          'info' => ['Топ продаж']
         ],
         (object)[
           'url' => 'page-product',
@@ -68,7 +68,7 @@
           'updatePrice' => 'от 198,22 ₴',
           'lastPrice' => 'от 260,22',
           'price' => 'от 206,71 ₴',
-          'info' => (object)['discount']
+          'info' => []
         ],
         (object)[
           'url' => 'page-product',
@@ -79,7 +79,7 @@
           'updatePrice' => 'Автозаказ',
           'lastPrice' => '',
           'price' => '1 600,22 ₴',
-          'info' => (object)['new']
+          'info' => []
         ],
         (object)[
           'url' => 'page-product',
@@ -90,7 +90,7 @@
           'updatePrice' => 'Автозаказ',
           'lastPrice' => '',
           'price' => '1 600,22 ₴',
-          'info' => (object)['new']
+          'info' => ['Топ продаж']
         ],
         (object)[
           'url' => 'page-product',
@@ -101,7 +101,7 @@
           'updatePrice' => '520,00 ₴',
           'lastPrice' => '640,22',
           'price' => '560,22 ₴',
-          'info' => (object)['top','discount']
+          'info' => ['Новинка']
         ],
       ]
       ],
@@ -118,7 +118,7 @@
             'updatePrice' => '1 550,22',
             'lastPrice' => '1722,22',
             'price' => '1 600,22',
-            'info' => (object)['top','discount']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -129,7 +129,7 @@
             'updatePrice' => 'от 198,22 ₴',
             'lastPrice' => 'от 260,22',
             'price' => 'от 206,71 ₴',
-            'info' => (object)['discount']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -140,7 +140,7 @@
             'updatePrice' => 'Автозаказ',
             'lastPrice' => '',
             'price' => '1 600,22 ₴',
-            'info' => (object)['new']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -151,7 +151,7 @@
             'updatePrice' => '520,00 ₴',
             'lastPrice' => '640,22',
             'price' => '560,22 ₴',
-            'info' => (object)['top','discount']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -162,7 +162,7 @@
             'updatePrice' => '1 550,22 ₴',
             'lastPrice' => '',
             'price' => '1 600,22 ₴',
-            'info' => (object)['top']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -173,7 +173,7 @@
             'updatePrice' => 'от 198,22 ₴',
             'lastPrice' => 'от 260,22',
             'price' => 'от 206,71 ₴',
-            'info' => (object)['discount']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -184,7 +184,7 @@
             'updatePrice' => 'Автозаказ',
             'lastPrice' => '',
             'price' => '1 600,22 ₴',
-            'info' => (object)['new']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -195,7 +195,7 @@
             'updatePrice' => 'Автозаказ',
             'lastPrice' => '',
             'price' => '1 600,22 ₴',
-            'info' => (object)['new']
+            'info' => []
           ],
           (object)[
             'url' => 'page-product',
@@ -206,7 +206,7 @@
             'updatePrice' => '520,00 ₴',
             'lastPrice' => '640,22',
             'price' => '560,22 ₴',
-            'info' => (object)['top','discount']
+            'info' => []
           ],
         ]
         ],
@@ -223,7 +223,7 @@
               'updatePrice' => '1 550,22',
               'lastPrice' => '1722,22',
               'price' => '1 600,22',
-              'info' => (object)['top','discount']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -234,7 +234,7 @@
               'updatePrice' => 'от 198,22 ₴',
               'lastPrice' => 'от 260,22',
               'price' => 'от 206,71 ₴',
-              'info' => (object)['discount']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -245,7 +245,7 @@
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
               'price' => '1 600,22 ₴',
-              'info' => (object)['new']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -256,7 +256,7 @@
               'updatePrice' => '520,00 ₴',
               'lastPrice' => '640,22',
               'price' => '560,22 ₴',
-              'info' => (object)['top','discount']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -267,7 +267,7 @@
               'updatePrice' => '1 550,22 ₴',
               'lastPrice' => '',
               'price' => '1 600,22 ₴',
-              'info' => (object)['top']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -278,7 +278,7 @@
               'updatePrice' => 'от 198,22 ₴',
               'lastPrice' => 'от 260,22',
               'price' => 'от 206,71 ₴',
-              'info' => (object)['discount']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -289,7 +289,7 @@
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
               'price' => '1 600,22 ₴',
-              'info' => (object)['new']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -300,7 +300,7 @@
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
               'price' => '1 600,22 ₴',
-              'info' => (object)['new']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -311,7 +311,7 @@
               'updatePrice' => '520,00 ₴',
               'lastPrice' => '640,22',
               'price' => '560,22 ₴',
-              'info' => (object)['top','discount']
+              'info' => []
             ],
           ]
         ],
@@ -328,7 +328,7 @@
               'updatePrice' => '1 550,22',
               'lastPrice' => '1722,22',
               'price' => '1 600,22',
-              'info' => (object)['top','discount']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -339,7 +339,7 @@
               'updatePrice' => 'от 198,22 ₴',
               'lastPrice' => 'от 260,22',
               'price' => 'от 206,71 ₴',
-              'info' => (object)['discount']
+              'info' => []
             ],
             (object)[
               'url' => 'page-product',
@@ -350,7 +350,7 @@
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
               'price' => '1 600,22 ₴',
-              'info' => (object)['new']
+              'info' => []
             ],
           ]
         ]

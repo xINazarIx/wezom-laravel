@@ -168,6 +168,10 @@
     &__filter{
       margin-top: 25px;
     }
+
+    &__user{
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -192,6 +196,12 @@
   .reviews{
     &__user-text{
       max-width: 340px;
+    }
+
+    &__title{
+      margin-right: 10px;
+      font-size: 18px;
+      line-height: 21px;
     }
   }
 }

@@ -15,6 +15,7 @@ import './about';
 import './reviews';
 import './order';
 import './catalog';
+import './product-images';
 import './rangeSlider';
 
 

@@ -13,7 +13,6 @@
       'secondpricetext' => 'Автозаказ',
       'pricesubtext' => 'Бесплатная доставка для этого товара',
       'infotext' => 'Экономия до 10% на заказах с регулярными поставками',
-      'img' => 'assets/images/product-main.webp',
       'info' => 'В наличии в 7 магазинах',
       'orderinfo' => 'Заказать упаковку х 8шт. (+2% к скидке)',
       'sublink' => '#',
@@ -28,16 +27,24 @@
 
       'images' => (object)[
         (object)[
-          'img' => 'assets/images/product-1.webp'
+          'id' => '1',
+          'img' => 'assets/images/product-small-1.png',
+          'imgbig' => 'assets/images/product-big-1.png'
         ],
         (object)[
-          'img' => 'assets/images/product-2.webp'
+          'id' => '2',
+          'img' => 'assets/images/product-small-2.png',
+          'imgbig' => 'assets/images/product-big-2.png'
         ],
         (object)[
-          'img' => 'assets/images/product-3.webp'
+          'id' => '3',
+          'img' => 'assets/images/product-small-3.png',
+          'imgbig' => 'assets/images/product-big-3.png'
         ],
         (object)[
-          'img' => 'assets/images/product-4.webp'
+          'id' => '4',
+          'img' => 'assets/images/product-small-4.png',
+          'imgbig' => 'assets/images/product-big-4.png'
         ],
       ],
 
