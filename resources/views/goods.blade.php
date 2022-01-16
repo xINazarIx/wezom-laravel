@@ -60,7 +60,7 @@
 
 
       @foreach(config('mock.filters') as $item)
-      @if($item->title == 'Цена')
+      @if($item->id == 'price')
       <div class="curtain">
         <div class="curtain__header">
           <div class="curtain__title">Цена, ₴</div>

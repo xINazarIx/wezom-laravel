@@ -2,6 +2,7 @@
 
 return[
   (object)[
+    'id' => 'checkbox',
     'title' => 'Бренд',
     'items' => (object)[
       (object)[
@@ -56,11 +57,13 @@ return[
   ],
 
   (object)[
+    'id' => 'price',
     'title' => 'Цена',
     'items' => (object)[]
   ],
 
   (object)[
+    'id' => 'checkbox',
     'title' => 'Класс',
     'items' => (object)[
       (object)[
@@ -79,21 +82,25 @@ return[
   ],
 
   (object)[
+    'id' => 'checkbox',
     'title' => 'Ингридиенты',
     'items' => (object)[]
   ],
 
   (object)[
+    'id' => 'checkbox',
     'title' => 'Особенности',
     'items' => (object)[]
   ],
 
   (object)[
+    'id' => 'checkbox',
     'title' => 'Вес упаковки',
     'items' => (object)[]
   ],
 
   (object)[
+    'id' => 'checkbox',
     'title' => 'Порода',
     'items' => (object)[]
   ],

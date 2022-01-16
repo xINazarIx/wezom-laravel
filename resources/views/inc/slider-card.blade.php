@@ -2,8 +2,8 @@
   <a class="slider-item__card" href="{{$card->url}}">
 
     @foreach($card->info as $item)
-    <div class="widget widget--purpure slider-item__widget">
-      <p class="widget__text">{{$item}}</p>
+    <div class="widget widget--{{$item->color}} slider-item__widget">
+      <p class="widget__text">{{$item->title}}</p>
     </div>
     @endforeach
 
@@ -37,7 +37,7 @@
           <use xlink:href="assets/images/spritemap.svg#sprite-updateBtn"></use>
         </svg>
       </button>
-      <span class='slider-item__updatePrice-text'>{{$card->updatePrice}}₴</span>
+      <span class='slider-item__updatePrice-text'>{{$card->updatePrice}} ₴</span>
     </div>
     <div class="slider-item__prices">
       <span class="slider-item__prices-lastPrice">{{$card->lastPrice}}</span>

@@ -13,7 +13,16 @@
           'updatePrice' => '1 550,22',
           'lastPrice' => '1722,22',
           'price' => '1 600,22',
-          'info' => ['Топ продаж','Скидка -5%','Новинка']
+          'info' => (object)[
+            (object)[
+              'title' => 'Топ продаж',
+              'color' => 'purpure'
+            ],
+            (object)[
+              'title' => 'Скидка -5%',
+              'color' => 'pink'
+            ]
+          ]
         ],
         (object)[
           'url' => 'page-product',
@@ -21,10 +30,15 @@
           'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
           'stars' => 5,
           'comments' => 12,
-          'updatePrice' => 'от 198,22 ₴',
+          'updatePrice' => 'от 198,22',
           'lastPrice' => 'от 260,22',
-          'price' => 'от 206,71 ₴',
-          'info' => ['Скидка -5%']
+          'price' => 'от 206,71',
+          'info' => (object)[
+            (object)[
+              'title' => 'Скидка -5%',
+              'color' => 'pink'
+            ]
+          ]
         ],
         (object)[
           'url' => 'page-product',
@@ -34,8 +48,13 @@
           'comments' => 65,
           'updatePrice' => 'Автозаказ',
           'lastPrice' => '',
-          'price' => '1 600,22 ₴',
-          'info' => ['Новинка']
+          'price' => '1 600,22',
+          'info' => (object)[
+            (object)[
+              'title' => 'Новинка',
+              'color' => 'green'
+            ]
+          ]
         ],
         (object)[
           'url' => 'page-product',
@@ -43,10 +62,19 @@
           'description' => 'Scalibor (Скалибор) ошейник 48 см',
           'stars' => 0,
           'comments' => 0,
-          'updatePrice' => '520,00 ₴',
+          'updatePrice' => '520,00',
           'lastPrice' => '640,22',
-          'price' => '560,22 ₴',
-          'info' => ['Топ продаж','Скидка -5%']
+          'price' => '560,22',
+          'info' => (object)[
+            (object)[
+              'title' => 'Топ продаж',
+              'color' => 'purpure'
+            ],
+            (object)[
+              'title' => 'Скидка -5%',
+              'color' => 'pink'
+            ]
+          ]
         ],
         (object)[
           'url' => 'page-product',
@@ -54,10 +82,15 @@
           'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
           'stars' => 0,
           'comments' => 0,
-          'updatePrice' => '1 550,22 ₴',
+          'updatePrice' => '1 550,22',
           'lastPrice' => '',
-          'price' => '1 600,22 ₴',
-          'info' => ['Топ продаж']
+          'price' => '1 600,22',
+          'info' => (object)[
+            (object)[
+              'title' => 'Топ продаж',
+              'color' => 'purpure'
+            ]
+          ]
         ],
         (object)[
           'url' => 'page-product',
@@ -65,10 +98,10 @@
           'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
           'stars' => 5,
           'comments' => 12,
-          'updatePrice' => 'от 198,22 ₴',
+          'updatePrice' => 'от 198,22',
           'lastPrice' => 'от 260,22',
-          'price' => 'от 206,71 ₴',
-          'info' => []
+          'price' => 'от 206,71',
+          'info' => (object)[]
         ],
         (object)[
           'url' => 'page-product',
@@ -78,8 +111,8 @@
           'comments' => 65,
           'updatePrice' => 'Автозаказ',
           'lastPrice' => '',
-          'price' => '1 600,22 ₴',
-          'info' => []
+          'price' => '1 600,22',
+          'info' => (object)[]
         ],
         (object)[
           'url' => 'page-product',
@@ -89,8 +122,13 @@
           'comments' => 65,
           'updatePrice' => 'Автозаказ',
           'lastPrice' => '',
-          'price' => '1 600,22 ₴',
-          'info' => ['Топ продаж']
+          'price' => '1 600,22',
+          'info' => (object)[
+            (object)[
+              'title' => 'Топ продаж',
+              'color' => 'purpure'
+            ]
+          ]
         ],
         (object)[
           'url' => 'page-product',
@@ -98,10 +136,15 @@
           'description' => 'Scalibor (Скалибор) ошейник 48 см',
           'stars' => 0,
           'comments' => 0,
-          'updatePrice' => '520,00 ₴',
+          'updatePrice' => '520,00',
           'lastPrice' => '640,22',
-          'price' => '560,22 ₴',
-          'info' => ['Новинка']
+          'price' => '560,22',
+          'info' => (object)[
+            (object)[
+              'title' => 'Новинка',
+              'color' => 'green'
+            ]
+          ]
         ],
       ]
       ],
@@ -118,7 +161,16 @@
             'updatePrice' => '1 550,22',
             'lastPrice' => '1722,22',
             'price' => '1 600,22',
-            'info' => []
+            'info' => (object)[
+              (object)[
+                'title' => 'Топ продаж',
+                'color' => 'purpure'
+              ],
+              (object)[
+                'title' => 'Скидка -5%',
+                'color' => 'pink'
+              ]
+            ]
           ],
           (object)[
             'url' => 'page-product',
@@ -126,10 +178,19 @@
             'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
             'stars' => 5,
             'comments' => 12,
-            'updatePrice' => 'от 198,22 ₴',
+            'updatePrice' => 'от 198,22',
             'lastPrice' => 'от 260,22',
-            'price' => 'от 206,71 ₴',
-            'info' => []
+            'price' => 'от 206,71',
+            'info' => (object)[
+              (object)[
+                'title' => 'Топ продаж',
+                'color' => 'purpure'
+              ],
+              (object)[
+                'title' => 'Скидка -5%',
+                'color' => 'pink'
+              ]
+            ]
           ],
           (object)[
             'url' => 'page-product',
@@ -139,8 +200,13 @@
             'comments' => 65,
             'updatePrice' => 'Автозаказ',
             'lastPrice' => '',
-            'price' => '1 600,22 ₴',
-            'info' => []
+            'price' => '1 600,22',
+            'info' => (object)[
+              (object)[
+                'title' => 'Топ продаж',
+                'color' => 'purpure'
+              ]
+            ]
           ],
           (object)[
             'url' => 'page-product',
@@ -148,10 +214,15 @@
             'description' => 'Scalibor (Скалибор) ошейник 48 см',
             'stars' => 0,
             'comments' => 0,
-            'updatePrice' => '520,00 ₴',
+            'updatePrice' => '520,00',
             'lastPrice' => '640,22',
-            'price' => '560,22 ₴',
-            'info' => []
+            'price' => '560,22',
+            'info' => (object)[
+              (object)[
+                'title' => 'Скидка -5%',
+                'color' => 'pink'
+              ]
+            ]
           ],
           (object)[
             'url' => 'page-product',
@@ -159,10 +230,10 @@
             'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
             'stars' => 0,
             'comments' => 0,
-            'updatePrice' => '1 550,22 ₴',
+            'updatePrice' => '1 550,22',
             'lastPrice' => '',
-            'price' => '1 600,22 ₴',
-            'info' => []
+            'price' => '1 600,22',
+            'info' => (object)[]
           ],
           (object)[
             'url' => 'page-product',
@@ -170,10 +241,19 @@
             'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
             'stars' => 5,
             'comments' => 12,
-            'updatePrice' => 'от 198,22 ₴',
+            'updatePrice' => 'от 198,22',
             'lastPrice' => 'от 260,22',
-            'price' => 'от 206,71 ₴',
-            'info' => []
+            'price' => 'от 206,71',
+            'info' => (object)[
+              (object)[
+                'title' => 'Топ продаж',
+                'color' => 'purpure'
+              ],
+              (object)[
+                'title' => 'Скидка -5%',
+                'color' => 'pink'
+              ]
+            ]
           ],
           (object)[
             'url' => 'page-product',
@@ -183,8 +263,8 @@
             'comments' => 65,
             'updatePrice' => 'Автозаказ',
             'lastPrice' => '',
-            'price' => '1 600,22 ₴',
-            'info' => []
+            'price' => '1 600,22',
+            'info' => (object)[]
           ],
           (object)[
             'url' => 'page-product',
@@ -194,8 +274,8 @@
             'comments' => 65,
             'updatePrice' => 'Автозаказ',
             'lastPrice' => '',
-            'price' => '1 600,22 ₴',
-            'info' => []
+            'price' => '1 600,22',
+            'info' => (object)[]
           ],
           (object)[
             'url' => 'page-product',
@@ -203,10 +283,10 @@
             'description' => 'Scalibor (Скалибор) ошейник 48 см',
             'stars' => 0,
             'comments' => 0,
-            'updatePrice' => '520,00 ₴',
+            'updatePrice' => '520,00',
             'lastPrice' => '640,22',
-            'price' => '560,22 ₴',
-            'info' => []
+            'price' => '560,22',
+            'info' => (object)[]
           ],
         ]
         ],
@@ -223,7 +303,16 @@
               'updatePrice' => '1 550,22',
               'lastPrice' => '1722,22',
               'price' => '1 600,22',
-              'info' => []
+              'info' => (object)[
+                (object)[
+                  'title' => 'Топ продаж',
+                  'color' => 'purpure'
+                ],
+                (object)[
+                  'title' => 'Скидка -5%',
+                  'color' => 'pink'
+                ]
+              ]
             ],
             (object)[
               'url' => 'page-product',
@@ -231,10 +320,10 @@
               'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
               'stars' => 5,
               'comments' => 12,
-              'updatePrice' => 'от 198,22 ₴',
+              'updatePrice' => 'от 198,22',
               'lastPrice' => 'от 260,22',
-              'price' => 'от 206,71 ₴',
-              'info' => []
+              'price' => 'от 206,71',
+              'info' => (object)[]
             ],
             (object)[
               'url' => 'page-product',
@@ -244,8 +333,13 @@
               'comments' => 65,
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
-              'price' => '1 600,22 ₴',
-              'info' => []
+              'price' => '1 600,22',
+              'info' => (object)[
+                (object)[
+                  'title' => 'Топ продаж',
+                  'color' => 'purpure'
+                ]
+              ]
             ],
             (object)[
               'url' => 'page-product',
@@ -253,10 +347,15 @@
               'description' => 'Scalibor (Скалибор) ошейник 48 см',
               'stars' => 0,
               'comments' => 0,
-              'updatePrice' => '520,00 ₴',
+              'updatePrice' => '520,00',
               'lastPrice' => '640,22',
-              'price' => '560,22 ₴',
-              'info' => []
+              'price' => '560,22',
+              'info' => (object)[
+                (object)[
+                  'title' => 'Топ продаж',
+                  'color' => 'purpure'
+                ]
+              ]
             ],
             (object)[
               'url' => 'page-product',
@@ -264,10 +363,10 @@
               'description' => '1st Choice Puppy Toy&Small Lamb&Fish сухой супер премиум корм для щенков мини и малых пород, 2 кг',
               'stars' => 0,
               'comments' => 0,
-              'updatePrice' => '1 550,22 ₴',
+              'updatePrice' => '1 550,22',
               'lastPrice' => '',
-              'price' => '1 600,22 ₴',
-              'info' => []
+              'price' => '1 600,22',
+              'info' => (object)[]
             ],
             (object)[
               'url' => 'page-product',
@@ -275,10 +374,19 @@
               'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
               'stars' => 5,
               'comments' => 12,
-              'updatePrice' => 'от 198,22 ₴',
+              'updatePrice' => 'от 198,22',
               'lastPrice' => 'от 260,22',
-              'price' => 'от 206,71 ₴',
-              'info' => []
+              'price' => 'от 206,71',
+              'info' => (object)[
+                (object)[
+                  'title' => 'Топ продаж',
+                  'color' => 'purpure'
+                ],
+                (object)[
+                  'title' => 'Скидка -5%',
+                  'color' => 'pink'
+                ]
+              ]
             ],
             (object)[
               'url' => 'page-product',
@@ -288,8 +396,8 @@
               'comments' => 65,
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
-              'price' => '1 600,22 ₴',
-              'info' => []
+              'price' => '1 600,22',
+              'info' => (object)[]
             ],
             (object)[
               'url' => 'page-product',
@@ -299,8 +407,8 @@
               'comments' => 65,
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
-              'price' => '1 600,22 ₴',
-              'info' => []
+              'price' => '1 600,22',
+              'info' => (object)[]
             ],
             (object)[
               'url' => 'page-product',
@@ -308,10 +416,10 @@
               'description' => 'Scalibor (Скалибор) ошейник 48 см',
               'stars' => 0,
               'comments' => 0,
-              'updatePrice' => '520,00 ₴',
+              'updatePrice' => '520,00',
               'lastPrice' => '640,22',
-              'price' => '560,22 ₴',
-              'info' => []
+              'price' => '560,22',
+              'info' => (object)[]
             ],
           ]
         ],
@@ -328,7 +436,7 @@
               'updatePrice' => '1 550,22',
               'lastPrice' => '1722,22',
               'price' => '1 600,22',
-              'info' => []
+              'info' => (object)[]
             ],
             (object)[
               'url' => 'page-product',
@@ -336,10 +444,10 @@
               'description' => 'Schesir Dog Small Adult Lamb сухой монопротеиновый корм для собак малых пород',
               'stars' => 5,
               'comments' => 12,
-              'updatePrice' => 'от 198,22 ₴',
+              'updatePrice' => 'от 198,22',
               'lastPrice' => 'от 260,22',
-              'price' => 'от 206,71 ₴',
-              'info' => []
+              'price' => 'от 206,71',
+              'info' => (object)[]
             ],
             (object)[
               'url' => 'page-product',
@@ -349,8 +457,17 @@
               'comments' => 65,
               'updatePrice' => 'Автозаказ',
               'lastPrice' => '',
-              'price' => '1 600,22 ₴',
-              'info' => []
+              'price' => '1 600,22',
+              'info' => (object)[
+                (object)[
+                  'title' => 'Топ продаж',
+                  'color' => 'purpure'
+                ],
+                (object)[
+                  'title' => 'Скидка -5%',
+                  'color' => 'pink'
+                ]
+              ]
             ],
           ]
         ]

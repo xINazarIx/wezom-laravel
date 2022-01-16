@@ -16,6 +16,7 @@ import './reviews';
 import './order';
 import './catalog';
 import './product-images';
+import './user-review-zoom-gallery';
 import './rangeSlider';
 
 

@@ -1197,7 +1197,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./order */ "./resources/assets/js/order.js");
 /* harmony import */ var _catalog__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./catalog */ "./resources/assets/js/catalog.js");
 /* harmony import */ var _product_images__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./product-images */ "./resources/assets/js/product-images.js");
-/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+/* harmony import */ var _user_review_zoom_gallery__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./user-review-zoom-gallery */ "./resources/assets/js/user-review-zoom-gallery.js");
+/* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./rangeSlider */ "./resources/assets/js/rangeSlider.js");
+
 
 
 
@@ -1431,6 +1433,43 @@ function openSearchLinks(item) {
   item.addClass('search-popup__menu-item--active');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.search-popup__menu-links', item).css('display', 'block');
 }
+
+/***/ }),
+
+/***/ "./resources/assets/js/user-review-zoom-gallery.js":
+/*!*********************************************************!*\
+  !*** ./resources/assets/js/user-review-zoom-gallery.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-reviews__user-images').each(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    fixedContentPos: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      verticalFit: true
+    },
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300,
+      opener: function opener(element) {
+        return element.find('img');
+      }
+    }
+  });
+});
 
 /***/ }),
 

@@ -83,7 +83,9 @@
               @foreach(config('mock.useful-materials-card') as $card)
               <div class="useful__materials-item">
                 <a class="useful__materials-item-card" href="{{$card->url}}" target="_blank">
-                  <div class="widget useful__materials-item-widget">{{$card->title}}</div>
+                  @foreach($card->info as $label)
+                  <div class="widget widget--{{$label->color}} useful__materials-item-widget">{{$label->title}}</div>
+                  @endforeach
                   <img class="useful__materials-item-img js-lazy-load fade-in" data-zzload-source-img="{{$card->img}}" data-zzload-source-srcset="{{$card->img}}" src='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" width="640" height="320"&gt;&lt;/svg&gt;' alt="#">
                 </a>
                 <div class="useful__materials-item-description">
